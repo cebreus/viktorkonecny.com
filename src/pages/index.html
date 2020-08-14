@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="{{ SITE.meta.lang }}">
+  {% set seo_things = [
+    {
+      seo_title: (INDEX.seo.seo_title or INDEX.title) | striptags | trim,
+      seo_description: (INDEX.seo.seo_description or INDEX.excerpt) | striptags | trim,
+      robots: INDEX.seo.robots,
+      canonical: INDEX.seo.canonical
+    }
+  ] %}
+  <head>
+    <meta charset="{{ SITE.meta.charset }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    {% set open_graph = INDEX.open_graph %}
+
+    {% include "_partials/meta-seo.njk" %}
+    {% include "_partials/meta-open-graph.njk" %}
+    {% include "_partials/meta-twitter-cards.njk" %}
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <!-- inject:css -->
+    <!-- endinject -->
+    {% set pageContetId = INDEX %}
+
+    <body data-template="index">
+      {% include "_partials/o-header.njk" %}
+
+      <article class="o-main py-3">
+        <div class="container">
+          <h1>{{ INDEX.h1 }}</h1>
+        </div>
+      </article>
+
+      <section class="c-blog py-3">
+        <div class="container">
+
+          <!-- Limit 3 articles -->
+          {% for item in BLOG %}
+            {% include "_partials/c-blog__item.njk" %}
+          {% endfor %}
+        </div>
+      </section>
+
+      {% include "_partials/o-footer.njk" %}
+
+      <!-- inject: bootstrap js -->
+      <!-- inject:js -->
+      <!-- endinject -->
+    </body>
+
+  </html>

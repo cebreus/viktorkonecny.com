@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="{{ SITE.meta.lang }}">
+	{% set seo_things = [
+		{
+			seo_title: (BLOGLIST.seo.seo_title or BLOGLIST.title) | striptags | trim,
+			seo_description: (BLOGLIST.seo.seo_description or BLOGLIST.excerpt) | striptags | trim,
+			robots: BLOGLIST.seo.robots,
+			canonical: BLOGLIST.seo.canonical
+		}
+	] %}
+	{% set open_graph = open_graph %}
+	<head>
+		<meta charset="{{ SITE.meta.charset }}">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta content="ie=edge" http-equiv="X-UA-Compatible">
+
+		{% include "_partials/meta-seo.njk" %}
+		{% include "_partials/meta-open-graph.njk" %}
+		{% include "_partials/meta-twitter-cards.njk" %}
+		<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="">
+		<!-- inject:css -->
+		<!-- endinject -->
+	</head>
+
+	<body data-template="blog-list">
+		{% include "_partials/o-header.njk" %}
+
+		<section class="o-main py-5 mb-4">
+			<div class="container">
+				<h1>{{ BLOGLIST.title }}</h1>
+				{% if BLOGLIST.excerpt %}
+					<div class="lead mb-5">{{ BLOGLIST.excerpt }}</div>
+				{% endif %}
+				{% for item in PAGINATE %}
+					{% include "_partials/c-blog__item.njk" %}
+				{% endfor %}
+			</div>
+		</section>
+
+		{% set pages = BLOG | length / SITE.blogPaginateLimit %}
+		<nav class="container">
+			<ul class="pagination">
+				{% for i in range(0, pages) %}
+					{% if i == 0 %}
+						{% set href = '/blog/' %}
+					{% else %}
+						{% set href = 'page-' + loop.index + '.html' %}
+					{% endif %}
+					{% if loop.index0 == active %}
+						{% set activeClass = 'active' %}
+					{% else %}
+						{% set activeClass = '' %}
+					{% endif %}
+
+					<li class="page-item {{ activeClass }}">
+						<a class="page-link" href="{{ href }}">{{ loop.index }}</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</nav>
+
+		{% include "_partials/o-footer.njk" %}
+
+		<!-- inject: bootstrap js -->
+		<!-- inject:js -->
+		<!-- endinject -->
+	</body>
+
+</html>

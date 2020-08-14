@@ -1,0 +1,15 @@
+<div class="c-blog__item mb-4">
+	<h3 class="c-blog__title">{{ item.title }}</h3>
+
+	{% if item.entity_status and item.entity_status.date  %}
+		<div class="c-blog__date text-muted">{{ item.entity_status.date | date('D. MMMM YYYY') }}</div>
+	{% endif %}
+
+	{% if item.excerpt %}
+		<div class="c-blog__content mb-1">{{ item.excerpt }}</div>
+	{% endif %}
+
+	{% if item.show_detail === true and item.path %}
+		<a class="c-blog__link" href="{{ item.path }}">Read more</a>
+	{% endif %}
+</div>

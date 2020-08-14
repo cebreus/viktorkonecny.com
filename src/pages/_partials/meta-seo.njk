@@ -1,0 +1,19 @@
+{% if seo_things[0].seo_robots %}
+	<meta name="robots" content="{{ seo_things[0].seo_robots }}">
+{% endif %}
+
+{% if seo_things[0].seo_canonical %}
+	<link rel="canonical" href="{{ seo_things[0].seo_canonical }}">
+{% endif %}
+
+{% if seo_things[0].seo_title %}
+	<title>{{ seo_things[0].seo_title }}</title>
+{% endif %}
+
+{% if seo_things[0].seo_description %}
+	<meta name="description" content="{{ seo_things[0].seo_description }}">
+{% endif %}
+
+{% if SITE.meta.author and SITE.meta.author | length %}
+	<meta name="author" content="{{ SITE.meta.author }}">
+{% endif %}
