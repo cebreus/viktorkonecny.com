@@ -14,12 +14,7 @@ const cmsBase = './content';
 
 const sassBase = `${devBase}/scss`;
 const sassBuild = `${buildBase}/css`;
-const sassAll = [
-  `${sassBase}/*.scss`,
-  `!${sassBase}/_*.scss`,
-  `!${sassBase}/u-*.scss`,
-];
-
+const sassAll = [`${sassBase}/*.scss`, `!${sassBase}/_*.scss`];
 const sassCustom = [
   `${sassBase}/custom.scss`,
   `${sassBase}/c-*.scss`,
@@ -48,11 +43,7 @@ const sourceMarkdownBuild = tempBase;
 // --------------
 
 const tplBase = `${devBase}/pages`;
-const tplMain = [
-  `${tplBase}/**/*.html`,
-  `!${tplBase}/*/blog-detail.html`,
-  `!${tplBase}/*/blog-index.html`,
-];
+const tplMain = [`${tplBase}/**/*.*`];
 const tplBuild = `${buildBase}`;
 const tplBuildBlog = `${buildBase}/blog`;
 const tplDataset = `${tempBase}/dataset.json`;
@@ -69,13 +60,13 @@ const gfxBase = `${devBase}/gfx`;
 const gfxBuild = `${buildBase}/images`;
 
 const svgBase = `${gfxBase}/**`;
-const svgImages = [`${svgBase}/*.svg`, `!${devBase}/favicon/**/*.*`];
+const svgImages = `${svgBase}/*.svg`;
 
 const jpgBase = `${gfxBase}/**`;
-const jpgImages = [`${jpgBase}/*.jpg`, `!${devBase}/favicon/**/*.*`];
+const jpgImages = `${jpgBase}/*.jpg`;
 
 const pngBase = `${gfxBase}/**`;
-const pngImages = [`${pngBase}/*.png`, `!${pngBase}/favicon/**/*.*`];
+const pngImages = `${pngBase}/*.png`;
 
 // JavaScript
 // --------------
@@ -86,9 +77,9 @@ const jsBuild = `${buildBase}/js`;
 const injectJs = `${jsBuild}/*.js`;
 
 const injectCdnJs = [
-  '<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>',
-  '<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha256-/ijcOLwFf26xEYAjW75FizKVo5tnTYiQddPZoLUHHZ8=" crossorigin="anonymous"></script>',
-  '<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>',
+  // '<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>',
+  // '<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha256-/ijcOLwFf26xEYAjW75FizKVo5tnTYiQddPZoLUHHZ8=" crossorigin="anonymous"></script>',
+  // '<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>',
 ];
 
 // Modules & Plugins
@@ -130,15 +121,12 @@ module.exports = {
   tplMain: tplMain,
   tplBuild: tplBuild,
   tplBuildBlog: tplBuildBlog,
-  blogDatasetFolder: blogDatasetFolder,
-  blogListTemplate: blogListTemplate,
   tplDataset: tplDataset,
-  tplBlogDataset: tplDataset,
   tplBlogDatasetFolder: tplBlogDatasetFolder,
   tplBlogDetail: tplBlogDetail,
-
-
-
+  tplBlogDataset: tplDataset,
+  blogDatasetFolder: blogDatasetFolder,
+  blogListTemplate: blogListTemplate,
   injectCdnJs: injectCdnJs,
   jsFiles: jsFiles,
   jsBuild: jsBuild,
@@ -150,5 +138,4 @@ module.exports = {
   pngImages: pngImages,
   fontloadFile: fontloadFile,
   fontLoadConfig: fontLoadConfig,
-
 };
