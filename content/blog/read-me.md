@@ -1,13 +1,13 @@
 ---
 type: blog-post
-title: Ream me article
-excerpt:
+title: Negenerovat
+excerpt: 
 show_detail: true
 featured: false
 entity_status:
   date: 2020-01-02T11:00:00.000+00:00
   updated_at: 2020-01-02T13:00:00.000+00:00
-  workflow_step: publish
+  workflow_step: draft
 seo:
   seo_keywords: []
   seo_robots: index,follow
@@ -15,7 +15,7 @@ seo:
   seo_title: ''
   seo_description: ''
   seo_iclude_to_sitemap: false
-  canonical:
+  canonical: 
 open_graph:
   type: article
   use: false
@@ -25,11 +25,11 @@ open_graph:
 twitter_cards:
   type: summary_large_image
   use: false
-  title:
-  description:
+  title: 
+  description: 
   image: []
----
 
+---
 ### What is it?
 
 A [README](https://en.wikipedia.org/wiki/README) is a text file that introduces and explains a project. It contains information that is commonly required to understand what the project is about.

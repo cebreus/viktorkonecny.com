@@ -1,0 +1,104 @@
+---
+label: Blog post
+hide_body: false
+display_field: title
+fields:
+- type: text
+  name: type
+  label: type
+  hidden: true
+  default: blog-post
+- type: text
+  name: title
+  label: title
+- type: text
+  name: excerpt
+  label: excerpt
+- type: field_group
+  name: entity_status
+  label: entity_status
+  fields:
+  - type: datetime
+    name: date
+    label: date
+  - type: datetime
+    name: updated_at
+    label: updated_at
+  - name: workflow_step
+    type: select
+    default: draft
+    config:
+      required: false
+      options:
+      - draft
+      - publish
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: workflow_step
+- type: field_group
+  name: seo
+  label: seo
+  fields:
+  - type: list
+    name: seo_keywords
+    label: seo_keywords
+  - type: text
+    name: seo_robots
+    label: seo_robots
+  - type: text
+    name: slug
+    label: slug
+    hidden: true
+  - type: text
+    name: seo_title
+    label: seo_title
+  - type: text
+    name: seo_description
+    label: seo_description
+  - type: boolean
+    name: seo_iclude_to_sitemap
+    label: seo_iclude_to_sitemap
+  - type: text
+    name: canonical
+    label: canonical
+- type: field_group
+  name: open_graph
+  label: open_graph
+  fields:
+  - type: boolean
+    name: use
+    label: use
+  - type: text
+    name: type
+    label: type
+  - type: text
+    name: title
+    label: title
+  - type: text
+    name: description
+    label: description
+  - type: list
+    name: image
+    label: image
+- type: field_group
+  name: twitter_cards
+  label: twitter_cards
+  fields:
+  - type: boolean
+    name: use
+    label: use
+  - type: text
+    name: type
+    label: type
+  - type: text
+    name: title
+    label: title
+  - type: text
+    name: description
+    label: description
+  - type: list
+    name: image
+    label: image

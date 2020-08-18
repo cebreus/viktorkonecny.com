@@ -7,13 +7,13 @@ featured: true
 slug: test-featured-state-tags
 author: content/blog-authors/emil.md
 tags:
-  - Frontend
-  - fastandcomfy.io
-  - Emil
+- Frontend
+- fastandcomfy.io
+- Emil
 entity_status:
-  date: 2020-01-05T11:00:00.000+00:00
+  date: 2020-01-05T11:00:00Z
   updated_at: 2020-01-05T13:00:00.000+00:00
-  workflow_step: publish
+  
 seo:
   seo_keywords: []
   seo_robots: index,follow
@@ -32,11 +32,11 @@ open_graph:
 twitter_cards:
   type: summary_large_image
   use: false
-  title:
-  description:
+  title: 
+  description: 
   image: []
----
 
+---
 # Testovací článek
 
 ## Text

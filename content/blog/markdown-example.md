@@ -1,13 +1,13 @@
 ---
 type: blog-post
 title: Markdown example
-excerpt:
+excerpt: 
 show_detail: true
 featured: true
 entity_status:
   date: 2020-01-01T11:00:00.000+00:00
   updated_at: 2020-01-01T13:00:00.000+00:00
-  workflow_step: publish
+  
 seo:
   seo_keywords: []
   seo_robots: index,follow
@@ -15,7 +15,7 @@ seo:
   seo_title: ''
   seo_description: ''
   seo_iclude_to_sitemap: false
-  canonical:
+  canonical: 
 open_graph:
   type: article
   use: false
@@ -25,11 +25,11 @@ open_graph:
 twitter_cards:
   type: summary_large_image
   use: false
-  title:
-  description:
+  title: 
+  description: 
   image: []
----
 
+---
 # h1 Heading 8-)
 
 ## h2 Heading
