@@ -17,35 +17,14 @@
     {% include "_partials/meta-seo.njk" %}
     {% include "_partials/meta-open-graph.njk" %}
     {% include "_partials/meta-twitter-cards.njk" %}
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    
     <!-- inject:css -->
     <!-- endinject -->
     {% set pageContetId = INDEX %}
 
-    <body data-template="index">
+    <body data-template="index" data-spy="scroll" data-target="#navbarDefault">
       {% include "_partials/o-header.njk" %}
-
-      <article class="o-main py-3">
-        <div class="container">
-          <h1>{{ INDEX.h1 }}</h1>
-        </div>
-      </article>
-
-      <section class="c-blog py-3">
-        <div class="container">
-
-          <!-- Limit 3 articles -->
-          {% for item in BLOG %}
-            {% include "_partials/c-blog__item.njk" %}
-          {% endfor %}
-        </div>
-      </section>
-
+      {% include "_partials/main.njk" %}
       {% include "_partials/o-footer.njk" %}
-
-      <!-- inject: bootstrap js -->
-      <!-- inject:js -->
-      <!-- endinject -->
     </body>
-
   </html>
