@@ -23,8 +23,21 @@
     {% set pageContetId = INDEX %}
 
     <body data-template="index" data-spy="scroll" data-target="#navbarDefault">
-      {% include "_partials/o-header.njk" %}
-      {% include "_partials/main.njk" %}
+      <main>
+        {% include "_partials/o-header.njk" %}
+        {% include "_partials/theme.njk" %}
+        <hr class="d-sm-none">
+        {% include "_partials/o-me.njk" %}
+        <hr>
+        {% include "_partials/sluzby.njk" %}
+        <hr>
+        {% include "_partials/individualni-online-plan.njk" %}
+        <hr>
+        {% include "_partials/c-blog__list.njk" %}
+        <hr>
+        {% include "_partials/form--contactus.njk" %}
+        {% include "_partials/map.njk" %}
+      </main>
       {% include "_partials/o-footer.njk" %}
     </body>
   </html>
