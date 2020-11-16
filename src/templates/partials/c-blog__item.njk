@@ -1,0 +1,37 @@
+<div class="col mb-4">
+	<div class="card c-blog__item h-100">
+		<div class="card-img-top">
+			{% if item.image[0] %}
+				{# <img src="https://res.cloudinary.com/hudebnipodyji/f_auto,q_auto,dpr_auto,c_thumb,w_350,h_233{{ item.image[0] }}" alt="" presentation=""> #}
+				<img src="https://res.cloudinary.com/hudebnipodyji/f_auto,q_auto,dpr_auto,c_fill,g_faces,w_350,h_233{{ item.image[0] }}" alt="" presentation="">
+			{% endif %}
+		</div>
+		<div class="card-body">
+			<h3 class="card-title c-blog__title">{{ item.title }}</h3>
+			{% if item.subtitle %}
+				<div class="card-text c-blog__content mb-1">{{ item.subtitle }}</div>
+			{% endif %}
+		</div>
+		<div class="card-footer pt-0">
+			<ul>
+				{% if item.startDate  %}
+					<li class="c-blog__date">
+						{{ item.startDate | date('D. MMMM YYYY') }}
+					</li>
+				{% endif %}
+				{% if item.startDate  %}
+					<li class="c-blog__location">
+						{{ item.location.addressLocality }}{% if item.location.addressLocality|length and item.location.name|length %},{% endif %}
+						{{ item.location.name }}
+					</li>
+				{% endif %}
+			</ul>
+
+			{% if item.showDetail  %}
+				<a class="c-blog__link" href="/blog/{{ item.uid }}/">
+					<span class="sr-only">Více o koncertu</span>
+				</a>
+			{% endif %}
+		</div>
+	</div>
+</div>

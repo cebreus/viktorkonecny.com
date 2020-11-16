@@ -7,13 +7,13 @@ featured: true
 slug: test-featured-state-tags
 author: content/blog-authors/emil.md
 tags:
-- Frontend
-- fastandcomfy.io
-- Emil
+  - Frontend
+  - fastandcomfy.io
+  - Emil
 entity_status:
   date: 2020-01-05T11:00:00Z
   updated_at: 2020-01-05T13:00:00.000+00:00
-  
+
 seo:
   seo_keywords: []
   seo_robots: index,follow
@@ -32,11 +32,11 @@ open_graph:
 twitter_cards:
   type: summary_large_image
   use: false
-  title: 
-  description: 
+  title:
+  description:
   image: []
-
 ---
+
 # Testovací článek
 
 ## Text
@@ -75,8 +75,8 @@ _toto je kruziva_
 
 ## Unordered list
 
-- polozka 1
-- polozka 2
+-   polozka 1
+-   polozka 2
 
 ## Ordered list
 
@@ -89,4 +89,4 @@ _toto je kruziva_
 
 ## Image
 
-![BANAN](assets/static/mike-dorner-173502-unsplash.jpg 'BANAN')
+![BANAN](assets/static/mike-dorner-173502-unsplash.jpg "BANAN")

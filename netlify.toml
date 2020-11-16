@@ -1,9 +1,106 @@
+[[headers]]
+  for = "/"
+  [headers.values]
+    # X-Frame-Options = "SAMEORIGIN" # je nahrazeno 'Content-Security-Policy'
+    X-Xss-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Feature-Policy = "microphone 'none'; camera 'none'; usb 'none'"
+    Content-Security-Policy = "frame-ancestors 'self'; base-uri 'self'"
+    Referrer-Policy =	"no-referrer-when-downgrade"
+    Strict-Transport-Security	= "max-age=15768000"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Strict-Transport-Security = "max-age=15768000"
+    
+[[headers]]
+  for = "*.html"
+  [headers.values]
+    X-UA-Compatible = "ie=edge"
+    X-Xss-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Feature-Policy = "microphone 'none', camera 'none', usb 'none'"
+    Content-Security-Policy = "frame-ancestors 'self'; base-uri 'self'"
+    Referrer-Policy =	"no-referrer-when-downgrade"
+    Strict-Transport-Security	= "max-age=15768000"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Content-Type = "text/javascript; charset=UTF-8"
+    Cache-Control = "immutable, max-age=31536000"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "immutable, max-age=31536000"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "*.ico"
+  [headers.values]
+    Content-Type = "image/x-icon"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "*.svg"
+  [headers.values]
+    Content-Type = "image/svg+xml; charset=UTF-8"
+    Cache-Control = "immutable, max-age=31536000"
+    Strict-Transport-Security	= "max-age=15768000"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "*.woff"
+  [headers.values]
+    Content-Type = "font/woff"
+    Cache-Control = "immutable, max-age=31556926"
+    X-Content-Type-Options = "nosniff"
+
+# [[plugins]]
+# package = "netlify-deployment-hours-plugin"
+#   [plugins.inputs]
+#   # A cron-like expression that expresses when a deployment can occur
+#   # Seconds | Minutes| Hours | Day of a month | Month
+#   expression = "* * 0-24 * *"
+#   # tz database value that expresses the timezone of the expression
+#   timezone = "Europe/Prague"
+
+[[plugins]]
+package = "netlify-plugin-checklinks"
+  [plugins.inputs]
+  entryPoints = [
+    "*.html",
+  ]
+  recursive = true
+  pretty = true
+  skipPatterns = [
+    "#void"
+  ]
+  checkExternal = false
+  followSourceMaps = false
+
+[[plugins]]
+package = "netlify-plugin-no-more-404"
+
+# [[plugins]]
+#   package = "@netlify/plugin-lighthouse"
+
+# [[plugins]]
+#   package = "netlify-plugin-inline-critical-css"
+
+# [[plugins]]
+# package = "netlify-plugin-visual-diff"
+
 [[plugins]]
 package = "@netlify/plugin-sitemap"
-
   [plugins.inputs]
   exclude = [
-    # By file Path
-    './dist/404*',
-    './dist/admin/**',
+    './build/404*',
+    './build/404/*',
+    './build/admin/*',
+    './build/blog/page-*',
   ]

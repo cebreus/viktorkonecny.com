@@ -7,13 +7,13 @@ const plumber = require('gulp-plumber');
 
 /**
  * @description Merge JSON files into one; each file in new node
- * @param {string,object} input Path with filter to source files
+ * @param {string, object} input Path with filter to source files
  * @param {string} output Path to save processed files
  * @param {string} outputFilename Output file name
  * @return {stream} Processed file
  */
 
-const buildDataset = (input, output, outputFilename, cb) => {
+const datasetBuild = (input, output, outputFilename, cb) => {
   return gulp
     .src(input)
     .pipe(
@@ -22,26 +22,21 @@ const buildDataset = (input, output, outputFilename, cb) => {
         concatArrays: true,
         mergeArrays: false,
         edit: (json, file) => {
-          let filename = path.basename(file.path),
-            primaryKey = filename.replace(path.extname(filename), '');
-
           let data = {};
-          if (file.path.includes('blog')) {
-            if (!file.path.includes('index')) {
-              json['path'] = `/blog/${primaryKey}/`;
-              data['BLOG'] = [json];
-              data['BLOG'] = data['BLOG'].sort(
-                (a, b) =>
-                  new Date(b['entity_status'].date) -
-                  new Date(a['entity_status'].date)
-              );
-            } else {
-              data['BLOGLIST'] = json;
-            }
-          } else if (primaryKey === 'dataset') {
-            data = json;
-          } else {
+          let fileName = path.parse(file.path).name;
+          let fileDir = path.parse(file.path).dir;
+
+          if (fileName === 'site') {
+            let primaryKey = fileName;
             data[primaryKey.toUpperCase()] = json;
+          } else if (fileDir.includes('dataset-')) {
+            let primaryKey = fileDir
+              .split(path.sep)
+              .pop()
+              .replace('_dataset-', '');
+            data[primaryKey.toUpperCase()] = [json].sort(
+              (a, b) => new Date(b['startDate']) - new Date(a['startDate'])
+            );
           }
           return data;
         },
@@ -51,4 +46,4 @@ const buildDataset = (input, output, outputFilename, cb) => {
     .on('end', cb);
 };
 
-module.exports = buildDataset;
+module.exports = datasetBuild;

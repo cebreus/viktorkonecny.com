@@ -1,13 +1,13 @@
 ---
 type: blog-post
 title: Markdown example
-excerpt: 
+excerpt:
 show_detail: true
 featured: true
 entity_status:
   date: 2020-01-01T11:00:00.000+00:00
   updated_at: 2020-01-01T13:00:00.000+00:00
-  
+
 seo:
   seo_keywords: []
   seo_robots: index,follow
@@ -15,7 +15,7 @@ seo:
   seo_title: ''
   seo_description: ''
   seo_iclude_to_sitemap: false
-  canonical: 
+  canonical:
 open_graph:
   type: article
   use: false
@@ -25,11 +25,11 @@ open_graph:
 twitter_cards:
   type: summary_large_image
   use: false
-  title: 
-  description: 
+  title:
+  description:
   image: []
-
 ---
+
 # h1 Heading 8-)
 
 ## h2 Heading
@@ -44,11 +44,11 @@ twitter_cards:
 
 ## Horizontal Rules
 
----
+* * *
 
----
+* * *
 
----
+* * *
 
 ## Typographic replacements
 
@@ -86,19 +86,19 @@ _This is italic text_
 
 Unordered
 
-- Create a list by starting a line with `+`, `-`, or `*`
-- Sub-lists are made by indenting 2 spaces:
-  - Marker character change forces new list start:
-    - Ac tristique libero volutpat at
-    * Facilisis in pretium nisl aliquet
-    - Nulla volutpat aliquam velit
-- Very easy!
+-   Create a list by starting a line with `+`, `-`, or `*`
+-   Sub-lists are made by indenting 2 spaces:
+    -   Marker character change forces new list start:
+        -   Ac tristique libero volutpat at
+        -   Facilisis in pretium nisl aliquet
+        -   Nulla volutpat aliquam velit
+-   Very easy!
 
 Ordered
 
-1. Lorem ipsum dolor sit amet
-2. Consectetur adipiscing elit
-3. Integer molestie lorem at massa
+1.  Lorem ipsum dolor sit amet
+2.  Consectetur adipiscing elit
+3.  Integer molestie lorem at massa
 
 1) You can use sequential numbers...
 1) ...or keep all the numbers as `1.`
@@ -106,7 +106,7 @@ Ordered
 Start numbering with offset:
 
 57. foo
-1. bar
+58. bar
 
 ## Code
 
@@ -121,9 +121,7 @@ Indented code
 
 Block code "fences"
 
-```
-Sample text here...
-```
+    Sample text here...
 
 Syntax highlighting
 
@@ -155,14 +153,14 @@ Right aligned columns
 
 [link text](http://dev.nodeca.com)
 
-[link with title](http://nodeca.github.io/pica/demo/ 'title text!')
+[link with title](http://nodeca.github.io/pica/demo/ "title text!")
 
-Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+Autoconverted link <https://github.com/nodeca/pica> (enable linkify to see)
 
 ## Images
 
 ![Minion](https://octodex.github.com/images/minion.png)
-![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg 'The Stormtroopocat')
+![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
 
 Like links, Images also have a footnote style syntax
 
@@ -170,7 +168,7 @@ Like links, Images also have a footnote style syntax
 
 With a reference later in the document defining the URL location:
 
-[id]: https://octodex.github.com/images/dojocat.jpg 'The Dojocat'
+[id]: https://octodex.github.com/images/dojocat.jpg "The Dojocat"
 
 ## Plugins
 
@@ -187,14 +185,14 @@ see [how to change output](https://github.com/markdown-it/markdown-it-emoji#chan
 
 ### [Subscript](https://github.com/markdown-it/markdown-it-sub) / [Superscript](https://github.com/markdown-it/markdown-it-sup)
 
-- 19^th^
-- H~2~O
+-   19^th^
+-   H~2~O
 
-### [\<ins>](https://github.com/markdown-it/markdown-it-ins)
+### [\\<ins>](https://github.com/markdown-it/markdown-it-ins)
 
-++Inserted text++
+\++Inserted text++
 
-### [\<mark>](https://github.com/markdown-it/markdown-it-mark)
+### [\\<mark>](https://github.com/markdown-it/markdown-it-mark)
 
 ==Marked text==
 
@@ -208,11 +206,11 @@ Inline footnote^[Text of inline footnote] definition.
 
 Duplicated footnote reference[^second].
 
-[^first]: Footnote **can have markup**
+[^first]&#x3A; Footnote **can have markup**
 
-  and multiple paragraphs.
+and multiple paragraphs.
 
-[^second]: Footnote text.
+[^second]&#x3A; Footnote text.
 
 ### [Definition lists](https://github.com/markdown-it/markdown-it-deflist)
 
@@ -244,7 +242,7 @@ This is HTML abbreviation example.
 
 It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
 
-\*[HTML]: Hyper Text Markup Language
+\*[HTML]&#x3A; Hyper Text Markup Language
 
 ### [Custom containers](https://github.com/markdown-it/markdown-it-container)
 

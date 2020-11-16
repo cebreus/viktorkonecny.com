@@ -10,16 +10,18 @@ const purgecss = require('gulp-purgecss');
  * @return {stream} processed files
  */
 
-const purgeCss = (inputCss, inputHtml, outputCss) => {
+const purgeCss = (inputCss, inputHtml, outputCss, cb) => {
   return gulp
     .src(inputCss)
     .pipe(plumber())
     .pipe(
       purgecss({
         content: inputHtml,
+        // rejected: true,
       })
     )
-    .pipe(gulp.dest(outputCss));
+    .pipe(gulp.dest(outputCss))
+    .on('end', cb);
 };
 
 module.exports = purgeCss;

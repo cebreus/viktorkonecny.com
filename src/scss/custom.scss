@@ -10,7 +10,7 @@
 // Set minimum reasonable width on very small devices
 body {
   min-width: 320px;
-  font-family: 'Poppins', sans-serif;
+  font-family: Poppins, sans-serif;
   letter-spacing: 0.06rem;
 
   @include media-breakpoint-down(sm) {
@@ -44,8 +44,9 @@ ul li {
 
 .navbar {
   padding-top: 2.5rem;
-  text-transform: uppercase;
   font-weight: $font-weight-bolder;
+  text-transform: uppercase;
+
   @include transition;
 
   @include media-breakpoint-down(md) {
@@ -54,6 +55,7 @@ ul li {
 
   img {
     height: 60px;
+
     @include transition;
   }
 
@@ -74,8 +76,8 @@ ul li {
     }
 
     @include media-breakpoint-down(md) {
-      font-size: 0.9rem;
       margin-right: 10px;
+      font-size: 0.9rem;
     }
   }
 }
@@ -85,8 +87,8 @@ ul li {
 }
 
 h2 {
-  color: $primary;
   font-weight: $font-weight-bold;
+  color: $primary;
   letter-spacing: 0.02rem;
 
   @include media-breakpoint-down(sm) {
@@ -96,20 +98,20 @@ h2 {
   span {
     display: block;
     margin-bottom: 0.3rem;
+    font-weight: $font-weight-bolder;
     font-size: 1rem;
     text-transform: uppercase;
     color: $white;
-    font-weight: $font-weight-bolder;
     letter-spacing: 0.3rem;
 
-    &:before {
+    &::before {
+      content: '';
       display: inline-block;
       width: 75px;
       height: 2px;
       margin-right: 25px;
-      background: $white;
-      content: '';
       vertical-align: 0.3rem;
+      background: $white;
     }
   }
 }
@@ -123,8 +125,8 @@ h3 {
 }
 
 .btn {
-  box-shadow: none !important;
   text-transform: uppercase;
+  box-shadow: none !important;
 
   .arrow {
     display: inline-block;
@@ -140,8 +142,8 @@ h3 {
 }
 
 .btn-primary:hover {
-  background: $white;
   border-color: $white;
+  background: $white;
 
   .arrow {
     background-position: 0 0 !important;
@@ -149,9 +151,9 @@ h3 {
 }
 
 .btn-light:hover {
-  background: $black;
-  border-color: $black;
   color: $white;
+  border-color: $black;
+  background: $black;
 }
 
 .form-group {
@@ -159,9 +161,9 @@ h3 {
 }
 
 .form-control {
-  box-shadow: none !important;
   text-transform: uppercase;
   border-bottom: 1px solid rgba($white, 0.4);
+  box-shadow: none !important;
 
   @include media-breakpoint-down(sm) {
     font-size: 0.85rem;
@@ -169,16 +171,15 @@ h3 {
 }
 
 .custom-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  cursor: pointer;
   background: url(../../images/custom-select.svg) 100% 50% no-repeat;
+  cursor: pointer;
+  appearance: none;
 }
 
+// stylelint-disable-line selector-no-qualifying-type
 textarea.form-control {
-  border-top: 1px solid rgba($white, 0.4);
   height: 120px;
+  border-top: 1px solid rgba($white, 0.4);
 }
 
 .header-contacts {
@@ -227,30 +228,31 @@ textarea.form-control {
   .theme-img {
     position: relative;
 
-    &:before {
+    &::before {
+      content: '';
       position: absolute;
-      left: 0;
-      bottom: 0;
       right: 0;
+      bottom: 0;
+      left: 0;
       display: block;
+      height: 40%;
+
       @include gradient-y(
         $start-color: rgba($black, 0),
         $end-color: $black,
         $start-percent: 0%,
         $end-percent: 100%
       );
-      content: '';
-      height: 40%;
     }
   }
 }
 
 .jumbotron {
   position: absolute;
-  left: 0;
   top: 0;
   right: 0;
   bottom: 0;
+  left: 0;
   padding: 0;
   background: none;
 
@@ -286,10 +288,10 @@ textarea.form-control {
     }
 
     strong {
+      font-weight: $font-weight-bold;
       font-size: 6rem;
       line-height: 0.95;
       color: $primary;
-      font-weight: $font-weight-bold;
 
       @include media-breakpoint-down(lg) {
         font-size: 5rem;
@@ -328,9 +330,9 @@ textarea.form-control {
 }
 
 .ml-minus-5 {
-  margin-left: -200px;
   position: relative;
   z-index: 5;
+  margin-left: -200px;
 
   @include media-breakpoint-only(md) {
     margin-left: -100px;
@@ -349,6 +351,7 @@ textarea.form-control {
   @include media-breakpoint-up(md) {
     height: 100%;
   }
+
   background: $primary;
 }
 
@@ -365,9 +368,9 @@ textarea.form-control {
   }
 
   &.block-light {
-    color: $black;
-    font-size: 1.125rem;
     font-weight: $font-weight-bolder;
+    font-size: 1.125rem;
+    color: $black;
     background: $primary;
 
     @include media-breakpoint-down(sm) {
@@ -380,8 +383,8 @@ textarea.form-control {
     line-height: 1;
 
     strong {
-      font-size: 3.6rem;
       font-weight: $font-weight-bold;
+      font-size: 3.6rem;
 
       @include media-breakpoint-only(xs) {
         font-size: 3rem;
@@ -397,20 +400,20 @@ textarea.form-control {
       position: relative;
       padding: 0 0 0.75rem 2rem;
 
-      &:before {
-        display: block;
+      &::before {
+        content: '';
         position: absolute;
         top: 0.8rem;
         left: 0;
-        margin-right: 0.7rem;
+        display: block;
         width: 1rem;
         height: 3px;
+        margin-right: 0.7rem;
         background: $black;
-        content: '';
 
         @include media-breakpoint-down(sm) {
-          height: 2px;
           top: 0.7rem;
+          height: 2px;
         }
       }
     }
@@ -428,24 +431,26 @@ textarea.form-control {
   .acc-heading {
     position: relative;
     padding: 2rem 70px;
-    cursor: pointer;
     font-weight: $font-weight-bold;
+    cursor: pointer;
+
     @include transition;
 
     @include media-breakpoint-down(sm) {
       padding: 1rem 30px;
     }
 
-    &:before,
-    &:after {
-      display: block;
+    &::before,
+    &::after {
+      content: '';
       position: absolute;
+      top: 2.75rem;
+      left: -10px;
+      display: block;
       width: 19px;
       height: 3px;
-      left: -10px;
-      top: 2.75rem;
       background: $primary;
-      content: '';
+
       @include transition;
 
       @include media-breakpoint-down(sm) {
@@ -456,7 +461,7 @@ textarea.form-control {
     &.collapsed {
       color: $primary;
 
-      &:after {
+      &::after {
         transform: rotate(90deg);
       }
     }
@@ -477,8 +482,8 @@ textarea.form-control {
 
 .contacts {
   margin-bottom: 5rem;
-  text-transform: uppercase;
   font-size: 1.25rem;
+  text-transform: uppercase;
   letter-spacing: 0.25rem;
 
   @include media-breakpoint-down(lg) {
@@ -494,9 +499,10 @@ textarea.form-control {
     display: inline-block;
     padding: 0.6rem 1rem 0.5rem;
     margin-bottom: -1px;
-    border: darken($white, 80%) 1px solid;
-    @include transition;
     white-space: nowrap;
+    border: darken($white, 80%) 1px solid;
+
+    @include transition;
 
     @include media-breakpoint-only(xs) {
       padding: 0.5rem 0.75rem 0.4rem;
@@ -507,6 +513,7 @@ textarea.form-control {
       background: darken($white, 80%);
     }
 
+    // stylelint-disable selector-no-qualifying-type
     span {
       display: inline-block;
       width: 15px;
@@ -523,6 +530,7 @@ textarea.form-control {
         background-position: -30px 100%;
       }
     }
+    // stylelint-enable selector-no-qualifying-type
   }
 }
 
@@ -536,7 +544,6 @@ textarea.form-control {
 }
 
 iframe {
-  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
 }
 
@@ -544,28 +551,28 @@ form label {
   display: none;
 }
 
-.short_explanation {
-  font-size: 0.6rem;
-}
+// .short_explanation {
+//   font-size: 0.6rem;
+// }
 
-.spmhidip {
-  display: none;
-  width: 10px;
-  height: 3px;
-}
+// .spmhidip {
+//   display: none;
+//   width: 10px;
+//   height: 3px;
+// }
 
-#fg_crdiv {
-  font-family: Arial, sans-serif;
-  font-size: 0.3em;
-  opacity: 0.2;
-  -moz-opacity: 0.2;
-  filter: alpha(opacity=20);
-}
+// #fg_crdiv {
+//   -moz-opacity: 0.2;
+//   opacity: 0.2;
+//   font-size: 0.3em;
+//   font-family: Arial, sans-serif;
+//   filter: alpha(opacity=20);
+// }
 
-#fg_crdiv p {
-  display: none;
-}
+// #fg_crdiv p {
+//   display: none;
+// }
 
-.error {
-  font-size: 0.75rem;
-}
+// .error {
+//   font-size: 0.75rem;
+// }

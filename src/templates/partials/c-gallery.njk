@@ -1,0 +1,24 @@
+<div class="c-gallery form-row row-cols-2 row-cols-md-3 row-cols-lg-4 mb-5">
+	{% for image in item.image %}
+		{% set loopIndex = loop.index %}
+		{% set loopLast = loop.last %}
+		{% set thisId = 'pic-' + item.title | wordcount + item.title | length  %}
+		<div class="col mb-1">
+			<a id="{{ thisId }}-{{ loopIndex }}" href="#{{ thisId }}-{{ loopIndex }}" aria-label="Fotografie z koncertu {{ item.title }}">
+				<img src="https://res.cloudinary.com/hudebnipodyji/f_auto,q_auto,dpr_auto,g_faces,c_fill,w_280,h_187{{ image }}" alt="" loading="lazy" class="cssbox_thumb">
+				<span class="cssbox_full"><img src="https://res.cloudinary.com/hudebnipodyji/f_auto,q_auto,dpr_auto,w_1280{{ image }}" loading="lazy"></span>
+			</a>
+			<a class="cssbox_close" href="#void"></a>
+			{% if loopIndex > 1 %}
+				<a class="cssbox_prev" href="#{{ thisId }}-{{ loopIndex - 1 }}">
+					<span class="sr-only">&lt;</span>
+				</a>
+			{% endif %}
+			{% if loopIndex < loop.length %}
+				<a class="cssbox_next" href="#{{ thisId }}-{{ loopIndex + 1 }}">
+					<span class="sr-only">&gt;</span>
+				</a>
+			{% endif %}
+		</div>
+	{% endfor %}
+</div>

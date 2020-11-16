@@ -1,0 +1,11 @@
+<section class="c-blog" role="complementary">
+  <div class="container">
+    <h2>Nadcházející</h2>
+    <div class="row row-cols-lg-3 row-cols-sm-2 row-cols-1">
+      {% for item in BLOG | sort(true, false, startDate) %} {% if
+      toDate(item.startDate) >= toDate() and item.entity_status.workflow_step
+      === 'publish' %} {% include "partials/c-blog__item.njk" %} {% endif %} {%
+      endfor %}
+    </div>
+  </div>
+</section>

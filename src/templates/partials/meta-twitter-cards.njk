@@ -1,0 +1,20 @@
+{% if not twitter_cards.show or twitter_cards.show !== 'true' %}
+	{# none #}
+{% elif twitter_cards.show and twitter_cards.show === 'true' %}
+	{% if twitter_cards.type %}
+		<meta name="twitter:card" content="{{ twitter_cards.type }}">
+	{% endif %}
+	<meta name="twitter:title" content="{{ twitter_cards.title or title }}">
+	<meta
+	name="twitter:description" content="{{ twitter_cards.description }}">
+	{# <meta name="twitter:url" content="{{ meta.canonical }}"> #}
+	<meta name="twitter:image" content="{{ twitter_cards.image }}">
+{% elif SITE.twitter_cards.show and SITE.twitter_cards.show === 'true' %}
+	{% if SITE.twitter_cards.type %}
+		<meta name="twitter:card" content="{{ SITE.twitter_cards.type }}">
+	{% endif %}
+	<meta name="twitter:title" content="{{ SITE.twitter_cards.title or SITE.title }}">
+	<meta name="twitter:description" content="{{ SITE.twitter_cards.description or SITE.meta.description }}">
+	<meta name="twitter:url" content="{{ SITE.meta.canonical }}">
+	<meta name="twitter:image" content="{{ SITE.twitter_cards.image }}">
+{% endif %}

@@ -1,0 +1,33 @@
+{% extends "./layout.html" %}
+
+{% set pageData = {
+	page_id: 'concerts',
+	template: 'index'
+} %}
+
+{% block content %}
+
+	<section class="o-main pt-5 pb-3" role="complementary">
+		<div class="container">
+			<h1>{{ title_h1 }}</h1>
+			{% if body %}
+				<div class="mb-5">{{ body|safe }}</div>
+			{% endif %}
+		</div>
+	</section>
+
+	<section role="main">
+		<div class="container">
+			<div class="row row-cols-lg-3 row-cols-sm-2 row-cols-1">
+				{% for item in BLOG | sort(true, false, startDate) %}
+					{% if toDate(item.startDate) >= toDate() and item.entity_status.workflow_step === 'publish' %}
+						{% include "partials/c-blog__item.njk" %}
+					{% endif %}
+				{% endfor %}
+			</div>
+			
+		</div>
+	</section>
+
+
+{% endblock %}

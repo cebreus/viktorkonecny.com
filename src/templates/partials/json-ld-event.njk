@@ -1,0 +1,122 @@
+{% filter replace(r/[\n\t]+|[ ]{2,}/g, '') %}
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Event",
+			"name": "{{ title|safe|trim }}"
+		{% if description is defined and description|length > 0 %}
+			,"description": "{{ description|striptags|safe|trim }}"
+		{% endif %}
+		{% if startDate is defined and startDate|length > 0 %}
+			,"startDate": "{{ startDate|trim }}"
+		{% endif %}
+		{% if endDate is defined and endDate|length > 0 %}
+			,"endDate": "{{ endDate|trim }}"
+		{% endif %}
+		{% if eventAttendanceMode is defined and eventAttendanceMode|length > 0 %}
+			,"eventAttendanceMode": "https://schema.org/{{ eventAttendanceMode|safe|trim }}"
+		{% endif %}
+		{% if eventStatus is defined and eventStatus|length > 0 %}
+			,"eventStatus": "https://schema.org/{{ eventStatus|safe|trim }}"
+		{% endif %}
+		{% if location.name is defined and location.name|length > 0 %}
+			,"location": {
+				"@type": "Place",
+				"name": "{{ location.name|safe|trim }}",
+			{% if location.addressLocality is defined and location.addressLocality|length > 0 %}
+				"address": {
+					"@type": "PostalAddress"
+				{% if location.streetAddress is defined and location.streetAddress|length > 0 %}
+					,"streetAddress": "{{ location.streetAddress|safe|trim }}"
+				{% endif %}
+				{% if location.addressLocality is defined and location.addressLocality|length > 0 %}
+					,"addressLocality": "{{ location.addressLocality|safe|trim }}"
+				{% endif %}
+				{% if location.postalCode is defined and location.postalCode|length > 0 %}
+					,"postalCode": "{{ location.postalCode|safe|trim }}"
+				{% endif %}
+				{% if location.addressCountry is defined and location.addressCountry|length > 0 %}
+					,"addressCountry": "{{ location.addressCountry|safe|trim }}"
+				{% endif %}
+				}
+			{% endif %}
+			}
+		{% endif %}
+		{% if organizer.name is defined and organizer.name|length > 0 %}
+			,"organizer": {
+				"@type": "{{ organizer.type|trim }}",
+				"name": "{{ organizer.name|safe|trim }}",
+				"url": "{{ organizer.url|trim }}"
+			}
+		{% endif %}
+		{% if image is defined and image|length > 0 %}
+			,"image": [
+			{% for item in image %}
+				"https://res.cloudinary.com/hudebnipodyji/f_auto,q_auto{{ item|trim }}"
+				{% if loop.index < loop.length %},
+				{% endif %}
+			{% endfor %}
+			]
+		{% endif %}
+		{% if tickets.offer is defined and tickets.offer|length > 0 %}
+			,"offers": [
+			{% for item in tickets.offer %}
+				{
+				"@type": "person"
+				{% if item.url is defined and item.url|length > 0 %}
+					,"url": "{{ item.url|safe|trim }}"
+				{% endif %}
+				{% if item.price is defined and item.price|length > 0 %}
+					,"price": "{{ item.price|trim }}"
+				{% endif %}
+				{% if item.priceCurrency is defined and item.priceCurrency|length > 0 %}
+					,"priceCurrency": "{{ item.priceCurrency|trim }}"
+				{% endif %}
+				{% if item.availability is defined and item.availability|length > 0 %}
+					,"availability": "{{ item.availability|trim }}"
+				{% endif %}
+				{% if item.validFrom is defined and item.validFrom|length > 0 %}
+					,"validFrom": "{{ item.validFrom|trim }}"
+				{% endif %}
+				}
+				{% if loop.index < loop.length %},
+				{% endif %}
+			{% endfor %}
+			]
+		{% endif %}
+		{% if performers is defined and performers|length > 0 %}
+			,"performer": [
+			{% for item in performers %}
+				{
+				"@type": "person",
+				"name": "{{ item.name|safe|trim }}"
+				{% if item.sameAs is defined and item.sameAs|length > 0 %}
+					,"sameAs": "{{ item.sameAs|trim }}"
+				{% endif %}
+				}
+				{% if loop.index < loop.length %},
+				{% endif %}
+			{% endfor %}
+			]
+		{% endif %}
+		{% if workperformed is defined and workperformed|length > 0 %}
+			,"workPerformed": [
+			{% for item in workperformed %}
+				{
+					"@type": "CreativeWork",
+					"name": "{{ item.name|safe|trim }}"
+				{% if item.abstract is defined and item.abstract|length > 0 %}
+					,"abstract": "{{ item.abstract|safe|trim|striptags }}"
+				{% endif %}
+				{% if item.byArtist is defined and item.byArtist|length > 0 %}
+					,"artist": "{{ item.byArtist|safe|trim }}"
+				{% endif %}
+				}
+				{% if loop.index < loop.length %},
+				{% endif %}
+			{% endfor %}
+			]
+		{% endif %}
+		}
+	</script>
+{% endfilter %}

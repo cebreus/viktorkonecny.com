@@ -1,0 +1,270 @@
+{% extends "layout.html" %}
+
+{% set pageData = {
+	page_id : 'blog',
+	template: 'blog-post'
+} %}
+
+{% block content %}
+
+	<article class="py-5">
+		<div class="container">
+			<h1 class="mb-5">{{ title_h1 }}</h1>
+			<div class="row justify-content-between">
+				<div class="col-lg-6 col-md-7">
+					<p class="h2">
+						{% if startDate %}
+							{{ startDate|date('D. M. YYYY v HH:mm')  }}
+						{% endif %}
+						{% if location.name is defined and location.name|length > 0 %}
+							<br>{{ location.name }}
+						{% endif %}
+						{% if location.addressLocality is defined and location.addressLocality|length > 0 %}
+							<br>{{ location.addressLocality }}
+						{% endif %}
+					</p>
+
+					{% if description is defined and description|length > 0 %}
+						<p>{{ description|safe }}</p>
+					{% endif %}
+
+					{% if body is defined and body|length > 0 %}
+						<div>{{ body|safe }}</div>
+					{% endif %}
+
+					{# <a href="#" class="btn btn-outline-primary btn-lg mb-2 mr-2">Přidat do kalendáře</a> #}
+
+					{% if facebookEventLink is defined and facebookEventLink|length > 0 %}
+						<a href="{{ facebookEventLink }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-lg mb-4 mb-md-2">Událost na Facebooku</a>
+					{% endif %}
+				</div>
+
+				{% if image is defined and image|length > 0 %}
+					<div class="col-md-5">
+						<div class="form-row row-cols-2 mt-1">
+							{% for item in image %}
+								{% set loopIndex = loop.index %}
+								{% set loopLast = loop.last %}
+								{% set thisId = 'pic-' + title | wordcount + title |length  %}
+
+								{% set wrapClass = 'col-12 mb-2' %}
+								{% set imgDimensions = 'w_445,h_297' %}
+
+								{% if image|length === 1 %}
+									{% set imgDimensions = 'w_445' %}
+								{% endif %}
+
+								{% if image|length >= 3 %}
+									{% if loopIndex === 2 or loopIndex === 3 %}
+										{% set wrapClass = 'col mb-2' %}
+										{% set imgDimensions = 'w_221,h_332' %}
+									{% endif %}
+								{% endif %}
+
+								<div class="{{ wrapClass }}">
+									<a id="{{ thisId }}-{{ loopIndex }}" href="#{{ thisId }}-{{ loopIndex }}" aria-label="Fotografie ke koncertu {{ title }}">
+										<img src="https://res.cloudinary.com/hudebnipodyji/f_auto,q_auto,dpr_auto,c_fill,g_faces,{{ imgDimensions }}{{ item }}" alt="" loading="lazy" class="cssbox_thumb">
+										<span class="cssbox_full"><img src="https://res.cloudinary.com/hudebnipodyji/f_auto,q_auto,dpr_auto,c_thumb,w_1280{{ item }}" loading="lazy"></span>
+									</a>
+									<a class="cssbox_close" href="#void"></a>
+									{% if loopIndex > 1 %}
+										<a class="cssbox_prev" href="#{{ thisId }}-{{ loopIndex - 1 }}">
+											<span class="sr-only">&lt;</span>
+										</a>
+									{% endif %}
+									{% if loopIndex < loop.length %}
+										<a class="cssbox_next" href="#{{ thisId }}-{{ loopIndex + 1 }}">
+											<span class="sr-only">&gt;</span>
+										</a>
+									{% endif %}
+								</div>
+							{% endfor %}
+						</div>
+					</div>
+				{% endif %}
+			</div>
+			<div class="row justify-content-between mt-5">
+				<div class="col-lg-8 col-md-9 mb-5">
+					{% if performers is defined and performers|length > 0 %}
+						<h2>Účinkující</h2>
+						<ul class="collapse-list mb-5">
+							{% for performer in performers %}
+								{% set loopIndex = loop.index %}
+
+								{% if performer.description or performer.sameAs %}
+									<li class="has-hover">
+
+										<input class="collapse-open" type="checkbox" id="collapse-{{ loopIndex }}">
+										<label class="collapse-btn" for="collapse-{{ loopIndex }}">
+											{% set loopIndex = loop.index %}
+											{% set loopLast = loop.last %}
+											{% if performer.name is defined and performer.name|length > 0%}
+												<strong class="text-primary d-block d-md-inline">{{ performer.name }}</strong>
+											{% endif %}
+											{% if performer.nationality is defined and performer.nationality|length > 0 %}
+												({{ performer.nationality }})
+											{% endif %}
+											{% if performer.instrument is defined and performer.instrument|length > 0 %}
+												–
+												{{performer.instrument}}
+											{% endif %}
+										</label>
+										<div class="collapse-painel">
+											<div class="collapse-inner">
+												{{ performer.description|safe|trim }}
+												{# TODO: předělat na regex #}
+												{% if performer.sameAs is defined and performer.sameAs|length > 0 %}
+													{% set sameAsShow = performer.sameAs.replace('http://', '').replace('https://', '').split('/') %}
+													<a href="{{ performer.sameAs|trim }}" target="_blank" rel="noopener noreferrer">{{ sameAsShow[0] }}</a>
+												{% endif %}
+											</div>
+										</div>
+									</li>
+								{% else %}
+									<li>
+										<div class="collapse-btn">
+											{% set loopIndex = loop.index %}
+											{% set loopLast = loop.last %}
+											{% if performer.name is defined and performer.name|length > 0  %}
+												<strong class="text-primary">{{ performer.name }}</strong>
+											{% endif %}
+											{% if performer.nationality is defined and performer.nationality|length > 0 %}
+												({{ performer.nationality }})
+											{% endif %}
+											{% if performer.instrument is defined and performer.instrument|length > 0 %}
+												–
+												{{performer.instrument}}
+											{% endif %}
+										</div>
+									{% endif %}
+								</li>
+							{% endfor %}
+						</ul>
+					{% endif %}
+
+					{% if tickets is defined and (tickets.note|length > 0 or tickets.offers|length > 0) %}
+						<h2>Vstupné</h2>
+						{% for item in tickets.offers %}
+							<p>
+								{% if item.note is defined and item.note|length > 0 %}
+									{{ item.note|safe|trim }}
+								{% endif %}
+								{% if item.price is defined %}
+									<strong class="mr-5">{{ item.price }}
+										{% if item.priceCurrency is defined and item.priceCurrency|length > 0 %}
+											{{ item.priceCurrency|trim|replace('CZK', 'Kč') }}
+										{% endif %}
+									</strong>
+								{% endif %}
+								{% if 
+									(item.url is defined and item.url|length > 0) and 
+									(item.availability is defined and item.availability|length > 0) and
+									(item.availability is defined and item.availability === 'InStock') and
+									not toDate(item.validFrom) < toDate() and
+									not toDate(startDate) > toDate()
+								 %}
+									<a class="btn btn-primary" href="{{ item.url|safe|trim }}" target="_blank" rel="noopener noreferrer">Koupit vstupenky</a>
+								{% endif %}
+							</p>
+						{% endfor %}
+						{% if tickets.note is defined and tickets.note|length > 0 %}
+							<p>{{ tickets.note|safe|trim }}</p>
+						{% endif %}
+
+					{% endif %}
+
+					{% if workperformed|length > 0 %}
+						<h2 class="mt-5">Program</h2>
+						{% for work in workperformed %}
+							<div class="row program-item">
+								<div class="col-sm">
+									{% if work.byArtist %}
+										<strong>{{ work.byArtist }}</strong>
+									{% endif %}
+									{% if work.artistBirthDate and work.artistDeathDate %}
+										<br>({{ work.artistBirthDate }}–{{ work.artistDeathDate }})
+									{% endif %}
+									{% if work.artistBirthDate and not work.artistDeathDate %}
+										<br>(*{{ work.artistBirthDate }})
+									{% endif %}
+									{% if not work.artistBirthDate and work.artistDeathDate %}
+										<br>(†{{ work.artistDeathDate }})
+									{% endif %}
+								</div>
+								<div class="col-sm">
+									{% if work.name %}
+										<strong>{{ work.name }}</strong>
+									{% endif %}
+									{% if work.abstract %}
+										<br>{{ work.abstract }}
+									{% endif %}
+								</div>
+							</div>
+						{% endfor %}
+					{% endif %}
+
+				</div>
+				{# <div class="col-md-3 mb-5"> #}
+			{# <h2>Partneři</h2> #}
+				{# <div class="card card-static text-center u-partneri"> #}
+				{# <div class="py-3"> #}
+				{# <img src="/images/logo-tv-noe.png" alt="TV Noe" height="60" class="m-3"> #}
+				{# <img src="/images/logo-ministerstvo-kultury.svg" alt="Ministerstvo Kultury" height="50" class="m-3"> #}
+				{# <img src="/images/logo-radio-proglas.svg" alt="Radio Proglas" height="60" class="m-3"> #}
+				{# <img src="/images/logo-lazariani.png" alt="Vojenský a špitální řád sv. Lazara Jeruzalémského" height="60" class="m-3"> #}
+				{# </div> #}
+				{# </div> #}
+				{# </div> #}
+			</div>
+
+			{% for item in main_content %}
+				{% if item.template === 'gallery' %}
+
+					{% if item.image is defined and item.image|length > 0 %}
+						{% if item.title is defined and item.title|length > 0 %}
+							{% set title = item.title  %}
+						{% else %}
+							{% set title = 'Fotogalerie'  %}
+						{% endif %}
+
+						{% set classHeading = 'mb-1' %}
+						{% set classDescription = 'mb-4' %}
+						{% if  not item.description is defined or item.description|length === 0 %}
+							{% set classHeading = 'mb-4' %}
+						{% endif %}
+
+						<h2 class="{{ classHeading }}">{{ title }}</h2>
+						{% if item.description is defined and item.description|length > 0 %}
+							<div class="{{ classDescription }}">{{ item.description }}</div>
+						{% endif %}
+						{% include "partials/c-gallery.njk" %}
+					{% endif %}
+				{% endif %}
+			{% endfor %}
+
+
+			{% if location.description %}
+				<h2 class="mt-5">Místo</h2>
+				<p>{{ location.description }}</p>
+			{% endif %}
+
+			<a href="/varhany/" class="btn btn-primary btn-lg">Více o varhanách</a>
+
+			{% if location.embed is defined %}
+				<div class="c-map embed-responsive embed-responsive-21by9 my-5">
+					<iframe class="embed-responsive-item" src="{{ location.embed }}" loading="lazy"></iframe>
+				</div>
+			{% endif %}
+
+			<a href="/blog/" class="btn btn-outline-primary btn-lg">Zpět</a>
+
+			{% if banners is defined and banners|length > 0 %}
+				<div class="mt-5 pt-3">
+					<hr>{{banners|safe}}
+				</div>
+			{% endif %}
+
+		</div>
+	</article>
+
+{% endblock %}

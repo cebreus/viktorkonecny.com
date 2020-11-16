@@ -76,7 +76,9 @@ $RECYCLE.BIN/
 ############################
 
 *#
+*.bak
 .cache
+.eslintcache
 .idea
 .temp
 .tmp
@@ -86,6 +88,7 @@ nbproject
 ssl
 static
 temp
+*.bak
 
 
 ############################
@@ -107,3 +110,6 @@ node_modules
 
 testApp
 coverage
+
+# Local Netlify folder
+.netlify

@@ -1,18 +1,19 @@
-const gulp = require('gulp');
 const fs = require('fs');
+const gulp = require('gulp');
+const path = require('path');
 
 const buildDatasetFnc = require('./gulp-tasks/gulp-build-dataset');
 const buildHtmlFnc = require('./gulp-tasks-build/gulp-build-html');
+const cleanFnc = require('./gulp-tasks/gulp-clean');
 const compileSassFnc = require('./gulp-tasks-build/gulp-compile-sass');
-// const concatFilesFnc = require('./gulp-tasks-build/gulp-concat-files');
-const imagesFnc = require('./gulp-tasks/gulp-optimize-images');
-const processJsFnc = require('./gulp-tasks-build/gulp-process-js');
-const sourceMarkdownFnc = require('./gulp-tasks/gulp-source-markdown');
-
-const buildBlogFnc = require('./gulp-tasks/gulp-build-blog');
-const cleanFnc = require('./gulp-tasks-build/gulp-clean');
+const copyStaticFnc = require('./gulp-tasks/gulp-copy-static');
 const faviconsFnc = require('./gulp-tasks/gulp-favicons');
+const fontLoadFnc = require('./gulp-tasks/gulp-font-load');
+const optimizeImagesFnc = require('./gulp-tasks/gulp-optimize-images');
+const prepareDatasetFnc = require('./gulp-tasks/gulp-dataset-prepare');
+const processJsFnc = require('./gulp-tasks-build/gulp-process-js');
 const purgeCssFnc = require('./gulp-tasks-build/gulp-purgecss');
+
 const replaceHashFnc = require('./gulp-tasks-build/gulp-sri-hash');
 const revisionFnc = require('./gulp-tasks-build/gulp-revision');
 
@@ -21,141 +22,29 @@ const revisionFnc = require('./gulp-tasks-build/gulp-revision');
 
 const config = require('./gulpconfig-build');
 
+const sleep = (waitTimeInMs = 0) =>
+  new Promise((resolve) => setTimeout(resolve, waitTimeInMs));
+
 // Gulp functions
 // --------------
 
-function buildDataset(done) {
-  buildDatasetFnc(
-    config.datasetJsonBase,
-    config.datasetJsonBuild,
-    config.datasetJsonFileName,
-    () => {
-      done();
-    }
-  );
-}
-
-function mergeDatasets(done) {
-  buildDatasetFnc(
-    config.datasetJsonWBlog,
-    config.datasetJsonBuild,
-    config.datasetJsonFileName,
-    () => {
-      done();
-    }
-  );
-}
-
-function sourceMarkdown(done) {
-  sourceMarkdownFnc(
-    config.sourceMarkdownBase,
-    config.sourceMarkdownBuild,
-    () => {
-      done();
-    }
-  );
-}
-
-function buildHtml(done) {
-  const params = {
-    input: config.tplMain,
-    output: config.tplBuild,
-    dataSource: config.tplDataset,
-    injectCdnJs: config.injectCdnJs,
-    injectJs: config.injectJs,
-    injectCss: config.injectCss,
-    cb: () => {
-      done();
-    },
-  };
-  buildHtmlFnc(params);
-}
-
-function buildBlogPages(done) {
-  fs.readdir(config.tplBlogDatasetFolder, (err, files) => {
-    files.forEach((file) => {
-      if (file !== 'index.json') {
-        const params = {
-          input: config.tplBlogDetail,
-          output: config.tplBuildBlog + `/${file.replace(/\.[^/.]+$/, '')}`,
-          dataSource: [
-            config.tplBlogDatasetFolder + file,
-            config.tplBlogDataset,
-          ],
-          injectCdnJs: config.injectCdnJs,
-          injectJs: config.injectJs,
-          injectCss: config.injectCss,
-          rename: 'index',
-          cb: () => {
-            done();
-          },
-        };
-        buildHtmlFnc(params);
-      }
-    });
-  });
-  done();
-}
-
-function buildBlogList(done) {
-  fs.readdir(config.blogDatasetFolder, (err, files) => {
-    files.forEach((file, index) => {
-      const name = index === 0 ? 'index' : `page-${index + 1}`;
-      const params = {
-        input: config.blogListTemplate,
-        output: config.tplBuildBlog,
-        dataSource: [
-          `${config.blogDatasetFolder}/${file}`,
-          config.tplBlogDataset,
-        ],
-        injectCdnJs: config.injectCdnJs,
-        injectJs: config.injectJs,
-        injectCss: config.injectCss,
-        rename: name,
-        cb: () => {
-          done();
-        },
-      };
-      buildHtmlFnc(params);
-    });
-  });
-}
-
-// function concatFiles() {
-//   return concatFilesFnc(config.jsFiles, config.jsBuild, 'index.min.js');
-// }
-
-function processJs() {
-  return processJsFnc(config.jsFiles, config.jsBuild, {
-    concatFiles: true,
-    outputConcatPrefixFileName: 'app',
-  });
-}
-
-function favicons() {
-  return faviconsFnc(
-    config.faviconSourceFile,
-    config.faviconBuild,
-    config.faviconGenConfig
-  );
-}
-
-function images(done) {
-  imagesFnc.optimizeJpg(config.jpgImages, config.gfxBuild);
-  imagesFnc.optimizePng(config.pngImages, config.gfxBuild);
-  imagesFnc.optimizeSvg(config.svgImages, config.gfxBuild);
-
-  done();
-}
-
 function cleanFolders() {
-  cleanFnc(config.tempBase);
-  return cleanFnc(config.buildBase);
+  return cleanFnc([config.tempBase, config.buildBase]);
 }
 
-function cleanFiles() {
-  return cleanFnc(config.buildRevManifest);
+function cleanFolderTemp() {
+  return cleanFnc(config.tempBase);
 }
+
+function copyStatic(done) {
+  sleep().then(() => {
+    return copyStaticFnc('./static/**/*', './static', config.buildBase, () => {
+      done();
+    });
+  });
+}
+
+// SASS
 
 function compileSassAll() {
   return compileSassFnc(
@@ -166,65 +55,275 @@ function compileSassAll() {
   );
 }
 
-function builBlog(done) {
-  buildBlogFnc(config.tplBlogDataset, config.blogDatasetFolder);
+function purgecss(done) {
+  sleep().then(() => {
+    return purgeCssFnc(
+      [`${config.buildBase}/**/*.css`],
+      [`${config.buildBase}/**/*.html`],
+      config.buildBase,
+      () => {
+        done();
+      }
+    );
+  });
+}
 
+// JS
+
+function processJs() {
+  return processJsFnc(config.jsFiles, config.jsBuild, {
+    concatFiles: true,
+    outputConcatPrefixFileName: 'app',
+  });
+}
+
+// Dataset
+
+function datasetPrepareSite(done) {
+  sleep().then(() => {
+    prepareDatasetFnc(`${config.contentBase}/site.md`, config.tempBase, () => {
+      done();
+    });
+  });
+}
+
+function datasetPreparePages(done) {
+  sleep().then(() => {
+    prepareDatasetFnc(
+      config.datasetPagesSource,
+      config.datasetPagesBuild,
+      () => {
+        done();
+      }
+    );
+  });
+}
+
+function datasetPrepareBlogPosts(done) {
+  sleep().then(() => {
+    prepareDatasetFnc(config.datasetBlogSource, config.datasetBlogBuild, () => {
+      done();
+    });
+  });
+}
+
+function datasetPrepareBlogDataset(done) {
+  sleep().then(() => {
+    buildDatasetFnc(
+      [`${config.tempBase}/site.json`, `${config.datasetBlogBuild}/*.json`],
+      config.tempBase,
+      config.datasetBlog,
+      () => {
+        done();
+      }
+    );
+    done();
+  });
+}
+
+// Templates
+
+function buildPages(done) {
+  const params = {
+    input: `${config.tplPagesBase}/**/*.html`,
+    output: config.tplBuild,
+    templates: config.tplTemplatesBase,
+    processPaths: [config.tplPagesBase, config.tplTemplatesBase],
+    siteConfig: `${config.tempBase}/site.json`,
+    datasetBlog: `${config.tempBase}/${config.datasetBlog}`,
+    dataSource: config.datasetPagesBuild,
+    injectCdnJs: config.injectCdnJs,
+    injectJs: config.injectJs,
+    injectCss: config.injectCss,
+    injectIgnorePath: config.buildBase.replace('./', ''),
+    cb: () => {
+      done();
+    },
+  };
+
+  sleep().then(() => {
+    buildHtmlFnc(params);
+  });
+}
+
+function buildBlogPosts(done) {
+  fs.readdir(config.datasetBlogBuild, (err, files) => {
+    files.forEach((file) => {
+      let fileName = path.parse(file).name;
+
+      const params = {
+        input: config.tplBlogPost,
+        output: `${config.blogBuild}/${fileName}`,
+        templates: config.tplTemplatesBase,
+        processPaths: [config.tplPagesBase, config.tplTemplatesBase],
+        siteConfig: `${config.tempBase}/site.json`,
+        datasetBlog: `${config.tempBase}/${config.datasetBlog}`,
+        dataSource: `${config.datasetBlogBuild}/${file}`,
+        injectCdnJs: config.injectCdnJs,
+        injectJs: config.injectJs,
+        injectCss: config.injectCss,
+        injectIgnorePath: config.buildBase.replace('./', ''),
+        rename: 'index',
+        cb: () => {
+          done();
+        },
+      };
+
+      sleep().then(() => {
+        buildHtmlFnc(params);
+      });
+    });
+  });
+}
+
+// GFX
+
+function images(done) {
+  sleep().then(() => {
+    optimizeImagesFnc.optimizeJpg(config.imagesJpg, config.gfxBuild);
+  });
+  sleep().then(() => {
+    optimizeImagesFnc.optimizePng(config.imagesPng, config.gfxBuild);
+  });
+  sleep().then(() => {
+    optimizeImagesFnc.optimizeSvg(config.imagesSvg, config.gfxBuild);
+  });
   done();
 }
 
-function replaceHash() {
-  return replaceHashFnc(`${config.buildBase}/*.html`, config.buildBase);
+// Favicons
+
+function favicons(done) {
+  sleep().then(() => {
+    return faviconsFnc(
+      config.faviconSourceFile,
+      config.faviconBuild,
+      config.faviconGenConfig,
+      () => {
+        fs.rename(
+          `${config.faviconBuild}/favicon.ico`,
+          `${config.buildBase}/favicon.ico`,
+          function (err) {
+            if (err) throw err;
+          }
+        );
+        fs.unlinkSync(`${config.faviconBuild}/favicons.njk`);
+      }
+    );
+  });
+  done();
 }
 
-function revision() {
+// Fonts
+
+function fontLoad(done) {
+  sleep().then(() => {
+    fontLoadFnc(
+      config.fontloadFile,
+      config.tempBase,
+      config.fontLoadConfig,
+      () => {
+        copyStaticFnc(
+          `${config.tempBase}/font/**/*`,
+          `${config.tempBase}/font`,
+          `${config.buildBase}/font`,
+          () => {
+            done();
+          }
+        );
+      }
+    );
+  });
+}
+
+function replaceHash(done) {
+  sleep().then(() => {
+    return replaceHashFnc(
+      `${config.buildBase}/**/*.html`,
+      config.buildBase,
+      () => {
+        done();
+      }
+    );
+  });
+}
+
+function revision(done) {
   const params = {
-    inputRevision: `${config.buildBase}/**/*.css`,
+    inputRevision: [
+      `${config.buildBase}/**/*.css`,
+      `${config.buildBase}/**/*.js`,
+    ],
+    inputRewrite: `${config.buildBase}/**/*.html`,
     outputRevision: config.buildBase,
-    ouputManifest: `${config.tempBase}/revision`,
-    inputRewrite: `${config.buildBase}/*.html`,
     outputRewrite: config.buildBase,
-    manifestFile: `${config.tempBase}/revision/*.json`,
+    ouputManifest: `${config.tempBase}/revision`,
+    cb: () => {
+      done();
+    },
   };
-  return revisionFnc(params);
-}
 
-function purgecss() {
-  return purgeCssFnc(
-    `${config.buildBase}/**/*.css`,
-    [`${config.buildBase}/**/*.html`],
-    config.buildBase
-  );
+  sleep().then(() => {
+    return revisionFnc(params);
+  });
 }
 
 // Gulp tasks
 // --------------
 
-gulp.task('build:css', gulp.parallel(compileSassAll));
-gulp.task('cleanup', cleanFolders);
-gulp.task('favicons', favicons);
+gulp.task('css', compileSassAll);
+
+gulp.task('js', processJs);
+
+gulp.task(
+  'dataset',
+  gulp.parallel(
+    datasetPrepareSite,
+    datasetPreparePages,
+    datasetPrepareBlogPosts,
+    datasetPrepareBlogDataset
+  )
+);
+
+gulp.task(
+  'html',
+  gulp.series(
+    datasetPrepareSite,
+    datasetPreparePages,
+    datasetPrepareBlogPosts,
+    datasetPrepareBlogDataset,
+    buildPages,
+    buildBlogPosts
+  )
+);
+
 gulp.task('images', images);
+
+gulp.task('fonts', fontLoad);
+
+gulp.task(
+  'build',
+  gulp.series(
+    cleanFolders,
+    datasetPrepareSite,
+    datasetPreparePages,
+    datasetPrepareBlogPosts,
+    datasetPrepareBlogDataset,
+    fontLoad,
+    compileSassAll,
+    processJs,
+    favicons,
+    buildPages,
+    buildBlogPosts,
+    purgecss,
+    copyStatic,
+    revision,
+    replaceHash,
+    images,
+    cleanFolderTemp
+  )
+);
 
 // Aliases
 
-gulp.task(
-  'default',
-  gulp.series(
-    cleanFolders,
-    sourceMarkdown,
-    buildDataset,
-    processJs,
-    // concatFiles,
-    mergeDatasets,
-    compileSassAll,
-    revision,
-    buildBlogPages,
-    builBlog,
-    buildHtml,
-    buildBlogList,
-    purgecss,
-    replaceHash,
-    favicons,
-    images,
-    cleanFiles
-  )
-);
+gulp.task('default', gulp.series('build'));

@@ -1,7 +1,7 @@
 ---
 type: blog-post
 title: Negenerovat
-excerpt: 
+excerpt:
 show_detail: true
 featured: false
 entity_status:
@@ -15,7 +15,7 @@ seo:
   seo_title: ''
   seo_description: ''
   seo_iclude_to_sitemap: false
-  canonical: 
+  canonical:
 open_graph:
   type: article
   use: false
@@ -25,11 +25,11 @@ open_graph:
 twitter_cards:
   type: summary_large_image
   use: false
-  title: 
-  description: 
+  title:
+  description:
   image: []
-
 ---
+
 ### What is it?
 
 A [README](https://en.wikipedia.org/wiki/README) is a text file that introduces and explains a project. It contains information that is commonly required to understand what the project is about.
@@ -52,7 +52,7 @@ In the top level directory of the project. This is where someone who is new to y
 
 ### [](https://www.makeareadme.com/#how-should-i-make-it)How should I make it?
 
-While READMEs can be written in any text file format, the most common one that is used nowadays is [Markdown](https://en.wikipedia.org/wiki/Markdown). It allows you to add some lightweight formatting. You can learn more about it [here](http://commonmark.org/), which also has a helpful [reference guide](http://commonmark.org/help/) and an [interactive tutorial](http://commonmark.org/help/tutorial/). Some other formats that you might see are [plain text](https://en.wikipedia.org/wiki/Text_file), [reStructuredText](https://en.wikipedia.org/wiki/ReStructuredText) (common in [Python](https://www.python.org/) projects), and [Textile](<https://en.wikipedia.org/wiki/Textile_(markup_language)>).
+While READMEs can be written in any text file format, the most common one that is used nowadays is [Markdown](https://en.wikipedia.org/wiki/Markdown). It allows you to add some lightweight formatting. You can learn more about it [here](http://commonmark.org/), which also has a helpful [reference guide](http://commonmark.org/help/) and an [interactive tutorial](http://commonmark.org/help/tutorial/). Some other formats that you might see are [plain text](https://en.wikipedia.org/wiki/Text_file), [reStructuredText](https://en.wikipedia.org/wiki/ReStructuredText) (common in [Python](https://www.python.org/) projects), and [Textile](https://en.wikipedia.org/wiki/Textile_(markup_language)).
 
 You can use any text editor. There are plugins for many editors (e.g. [Atom](https://github.com/atom/markdown-preview), [Emacs](https://github.com/jrblevin/markdown-mode), [Sublime Text](https://github.com/revolunet/sublimetext-markdown-preview), [Vim](https://github.com/suan/vim-instant-markdown), and [Visual Studio Code](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview)) that allow you to preview Markdown while you are editing it.
 
