@@ -221,7 +221,7 @@ function favicons(done) {
           }
         );
 
-        // Move `favicons.njk` and replace in file
+        // Move `favicons.njk` and edit file content
         fs.readFile(
           `${config.faviconBuild}/favicons.njk`,
           'utf-8',
@@ -236,8 +236,19 @@ function favicons(done) {
               newValue,
               'utf-8',
               function (err, data) {
-                if (err) throw err;
-                // console.log('Done!');
+                if (err) {
+                  throw err;
+                } else {
+                  // console.log('Done!');
+
+                  // Remove temp `favicons.njk`
+                  try {
+                    fs.unlinkSync(`${config.faviconBuild}/favicons.njk`);
+                    // console.log('Removed!');
+                  } catch (err) {
+                    console.error(err);
+                  }
+                }
               }
             );
           }
