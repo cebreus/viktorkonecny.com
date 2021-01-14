@@ -491,7 +491,7 @@ $input-focus-bg:                        $input-bg !default;
 $input-focus-border-color:              $primary !default;
 $input-focus-color:                     $input-color !default;
 $input-focus-width:                     $input-btn-focus-width !default;
-$input-focus-box-shadow:                $input-btn-focus-box-shadow !default;
+$input-focus-box-shadow:                none !default;
 
 $input-placeholder-color:               rgba($white,.7) !default;
 $input-plaintext-color:                 $body-color !default;
@@ -739,7 +739,7 @@ $navbar-dark-color:                 $white !default;
 $navbar-dark-hover-color:           $primary !default;
 $navbar-dark-active-color:          $primary !default;
 $navbar-dark-disabled-color:        rgba($white, .25) !default;
-$navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
+$navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$primary}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 $navbar-dark-toggler-border-color:  none !default;
 
 $navbar-light-color:                rgba($black, .5) !default;

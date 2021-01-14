@@ -77,18 +77,13 @@ ul li {
     margin-right: 50px;
 
     @include media-breakpoint-only(lg) {
-      margin-right: 30px;
+      margin-right: 15px;
     }
 
     @include media-breakpoint-down(md) {
-      margin-right: 10px;
       font-size: 0.9rem;
     }
   }
-}
-
-.navbar-toggler-icon {
-  background: url(../images/navbar-toggler.svg) 50% 50% no-repeat !important;
 }
 
 h2 {
@@ -131,7 +126,6 @@ h3 {
 
 .btn {
   text-transform: uppercase;
-  box-shadow: none !important;
 
   .arrow {
     display: inline-block;
@@ -142,7 +136,7 @@ h3 {
   }
 
   &:hover .arrow {
-    background-position: 0 100% !important;
+    background-position: 0 100%;
   }
 }
 
@@ -151,7 +145,7 @@ h3 {
   background: $white;
 
   .arrow {
-    background-position: 0 0 !important;
+    background-position: 0 0;
   }
 }
 
@@ -168,7 +162,7 @@ h3 {
 .form-control {
   text-transform: uppercase;
   border-bottom: 1px solid rgba($white, 0.4);
-  box-shadow: none !important;
+  box-shadow: none;
 
   @include media-breakpoint-down(sm) {
     font-size: 0.85rem;
@@ -181,8 +175,7 @@ h3 {
   appearance: none;
 }
 
-// stylelint-disable-line selector-no-qualifying-type
-textarea.form-control {
+.form-control-textarea {
   height: 120px;
   border-top: 1px solid rgba($white, 0.4);
 }
@@ -229,26 +222,26 @@ textarea.form-control {
   @include media-breakpoint-only(xs) {
     padding-top: 5.3rem;
   }
+}
 
-  .theme-img {
-    position: relative;
+.theme-img {
+  position: relative;
 
-    &::before {
-      content: '';
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      display: block;
-      height: 40%;
+  &::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    height: 40%;
 
-      @include gradient-y(
-        $start-color: rgba($black, 0),
-        $end-color: $black,
-        $start-percent: 0%,
-        $end-percent: 100%
-      );
-    }
+    @include gradient-y(
+      $start-color: rgba($black, 0),
+      $end-color: $black,
+      $start-percent: 0%,
+      $end-percent: 100%
+    );
   }
 }
 
@@ -268,53 +261,53 @@ textarea.form-control {
   @include media-breakpoint-up(sm) {
     & > .container {
       height: 100%;
-
-      & > .row {
-        height: 100%;
-      }
-    }
-  }
-
-  h1 {
-    font-weight: $font-weight-bolder;
-    line-height: 1.6;
-    letter-spacing: 0.02rem;
-
-    @include media-breakpoint-down(lg) {
-      font-size: 1.6rem;
     }
 
-    @include media-breakpoint-down(md) {
-      font-size: 1.25rem;
-    }
-
-    @include media-breakpoint-down(sm) {
-      font-size: 1.1rem;
-    }
-
-    strong {
-      font-weight: $font-weight-bold;
-      font-size: 6rem;
-      line-height: 0.95;
-      color: $primary;
-
-      @include media-breakpoint-down(lg) {
-        font-size: 5rem;
-      }
-
-      @include media-breakpoint-down(md) {
-        font-size: 4rem;
-      }
-
-      @include media-breakpoint-down(sm) {
-        font-size: 3.5rem;
-      }
+    & > .container > .row {
+      height: 100%;
     }
   }
 
   .lead {
     @include media-breakpoint-down(md) {
       font-size: 0.85rem;
+    }
+  }
+}
+
+.jumbotron h1 {
+  font-weight: $font-weight-bolder;
+  line-height: 1.6;
+  letter-spacing: 0.02rem;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 1.6rem;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 1.25rem;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 1.1rem;
+  }
+
+  strong {
+    font-weight: $font-weight-bold;
+    font-size: 6rem;
+    line-height: 0.95;
+    color: $primary;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 5rem;
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 4rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: 3.5rem;
     }
   }
 }
@@ -339,29 +332,33 @@ textarea.form-control {
   z-index: 5;
   margin-left: -200px;
 
+  @include media-breakpoint-only(lg) {
+    margin-left: -185px;
+  }
+
   @include media-breakpoint-only(md) {
-    margin-left: -100px;
+    margin-left: -105px;
   }
 
-  @include media-breakpoint-only(sm) {
-    margin-left: -60px;
-  }
-
-  @include media-breakpoint-only(xs) {
+  @include media-breakpoint-down(sm) {
     margin-left: 0;
   }
 }
 
 .blocks {
-  @include media-breakpoint-up(md) {
+  background: $primary;
+
+  @include media-breakpoint-up(lg) {
     height: 100%;
   }
 
-  background: $primary;
+  .btn {
+    margin-bottom: -1.35rem;
+  }
 }
 
 .block {
-  padding: 3.5rem 3.5rem 0;
+  padding: 2.5rem 2.5rem 0;
   background: darken($primary, 8%);
 
   @include media-breakpoint-only(md) {
@@ -382,50 +379,32 @@ textarea.form-control {
       font-size: 1rem;
     }
   }
+}
 
-  .price {
-    font-size: $font-size-base * 1.625;
-    line-height: 1;
+.block-list {
+  padding: 0;
+  margin: 0;
 
-    strong {
-      font-weight: $font-weight-bold;
-      font-size: 3.6rem;
-
-      @include media-breakpoint-only(xs) {
-        font-size: 3rem;
-      }
-    }
+  li {
+    position: relative;
+    padding: 0 0 0.75rem 2rem;
   }
 
-  ul {
-    padding: 0;
-    margin: 0;
+  li::before {
+    content: '';
+    position: absolute;
+    top: 0.8rem;
+    left: 0;
+    display: block;
+    width: 1rem;
+    height: 3px;
+    margin-right: 0.7rem;
+    background: $black;
 
-    li {
-      position: relative;
-      padding: 0 0 0.75rem 2rem;
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: 0.8rem;
-        left: 0;
-        display: block;
-        width: 1rem;
-        height: 3px;
-        margin-right: 0.7rem;
-        background: $black;
-
-        @include media-breakpoint-down(sm) {
-          top: 0.7rem;
-          height: 2px;
-        }
-      }
+    @include media-breakpoint-down(sm) {
+      top: 0.7rem;
+      height: 2px;
     }
-  }
-
-  .btn {
-    margin-bottom: -1.35rem;
   }
 }
 
@@ -433,55 +412,64 @@ textarea.form-control {
   margin-bottom: -1px;
   border: darken($white, 80%) 1px solid;
 
-  .acc-heading {
-    position: relative;
-    padding: 2rem 70px;
-    font-weight: $font-weight-bold;
-    cursor: pointer;
+  &.collapsed {
+    color: $primary;
+
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.acc-heading {
+  position: relative;
+  padding: 2rem 70px;
+  font-weight: $font-weight-bold;
+  cursor: pointer;
+
+  @include transition;
+
+  @include media-breakpoint-down(sm) {
+    padding: 1rem 30px;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 2.75rem;
+    left: -10px;
+    display: block;
+    width: 19px;
+    height: 3px;
+    background: $primary;
 
     @include transition;
 
     @include media-breakpoint-down(sm) {
-      padding: 1rem 30px;
-    }
-
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      top: 2.75rem;
-      left: -10px;
-      display: block;
-      width: 19px;
-      height: 3px;
-      background: $primary;
-
-      @include transition;
-
-      @include media-breakpoint-down(sm) {
-        top: 1.7rem;
-      }
-    }
-
-    &.collapsed {
-      color: $primary;
-
-      &::after {
-        transform: rotate(90deg);
-      }
-    }
-
-    &:hover {
-      color: $white;
+      top: 1.7rem;
     }
   }
+}
 
-  .acc-body {
-    padding: 0 70px 2rem;
+.acc-body {
+  padding: 0 70px 2rem;
 
-    @include media-breakpoint-down(sm) {
-      padding: 0 30px 1rem;
-    }
+  @include media-breakpoint-down(sm) {
+    padding: 0 30px 1rem;
+  }
+}
+
+.copyright {
+  font-size: 0.75rem;
+  color: darken($white, 60%);
+
+  a {
+    color: darken($white, 60%);
   }
 }
 
@@ -526,25 +514,15 @@ textarea.form-control {
       margin-right: 1rem;
       vertical-align: -0.05rem;
       background: url(../images/header-contacts.svg) 0 100% no-repeat;
-
-      &.ico-email {
-        background-position: -15px 100%;
-      }
-
-      &.ico-instagram {
-        background-position: -30px 100%;
-      }
     }
-    // stylelint-enable selector-no-qualifying-type
-  }
-}
 
-.copyright {
-  font-size: 0.75rem;
-  color: darken($white, 60%);
+    .ico-email {
+      background-position: -15px 100%;
+    }
 
-  a {
-    color: darken($white, 60%);
+    .ico-instagram {
+      background-position: -30px 100%;
+    }
   }
 }
 
