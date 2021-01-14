@@ -15,7 +15,6 @@ html {
 body {
   // Set minimum reasonable width on very small devices
   min-width: 320px;
-  font-family: Poppins, sans-serif;
   letter-spacing: 0.06rem;
 
   @include media-breakpoint-down(sm) {
@@ -533,29 +532,3 @@ iframe {
 form label {
   display: none;
 }
-
-// .short_explanation {
-//   font-size: 0.6rem;
-// }
-
-// .spmhidip {
-//   display: none;
-//   width: 10px;
-//   height: 3px;
-// }
-
-// #fg_crdiv {
-//   -moz-opacity: 0.2;
-//   opacity: 0.2;
-//   font-size: 0.3em;
-//   font-family: Arial, sans-serif;
-//   filter: alpha(opacity=20);
-// }
-
-// #fg_crdiv p {
-//   display: none;
-// }
-
-// .error {
-//   font-size: 0.75rem;
-// }
