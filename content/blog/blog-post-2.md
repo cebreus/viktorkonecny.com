@@ -2,7 +2,7 @@
 type: blogpost
 uid: co-je-individualni-plan
 title: Co je individuální plán?
-description: ''
+description: Individuální plán je online forma spolupráce mezi mnou a klientem. Každý měsíc obdržíte nový tréninkový plán a během celého období společně vyhodnocujeme dosažené výsledky a techniku cvičení.
 showDetail: true
 showOnHome: true
 entity_status:

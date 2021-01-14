@@ -139,7 +139,9 @@ h3 {
   }
 }
 
-.btn-primary:hover {
+// stylelint-disable selector-max-specificity
+.btn-primary:hover,
+.btn-primary:not(:disabled):not(.disabled):active {
   border-color: $white;
   background: $white;
 
@@ -147,6 +149,7 @@ h3 {
     background-position: 0 0;
   }
 }
+// stylelint-enable selector-max-specificity
 
 .btn-light:hover {
   color: $white;
@@ -531,4 +534,41 @@ iframe {
 
 form label {
   display: none;
+}
+
+.c-blog {
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+}
+
+.c-blog__item {
+  display: flex;
+  flex-direction: column;
+  padding: $grid-gutter-width;
+  background-color: #242427;
+}
+
+.c-blog__date {
+  font-size: 0.875rem;
+  color: #868687;
+}
+
+.c-blog__title {
+  margin-bottom: map-get($spacers, 4);
+  font-weight: $font-weight-bold;
+  font-size: 1.625rem;
+}
+
+.c-blog__perex {
+  margin-bottom: map-get($spacers, 4);
+}
+
+.c-blog__link {
+  margin-top: auto;
+  margin-bottom: -3.25rem;
+  // &:active,
+  // &:focus,
+  // &:hover {
+  //   background-color: $white;
+  // }
 }

@@ -1,36 +1,27 @@
-<div class="col mb-4">
-	<div class="card c-blog__item h-100">
-		<div class="card-img-top">
-			{% if item.image[0] %}
-				<img src="{{ item.image[0] }}" alt="" presentation="">
-			{% endif %}
-		</div>
-		<div class="card-body">
-			<h3 class="card-title c-blog__title">{{ item.title }}</h3>
-			{% if item.subtitle %}
-				<div class="card-text c-blog__content mb-1">{{ item.subtitle }}</div>
-			{% endif %}
-		</div>
-		<div class="card-footer pt-0">
-			<ul>
-				{% if item.startDate  %}
-					<li class="c-blog__date">
-						{{ item.startDate | date('D. MMMM YYYY') }}
-					</li>
-				{% endif %}
-				{% if item.startDate  %}
-					<li class="c-blog__location">
-						{{ item.location.addressLocality }}{% if item.location.addressLocality|length and item.location.name|length %},{% endif %}
-						{{ item.location.name }}
-					</li>
-				{% endif %}
-			</ul>
+<div class="col mb-5">
+	<div class="c-blog__item h-100">
 
-			{% if item.showDetail  %}
-				<a class="c-blog__link" href="/{{ item.path }}/">
-					<span class="sr-only">Více o koncertu</span>
+		{% if item.entity_status.date is defined and item.entity_status.date | length > 0 %}
+			<span class="c-blog__date">
+				{{ item.entity_status.date | date('D. MMMM YYYY') }}
+			</span>
+		{% endif %}
+
+		<h3 class="c-blog__title">
+			{% if item.showDetail === true %}
+				<a class="c-blog__title-link" href="/{{ item.path }}/">
+					{{ item.title }}
 				</a>
+			{% else %}
+				{{ item.title }}
 			{% endif %}
-		</div>
+		</h3>
+		{% if item.description is defined and  item.description | length > 0%}
+			<div class="c-blog__perex">{{ item.description }}</div>
+		{% endif %}
+		{% if item.showDetail %}
+			<a class="c-blog__link btn btn-primary btn-lg" href="/{{ item.path }}/">Celý článek<span class="arrow ml-2"></span></a>
+		{% endif %}
+
 	</div>
 </div>

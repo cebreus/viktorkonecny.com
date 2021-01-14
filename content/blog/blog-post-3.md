@@ -2,7 +2,7 @@
 type: blogpost
 uid: jak-to-funguje
 title: Jak to funguje?
-description: ''
+description: Na základě vyplněného a odeslaného dotazníku vás budu kontaktovat a domluvíme se společně na osobní vstupní diagnostice.
 showDetail: true
 showOnHome: false
 entity_status:

@@ -2,8 +2,8 @@
 type: blogpost
 uid: proc-zvolit-individualni-plan
 title: Proč zvolit individuální plán?
-description: ''
-showDetail: true
+description: Individuální plán zpracuji každému, kdo chce posunout svůj výkon na další úroveň.
+showDetail: false
 showOnHome: true
 entity_status:
   date: 2020-03-01T11:00:00.000+00:00
