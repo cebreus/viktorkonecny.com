@@ -15,7 +15,7 @@ const blogTemp = `${tempBase}/blog`;
 // --------------
 
 const sassBase = `${devBase}/scss`;
-const sassBuild = `${buildBase}/css`;
+const sassBuild = `${buildBase}/assets/css`;
 const sassAll = [`${sassBase}/*.scss`, `!${sassBase}/_*.scss`];
 const sassCustom = [
   `${sassBase}/custom.scss`,
@@ -33,13 +33,12 @@ const injectCss = `${sassBuild}/*.css`;
 
 const jsBase = `${devBase}/js`;
 const jsFiles = `${jsBase}/*.js`;
-const jsBuild = `${buildBase}/js`;
+const jsBuild = `${buildBase}/assets/js`;
 const injectJs = `${jsBuild}/*.js`;
 
 const injectCdnJs = [
   '<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>',
-  '<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha512-ubuT8Z88WxezgSqf3RLuNi5lmjstiJcyezx34yIU2gAHonIi27Na7atqzUZCOoY4CExaoFumzOsFQ2Ch+I/HCw==" crossorigin="anonymous"></script>',
-  '<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js" integrity="sha512-8qmis31OQi6hIRgvkht0s6mCOittjMa9GMqtK9hes5iEQBQE/Ca6yGE5FsW36vyipGoWQswBj/QBm2JR086Rkw==" crossorigin="anonymous"></script>',
+  '<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.bundle.min.js" integrity="sha512-iceXjjbmB2rwoX93Ka6HAHP+B76IY1z0o3h+N1PeDtRSsyeetU3/0QKJqGyPJcX63zysNehggFwMC/bi7dvMig==" crossorigin="anonymous"></script>',
   // '<script src="./js/classie.js"></script>',
   // '<script src="./js/scroll.js"></script>',
 ];
@@ -61,6 +60,7 @@ const tplBlogPost = `${devBase}/templates/blog-post.html`;
 
 const datasetPagesSource = `${contentBase}/pages/**/*.md`;
 const datasetPagesBuild = `${tempBase}/_dataset-pages`;
+
 const datasetBlogSource = `${contentBase}/blog/**/*.md`;
 const datasetBlogBuild = `${tempBase}/_dataset-blog`;
 const datasetBlog = `_dataset-blog.json`;
@@ -69,7 +69,7 @@ const datasetBlog = `_dataset-blog.json`;
 // --------------
 
 const gfxBase = `${devBase}/gfx`;
-const gfxBuild = `${buildBase}/images`;
+const gfxBuild = `${buildBase}/assets/images`;
 
 const svgBase = `${gfxBase}/**`;
 const imagesSvg = [`${svgBase}/*.svg`, `!${devBase}/favicon/**/*.*`];
@@ -92,8 +92,8 @@ const postcssPluginsBase = [
 
 const fontloadFile = `${devBase}/fonts.list`;
 const fontLoadConfig = {
-  fontsDir: 'font/',
-  cssDir: 'css/',
+  fontsDir: 'assets/font/',
+  cssDir: 'assets/css/',
   cssFilename: 'fonts.scss',
   relativePaths: true,
   fontDisplayType: 'swap',
@@ -103,40 +103,40 @@ const fontLoadConfig = {
 // --------------
 
 module.exports = {
-  blogBuild: blogBuild,
-  blogTemp: blogTemp,
-  buildBase: buildBase,
-  contentBase: contentBase,
-  datasetBlog: datasetBlog,
-  datasetBlogBuild: datasetBlogBuild,
-  datasetBlogSource: datasetBlogSource,
-  datasetPagesBuild: datasetPagesBuild,
-  datasetPagesSource: datasetPagesSource,
-  devBase: devBase,
-  fontLoadConfig: fontLoadConfig,
-  fontloadFile: fontloadFile,
-  gfxBase: gfxBase,
-  gfxBuild: gfxBuild,
-  imagesJpg: imagesJpg,
-  imagesPng: imagesPng,
-  imagesSvg: imagesSvg,
-  injectCdnJs: injectCdnJs,
-  injectCss: injectCss,
-  injectJs: injectJs,
-  jsBuild: jsBuild,
-  jsFiles: jsFiles,
-  postcssPluginsBase: postcssPluginsBase,
-  sassAll: sassAll,
-  sassBase: sassBase,
-  sassBuild: sassBuild,
-  sassCore: sassCore,
-  sassCustom: sassCustom,
-  sassUtils: sassUtils,
-  tempBase: tempBase,
-  tplBase: tplBase,
-  tplBlogList: tplBlogList,
-  tplBlogPost: tplBlogPost,
-  tplBuild: tplBuild,
-  tplPagesBase: tplPagesBase,
-  tplTemplatesBase: tplTemplatesBase,
+  blogBuild,
+  blogTemp,
+  buildBase,
+  contentBase,
+  datasetBlog,
+  datasetBlogBuild,
+  datasetBlogSource,
+  datasetPagesBuild,
+  datasetPagesSource,
+  devBase,
+  fontLoadConfig,
+  fontloadFile,
+  gfxBase,
+  gfxBuild,
+  imagesJpg,
+  imagesPng,
+  imagesSvg,
+  injectCdnJs,
+  injectCss,
+  injectJs,
+  jsBuild,
+  jsFiles,
+  postcssPluginsBase,
+  sassAll,
+  sassBase,
+  sassBuild,
+  sassCore,
+  sassCustom,
+  sassUtils,
+  tempBase,
+  tplBase,
+  tplBlogList,
+  tplBlogPost,
+  tplBuild,
+  tplPagesBase,
+  tplTemplatesBase,
 };

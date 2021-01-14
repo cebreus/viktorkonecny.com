@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="{{ meta.lang }}">
+<html lang="{{ SITE.meta.lang }}">
 	<head>
-		<meta charset="{{ meta.charset }}">
+		<meta charset="{{ SITE.meta.charset }}">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		{% include "partials/meta-seo.njk" %}
@@ -9,11 +9,6 @@
 		{% include "partials/meta-twitter-cards.njk" %}
 		{# <link rel="preload" href="/font/Poppins-normal-400.woff" as="font" type="font/woff" crossorigin> #}
 		
-
-		{% if pageData.template === 'blog-post' %}
-			{% include "partials/json-ld-event.njk" %}
-		{% endif %}
-
 		<!-- inject:css -->
 		<!-- endinject -->
 	</head>

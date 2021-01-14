@@ -2,17 +2,21 @@ const fs = require('fs');
 const gulp = require('gulp');
 const path = require('path');
 
-const buildDatasetFnc = require('./gulp-tasks/gulp-build-dataset');
-const buildHtmlFnc = require('./gulp-tasks-build/gulp-build-html');
+const htmlBuildlFnc = require('./gulp-tasks-build/gulp-html-build');
+
 const cleanFnc = require('./gulp-tasks/gulp-clean');
 const compileSassFnc = require('./gulp-tasks-build/gulp-compile-sass');
 const copyStaticFnc = require('./gulp-tasks/gulp-copy-static');
+const createPathsFnc = require('./gulp-tasks/gulp-create-path');
+const datasetBuildFnc = require('./gulp-tasks/gulp-dataset-build');
+const datasetPrepareFnc = require('./gulp-tasks/gulp-dataset-prepare');
 const faviconsFnc = require('./gulp-tasks/gulp-favicons');
 const fontLoadFnc = require('./gulp-tasks/gulp-font-load');
 const optimizeImagesFnc = require('./gulp-tasks/gulp-optimize-images');
-const prepareDatasetFnc = require('./gulp-tasks/gulp-dataset-prepare');
+
 const processJsFnc = require('./gulp-tasks-build/gulp-process-js');
 const purgeCssFnc = require('./gulp-tasks-build/gulp-purgecss');
+const htmlValidateFnc = require('./gulp-tasks/gulp-html-validate');
 
 const replaceHashFnc = require('./gulp-tasks-build/gulp-sri-hash');
 const revisionFnc = require('./gulp-tasks-build/gulp-revision');
@@ -42,6 +46,10 @@ function copyStatic(done) {
       done();
     });
   });
+}
+
+function htmlValidate() {
+  return htmlValidateFnc(`${config.buildBase}/**/*.html`);
 }
 
 // SASS
@@ -81,7 +89,7 @@ function processJs() {
 
 function datasetPrepareSite(done) {
   sleep().then(() => {
-    prepareDatasetFnc(`${config.contentBase}/site.md`, config.tempBase, () => {
+    datasetPrepareFnc(`${config.contentBase}/site.md`, config.tempBase, () => {
       done();
     });
   });
@@ -89,7 +97,7 @@ function datasetPrepareSite(done) {
 
 function datasetPreparePages(done) {
   sleep().then(() => {
-    prepareDatasetFnc(
+    datasetPrepareFnc(
       config.datasetPagesSource,
       config.datasetPagesBuild,
       () => {
@@ -101,7 +109,7 @@ function datasetPreparePages(done) {
 
 function datasetPrepareBlogPosts(done) {
   sleep().then(() => {
-    prepareDatasetFnc(config.datasetBlogSource, config.datasetBlogBuild, () => {
+    datasetPrepareFnc(config.datasetBlogSource, config.datasetBlogBuild, () => {
       done();
     });
   });
@@ -109,7 +117,7 @@ function datasetPrepareBlogPosts(done) {
 
 function datasetPrepareBlogDataset(done) {
   sleep().then(() => {
-    buildDatasetFnc(
+    datasetBuildFnc(
       [`${config.tempBase}/site.json`, `${config.datasetBlogBuild}/*.json`],
       config.tempBase,
       config.datasetBlog,
@@ -117,6 +125,12 @@ function datasetPrepareBlogDataset(done) {
         done();
       }
     );
+    done();
+  });
+}
+
+function createPathForBlogPosts(done) {
+  createPathsFnc(config.datasetBlogBuild, () => {
     done();
   });
 }
@@ -142,7 +156,7 @@ function buildPages(done) {
   };
 
   sleep().then(() => {
-    buildHtmlFnc(params);
+    htmlBuildlFnc(params);
   });
 }
 
@@ -170,7 +184,7 @@ function buildBlogPosts(done) {
       };
 
       sleep().then(() => {
-        buildHtmlFnc(params);
+        htmlBuildlFnc(params);
       });
     });
   });
@@ -200,6 +214,7 @@ function favicons(done) {
       config.faviconBuild,
       config.faviconGenConfig,
       () => {
+        // Move `favicon.ico` to project root
         fs.rename(
           `${config.faviconBuild}/favicon.ico`,
           `${config.buildBase}/favicon.ico`,
@@ -207,7 +222,28 @@ function favicons(done) {
             if (err) throw err;
           }
         );
-        fs.unlinkSync(`${config.faviconBuild}/favicons.njk`);
+
+        // Move `favicons.njk` and replace in file
+        fs.readFile(
+          `${config.faviconBuild}/favicons.njk`,
+          'utf-8',
+          function (err, data) {
+            if (err) throw err;
+
+            // Remove link to moved `favicon.ico`
+            let newValue = data.replace(/<link rel="shortcut icon[^>]*>/g, '');
+
+            fs.writeFile(
+              `${config.tplTemplatesBase}/partials/favicons.njk`,
+              newValue,
+              'utf-8',
+              function (err, data) {
+                if (err) throw err;
+                // console.log('Done!');
+              }
+            );
+          }
+        );
       }
     );
   });
@@ -224,9 +260,9 @@ function fontLoad(done) {
       config.fontLoadConfig,
       () => {
         copyStaticFnc(
-          `${config.tempBase}/font/**/*`,
-          `${config.tempBase}/font`,
-          `${config.buildBase}/font`,
+          `${config.tempBase}/assets/font/**/*`,
+          `${config.tempBase}/assets/font`,
+          `${config.buildBase}/assets/font`,
           () => {
             done();
           }
@@ -301,13 +337,18 @@ gulp.task('images', images);
 
 gulp.task('fonts', fontLoad);
 
+gulp.task('validate', htmlValidate);
+
 gulp.task(
   'build',
   gulp.series(
     cleanFolders,
+    copyStatic,
     datasetPrepareSite,
     datasetPreparePages,
     datasetPrepareBlogPosts,
+    datasetPrepareBlogPosts,
+    createPathForBlogPosts,
     datasetPrepareBlogDataset,
     fontLoad,
     compileSassAll,
@@ -316,7 +357,6 @@ gulp.task(
     buildPages,
     buildBlogPosts,
     purgecss,
-    copyStatic,
     revision,
     replaceHash,
     images,

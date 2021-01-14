@@ -5,10 +5,9 @@ const data = require('gulp-data');
 const inject = require('gulp-inject');
 const nunjucksRender = require('gulp-nunjucks-render');
 const plumber = require('gulp-plumber');
-const htmlpretty = require('gulp-html-beautify');
+const minify = require('gulp-htmlmin');
 const replace = require('gulp-replace');
 const rename = require('gulp-rename');
-const { config } = require('process');
 
 /**
  * @description Compile Nunjucks templates and replaces variable from JSON
@@ -31,11 +30,13 @@ const buildHtml = (params) => {
   let findJson = true;
   let currentFile = '';
   let renameCondition = params.rename ? true : false;
+  let oldDataSource = '';
 
   if (params.dataSource.includes('.json')) {
     if (typeof params.dataSource !== 'object') {
       params.dataSource = [params.dataSource];
     }
+
     params.dataSource.forEach((element) => {
       try {
         fs.accessSync(element);
@@ -67,6 +68,20 @@ const buildHtml = (params) => {
       .pipe(
         rename((path) => {
           currentFile = path;
+          if (currentFile.dirname !== '.') {
+            const file = JSON.parse(
+              fs.readFileSync(
+                `${process.cwd()}/${params.dataSource}/${
+                  currentFile.dirname
+                }.json`,
+                'utf-8'
+              )
+            );
+            oldDataSource = currentFile.dirname;
+            if (file.seo.slug) {
+              currentFile.dirname = file.seo.slug;
+            }
+          }
         })
       )
       // Add acces to site configuration
@@ -74,8 +89,9 @@ const buildHtml = (params) => {
         data(function () {
           let file = params.siteConfig;
           file = {
-            ...file,
-            ...JSON.parse(fs.readFileSync(file)),
+            SITE: {
+              ...JSON.parse(fs.readFileSync(file)),
+            },
           };
           return file;
         })
@@ -117,13 +133,12 @@ const buildHtml = (params) => {
                 )
               );
             } else {
-              return JSON.parse(
+              const file = JSON.parse(
                 fs.readFileSync(
-                  `${process.cwd()}/${params.dataSource}/${
-                    currentFile.dirname
-                  }.json`
+                  `${process.cwd()}/${params.dataSource}/${oldDataSource}.json`
                 )
               );
+              return file;
             }
           })
         )
@@ -161,14 +176,7 @@ const buildHtml = (params) => {
           params.injectCdnJs.toString().replace(/[, ]+/g, ' ')
         )
       )
-      .pipe(
-        htmlpretty({
-          indentSize: 4,
-          indent_char: ' ',
-          indent_with_tabs: false,
-          preserve_newlines: false,
-        })
-      )
+      .pipe(minify({ collapseWhitespace: true }))
       .pipe(
         gulpif(
           renameCondition,
