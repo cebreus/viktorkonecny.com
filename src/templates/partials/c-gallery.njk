@@ -5,8 +5,8 @@
 		{% set thisId = 'pic-' + item.title | wordcount + item.title | length  %}
 		<div class="col mb-1">
 			<a id="{{ thisId }}-{{ loopIndex }}" href="#{{ thisId }}-{{ loopIndex }}" aria-label="Fotografie z koncertu {{ item.title }}">
-				<img src="https://res.cloudinary.com/hudebnipodyji/f_auto,q_auto,dpr_auto,g_faces,c_fill,w_280,h_187{{ image }}" alt="" loading="lazy" class="cssbox_thumb">
-				<span class="cssbox_full"><img src="https://res.cloudinary.com/hudebnipodyji/f_auto,q_auto,dpr_auto,w_1280{{ image }}" loading="lazy"></span>
+				<img src="{{ image }}" alt="" loading="lazy" class="cssbox_thumb">
+				<span class="cssbox_full"><img src="{{ image }}" loading="lazy"></span>
 			</a>
 			<a class="cssbox_close" href="#void"></a>
 			{% if loopIndex > 1 %}

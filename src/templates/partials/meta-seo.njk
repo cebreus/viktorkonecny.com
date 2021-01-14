@@ -4,8 +4,12 @@
 	<meta name="robots" content="{{ SITE.seo.robots }}">
 {% endif %}
 
+{% if seo.canonical_self %}
+  <link rel="canonical" href="{{ SITE.baseUrl|trim }}{{ seo.canonical_self|trim }}">
+{% endif %}
+
 {% if canonical %}
-	<link rel="canonical" href="{{ canonical|trim }}">
+	<link rel="canonical" href="{{ SITE.baseUrl|trim }}{{ canonical|trim }}">
 {% endif %}
 
 {% if seo.title is defined or title is defined %}

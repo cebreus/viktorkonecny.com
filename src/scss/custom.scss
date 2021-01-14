@@ -83,7 +83,7 @@ ul li {
 }
 
 .navbar-toggler-icon {
-  background: url(../../images/navbar-toggler.svg) 50% 50% no-repeat !important;
+  background: url(../images/navbar-toggler.svg) 50% 50% no-repeat !important;
 }
 
 h2 {
@@ -133,7 +133,7 @@ h3 {
     width: 18px;
     height: 8px;
     vertical-align: 0.05rem;
-    background: url(../../images/ico-arrow.svg) 0 0 no-repeat;
+    background: url(../images/ico-arrow.svg) 0 0 no-repeat;
   }
 
   &:hover .arrow {
@@ -171,7 +171,7 @@ h3 {
 }
 
 .custom-select {
-  background: url(../../images/custom-select.svg) 100% 50% no-repeat;
+  background: url(../images/custom-select.svg) 100% 50% no-repeat;
   cursor: pointer;
   appearance: none;
 }
@@ -194,7 +194,7 @@ textarea.form-control {
     padding: 0;
     overflow: hidden;
     text-indent: 100px;
-    background: url(../../images/header-contacts.svg) 0 0 no-repeat;
+    background: url(../images/header-contacts.svg) 0 0 no-repeat;
 
     &:hover {
       background-position: 0 100%;
@@ -520,7 +520,7 @@ textarea.form-control {
       height: 15px;
       margin-right: 1rem;
       vertical-align: -0.05rem;
-      background: url(../../images/header-contacts.svg) 0 100% no-repeat;
+      background: url(../images/header-contacts.svg) 0 100% no-repeat;
 
       &.ico-email {
         background-position: -15px 100%;

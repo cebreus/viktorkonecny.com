@@ -2,8 +2,7 @@
 	<div class="card c-blog__item h-100">
 		<div class="card-img-top">
 			{% if item.image[0] %}
-				{# <img src="https://res.cloudinary.com/hudebnipodyji/f_auto,q_auto,dpr_auto,c_thumb,w_350,h_233{{ item.image[0] }}" alt="" presentation=""> #}
-				<img src="https://res.cloudinary.com/hudebnipodyji/f_auto,q_auto,dpr_auto,c_fill,g_faces,w_350,h_233{{ item.image[0] }}" alt="" presentation="">
+				<img src="{{ item.image[0] }}" alt="" presentation="">
 			{% endif %}
 		</div>
 		<div class="card-body">
@@ -28,7 +27,7 @@
 			</ul>
 
 			{% if item.showDetail  %}
-				<a class="c-blog__link" href="/blog/{{ item.uid }}/">
+				<a class="c-blog__link" href="/{{ item.path }}/">
 					<span class="sr-only">Více o koncertu</span>
 				</a>
 			{% endif %}

@@ -2,16 +2,17 @@ const fs = require('fs');
 const gulp = require('gulp');
 const path = require('path');
 
-const buildDatasetFnc = require('./gulp-tasks/gulp-build-dataset');
-const buildHtmlFnc = require('./gulp-tasks/gulp-build-html');
 const cleanFnc = require('./gulp-tasks/gulp-clean');
 const compileSassFnc = require('./gulp-tasks/gulp-compile-sass');
-const copyStaticFnc = require('./gulp-tasks/gulp-copy-static');
 const concatJsFnc = require('./gulp-tasks/gulp-concat-files');
-const loadFontFnc = require('./gulp-tasks/gulp-font-load');
-const optimizeImagesFnc = require('./gulp-tasks/gulp-optimize-images');
-const prepareDatasetFnc = require('./gulp-tasks/gulp-dataset-prepare');
+const copyStaticFnc = require('./gulp-tasks/gulp-copy-static');
+const createPathsFnc = require('./gulp-tasks/gulp-create-path');
+const datasetBuildFnc = require('./gulp-tasks/gulp-dataset-build');
+const datasetPrepareFnc = require('./gulp-tasks/gulp-dataset-prepare');
+const fontLoadFnc = require('./gulp-tasks/gulp-font-load');
 const hotReload = require('./gulp-tasks/gulp-hotreload');
+const htmlBuildlFnc = require('./gulp-tasks/gulp-html-build');
+const optimizeImagesFnc = require('./gulp-tasks/gulp-optimize-images');
 
 // Variables
 // --------------
@@ -69,25 +70,25 @@ function concatJs() {
 // Dataset
 
 function datasetPrepareSite(done) {
-  prepareDatasetFnc(`${config.contentBase}/site.md`, config.tempBase, () => {
+  datasetPrepareFnc(`${config.contentBase}/site.md`, config.tempBase, () => {
     done();
   });
 }
 
 function datasetPreparePages(done) {
-  prepareDatasetFnc(config.datasetPagesSource, config.datasetPagesBuild, () => {
+  datasetPrepareFnc(config.datasetPagesSource, config.datasetPagesBuild, () => {
     done();
   });
 }
 
 function datasetPrepareBlogPosts(done) {
-  prepareDatasetFnc(config.datasetBlogSource, config.datasetBlogBuild, () => {
+  datasetPrepareFnc(config.datasetBlogSource, config.datasetBlogBuild, () => {
     done();
   });
 }
 
 function datasetPrepareBlogDataset(done) {
-  buildDatasetFnc(
+  datasetBuildFnc(
     [`${config.tempBase}/site.json`, `${config.datasetBlogBuild}/*.json`],
     config.tempBase,
     config.datasetBlog,
@@ -96,6 +97,12 @@ function datasetPrepareBlogDataset(done) {
     }
   );
   done();
+}
+
+function createPathForBlogPosts(done) {
+  createPathsFnc(config.datasetBlogBuild, () => {
+    done();
+  });
 }
 
 // Templates
@@ -117,7 +124,7 @@ function buildPages(done) {
       done();
     },
   };
-  buildHtmlFnc(params);
+  htmlBuildlFnc(params);
 }
 
 function buildBlogPosts(done) {
@@ -142,7 +149,7 @@ function buildBlogPosts(done) {
           done();
         },
       };
-      buildHtmlFnc(params);
+      htmlBuildlFnc(params);
     });
   });
   done();
@@ -166,7 +173,7 @@ function images(done) {
 // Fonts
 
 function fontLoad(done) {
-  loadFontFnc(
+  fontLoadFnc(
     config.fontloadFile,
     config.tempBase,
     config.fontLoadConfig,
@@ -184,59 +191,38 @@ function watchFiles() {
 
   gulp.watch(
     config.sassCustom,
-    gulp.series(compileSassCustom, hotReload.browserSyncReload)
+    gulp.series(compileSassCustom, hotReload.browserSyncRefresh)
   );
 
   gulp.watch(
     config.sassCore,
-    gulp.series(compileSassCore, hotReload.browserSyncReload)
+    gulp.series(compileSassCore, hotReload.browserSyncRefresh)
   );
 
   gulp.watch(
     config.sassUtils,
-    gulp.series(compileSassUtils, hotReload.browserSyncReload)
+    gulp.series(compileSassUtils, hotReload.browserSyncRefresh)
   );
 
   // Watch JS
 
   gulp.watch(
     config.jsFiles,
-    gulp.series(concatJs, hotReload.browserSyncReload)
+    gulp.series(concatJs, hotReload.browserSyncRefresh)
   );
 
   // Watch Templates
 
-  gulp.watch(
-    ['./src/templates/**/*.*', './src/pages/**/*.*'],
-    gulp.series(buildPages, buildBlogPosts, hotReload.browserSyncReload)
-  );
-
-  gulp.watch(
-    config.tplBlogPost,
-    gulp.series(buildBlogPosts, hotReload.browserSyncReload)
-  );
-
-  // Watch Datasets
-  // FIXME: způsobuje pád
-
-  // gulp.watch(
-  //   //config.datasetSourceMd,
-  //   './content/**/*.md',
-  //   gulp.series(
-  //     datasetPrepareSite,
-  //     datasetPreparePages,
-  //     datasetPrepareblog,
-  //     datasetPrepareBlogPaginate,
-  //     datasetBuildBlog,
-  //     buildBlogPosts,
-  //     buildPages,
-  //     hotReload.browserSyncReload
-  //   )
-  // );
+  gulp
+    .watch(
+      ['./src/templates/**/*.*', './src/pages/**/*.*', config.tplBlogPost],
+      gulp.series(buildPages, buildBlogPosts)
+    )
+    .on('change', hotReload.browserSyncReload);
 
   // Watch GFX
 
-  gulp.watch(config.gfxBase, gulp.series(images, hotReload.browserSyncReload));
+  gulp.watch(config.gfxBase, gulp.series(images, hotReload.browserSyncRefresh));
 }
 
 // Gulp tasks
@@ -279,9 +265,11 @@ gulp.task(
   'serve',
   gulp.series(
     cleanFolders,
+    copyStatic,
     datasetPrepareSite,
     datasetPreparePages,
     datasetPrepareBlogPosts,
+    createPathForBlogPosts,
     datasetPrepareBlogDataset,
     fontLoad,
     compileSassCore,
@@ -291,7 +279,6 @@ gulp.task(
     buildPages,
     buildBlogPosts,
     images,
-    copyStatic,
     gulp.parallel(watchFiles, hotReload.browserSync)
   )
 );

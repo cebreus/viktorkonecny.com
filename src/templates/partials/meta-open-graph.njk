@@ -35,15 +35,17 @@
 	{% endif %}
 
 	{% if open_graph.image is defined and open_graph.image[0]|length > 0 %}
-		<meta property="og:image" content="https://res.cloudinary.com/hudebnipodyji/f_png,c_thumb,q_auto:best,w_1200,h_627{{ open_graph.image[0] }}">
-		<meta property="og:image:type" content="png">
-		<meta property="og:image:width" content="1200">
-		<meta property="og:image:height" content="627">
+	{% for item in open_graph.image %}
+		{% set loopIndex = loop.index %}
+		{% if loopIndex == 1 %}
+			<meta property="og:image" content="{{ SITE.baseUrl|trim }}{{ open_graph.image[0] }}">
+		{% elseif loopIndex <= 9 %}
+			<meta property="og:image" content="{{ SITE.baseUrl|trim }}{{ item }}">
+		{% endif %}
+	{% endfor %}
 	{% elseif SITE.open_graph.image is defined and SITE.open_graph.image[0]|length > 0 %}
-		<meta property="og:image" content="https://res.cloudinary.com/hudebnipodyji/f_png,c_thumb,q_auto:best,w_1200,h_627{{ SITE.open_graph.image[0] }}">
-		<meta property="og:image:type" content="png">
-		<meta property="og:image:width" content="1200">
-		<meta property="og:image:height" content="627">
+		<meta property="og:image" content="{{ SITE.baseUrl|trim }}{{ SITE.open_graph.image[0] }}">
 	{% endif %}
 
 {% endif %}
+  

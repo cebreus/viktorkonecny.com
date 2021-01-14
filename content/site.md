@@ -2,6 +2,8 @@
 type: settings
 blogPaginateLimit: 10
 copyright: '2020 © Viktor Konečný'
+baseUrl: https://www.viktorkonecny.com/
+
 meta:
   lang: cs
   charset: utf-8
@@ -10,7 +12,7 @@ seo:
   title: Viktor Konečný – Silový a kondiční trenér Praha
   description: Viktor Konečný – silový a kondiční trenér pro sportovce i běžné lidi, působící v Praze.
   robots: index,follow
-  canonical: https://viktorkonecny.com/
+  canonical: https://www.viktorkonecny.com/
   iclude_to_sitemap: true
 open_graph:
   use: true
@@ -23,12 +25,11 @@ open_graph:
     - 'facebook-universal.png'
   image_text: ''
 twitter_cards:
-  show: true
+  use: false
   type: summary_large_image
   title: ''
   description: ''
   image: []
-  use: false
   site: ''
   creator: ''
 ---
