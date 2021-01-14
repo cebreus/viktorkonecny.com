@@ -2,8 +2,6 @@ const fs = require('fs');
 const gulp = require('gulp');
 const path = require('path');
 
-const htmlBuildlFnc = require('./gulp-tasks-build/gulp-html-build');
-
 const cleanFnc = require('./gulp-tasks/gulp-clean');
 const compileSassFnc = require('./gulp-tasks-build/gulp-compile-sass');
 const copyStaticFnc = require('./gulp-tasks/gulp-copy-static');
@@ -12,11 +10,11 @@ const datasetBuildFnc = require('./gulp-tasks/gulp-dataset-build');
 const datasetPrepareFnc = require('./gulp-tasks/gulp-dataset-prepare');
 const faviconsFnc = require('./gulp-tasks/gulp-favicons');
 const fontLoadFnc = require('./gulp-tasks/gulp-font-load');
+const htmlBuildlFnc = require('./gulp-tasks-build/gulp-html-build');
+const htmlValidateFnc = require('./gulp-tasks/gulp-html-validate');
 const optimizeImagesFnc = require('./gulp-tasks/gulp-optimize-images');
-
 const processJsFnc = require('./gulp-tasks-build/gulp-process-js');
 const purgeCssFnc = require('./gulp-tasks-build/gulp-purgecss');
-const htmlValidateFnc = require('./gulp-tasks/gulp-html-validate');
 
 const replaceHashFnc = require('./gulp-tasks-build/gulp-sri-hash');
 const revisionFnc = require('./gulp-tasks-build/gulp-revision');

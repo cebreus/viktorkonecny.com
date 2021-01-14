@@ -4,6 +4,7 @@
   "description": "Persoval site of the Viktor Konečný",
   "scripts": {
     "build": "node ./node_modules/gulp/bin/gulp.js -f gulpfile-build.js default",
+    "build:validate:html": "node ./node_modules/gulp/bin/gulp.js -f gulpfile-build.js validate",
     "dev": "node ./node_modules/gulp/bin/gulp.js -f gulpfile.js default",
     "deploy": "netlify build && netlify deploy --prod",
     "commit": "git-cz",
@@ -48,6 +49,7 @@
     "gulp-favicons": "^2.4.0",
     "gulp-google-webfonts": "^4.0.0",
     "gulp-html-beautify": "^1.0.1",
+    "gulp-html-validate": "^0.2.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-if": "^3.0.0",
     "gulp-imagemin": "^7.1.0",
@@ -73,6 +75,7 @@
     "gulp-stylelint": "^13.0.0",
     "gulp-uglify": "^3.0.2",
     "gulp-upng": "^1.0.3",
+    "html-validate": "^4.1.0",
     "husky": "^4.3.7",
     "imagemin-mozjpeg": "^9.0.0",
     "lint-staged": "^10.5.3",
