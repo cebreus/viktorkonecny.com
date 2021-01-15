@@ -7,28 +7,32 @@
 
 {% block content %}
 
-	<article class="py-5">
-		<div class="container">
-			<h1 class="mb-5">{{ title }}</h1>
+	<article class="o-main pt-5 pb-5">
+		<div class="container pt-5 pb-5">
 			<div class="row justify-content-between">
-				<div class="col-lg-6 col-md-7">
-					<p class="h2">
-						{% if startDate %}
-						{{ startDate|date('D. M. YYYY v HH:mm')  }}
-						{% endif %}
-					</p>
-					{% if description is defined and description|length > 0 %}
-						<p>{{ description|safe }}</p>
+				<div class="col-md-10 col-lg-8 mx-auto">
+					<h1 class="text-primary font-weight-bold display-4 mt-5 mb-5">{{ title }}</h1>
+
+					{% if entity_status.date %}
+						<div class="mb-3">{{ entity_status.date|date('D. M. YYYY v HH:mm')  }}</div>
 					{% endif %}
 
-					{% if body is defined and body|length > 0 %}
+					{% if description is defined and description | length > 0 %}
+						<div class="lead mb-4">{{ description|safe }}</div>
+					{% endif %}
+
+					{% if body is defined and body | length > 0 %}
 						{{ body|safe }}
 					{% endif %}
+
+					<a href="/blog/" class="btn btn-link btn-lg pl-0">Zpět na články</a>
 				</div>
 			</div>
 
-			<a href="/blog/" class="btn btn-outline-primary btn-lg">Zpět</a>
 		</div>
 	</article>
+
+	<hr>
+	{% include "partials/form--contactus.njk" %}
 
 {% endblock %}
