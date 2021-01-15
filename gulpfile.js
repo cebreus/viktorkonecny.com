@@ -130,11 +130,23 @@ function buildPages(done) {
 function buildBlogPosts(done) {
   fs.readdir(config.datasetBlogBuild, (err, files) => {
     files.forEach((file) => {
-      let fileName = path.parse(file).name;
+      const fileName = path.parse(file).name;
+
+      // read current file
+      const readFile = fs.readFileSync(
+        `${config.datasetBlogBuild}/${file}`,
+        'utf-8'
+      );
+
+      // parse current file
+      const parsedFile = JSON.parse(readFile);
+
+      // if seo.slug exists use it as the output pah else use the current filename
+      const outputPath = parsedFile.seo.slug || fileName;
 
       const params = {
         input: config.tplBlogPost,
-        output: `${config.blogBuild}/${fileName}`,
+        output: `${config.blogBuild}/${outputPath}`,
         templates: config.tplTemplatesBase,
         processPaths: [config.tplPagesBase, config.tplTemplatesBase],
         siteConfig: `${config.tempBase}/site.json`,
