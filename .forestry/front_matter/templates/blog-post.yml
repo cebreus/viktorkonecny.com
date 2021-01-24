@@ -1,34 +1,30 @@
 ---
-label: Blog post
+label: Blogový příspěvek
 hide_body: false
 display_field: title
 fields:
 - type: text
   name: type
-  label: type
+  label: Typ
   hidden: true
   default: blog-post
 - type: text
   name: title
-  label: title
+  label: Titulek (hlavní nadpis)
+  config:
+    required: true
 - type: text
   name: excerpt
-  label: excerpt
+  label: Perex
 - type: field_group
   name: entity_status
-  label: entity_status
+  label: Vlastnosti příspěvku
   fields:
-  - type: datetime
-    name: date
-    label: date
-  - type: datetime
-    name: updated_at
-    label: updated_at
   - name: workflow_step
     type: select
     default: draft
     config:
-      required: false
+      required: true
       options:
       - draft
       - publish
@@ -37,68 +33,78 @@ fields:
         section: 
         file: 
         path: 
-    label: workflow_step
+    label: Stav
+    hidden: false
+  - type: datetime
+    name: date
+    label: Vytvořeno
+    default: now
+  - type: datetime
+    name: updated_at
+    label: Aktualizováno
+    default: now
 - type: field_group
   name: seo
-  label: seo
+  label: SEO
   fields:
-  - type: list
-    name: seo_keywords
-    label: seo_keywords
-  - type: text
-    name: seo_robots
-    label: seo_robots
-  - type: text
-    name: slug
-    label: slug
-    hidden: true
   - type: text
     name: seo_title
-    label: seo_title
+    label: Titulek
   - type: text
     name: seo_description
-    label: seo_description
+    label: Popis
+  - type: text
+    name: seo_robots
+    label: Nastavení procházení crawlery
+  - type: text
+    name: slug
+    label: URL slug
+    hidden: false
+    description: Poslední část adresy URL obsahující jedinečný řetězec, který identifikuje
+      webovou stránku.
   - type: boolean
     name: seo_iclude_to_sitemap
-    label: seo_iclude_to_sitemap
+    label: Vložit do sitemap.xml
+    hidden: true
   - type: text
     name: canonical
-    label: canonical
+    label: Kanonický odkaz
+    hidden: false
 - type: field_group
   name: open_graph
-  label: open_graph
+  label: Meta data pro Facebook
   fields:
   - type: boolean
     name: use
-    label: use
-  - type: text
-    name: type
-    label: type
+    label: Použít
   - type: text
     name: title
-    label: title
+    label: Titulek
   - type: text
     name: description
-    label: description
+    label: Popis
   - type: list
     name: image
-    label: image
+    label: Obrázky
+  - type: text
+    name: type
+    label: Typ
 - type: field_group
   name: twitter_cards
-  label: twitter_cards
   fields:
   - type: boolean
     name: use
-    label: use
-  - type: text
-    name: type
-    label: type
+    label: Použít
   - type: text
     name: title
-    label: title
+    label: Titulek
   - type: text
     name: description
-    label: description
+    label: Popis
   - type: list
     name: image
-    label: image
+    label: Obrázky
+  - type: text
+    name: type
+    label: Typ
+  label: Meta data pro Twitter
