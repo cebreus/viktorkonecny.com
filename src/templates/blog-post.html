@@ -7,25 +7,26 @@
 
 {% block content %}
 
-	<article class="o-main pt-5 pb-5">
-		<div class="container pt-5 pb-5">
+	<article class="o-main">
+		<div class="container">
 			<div class="row justify-content-between">
-				<div class="col-md-10 col-lg-8 mx-auto">
-					<h1 class="text-primary font-weight-bold display-4 mt-5 mb-5">{{ title }}</h1>
+				<div class="c-blog-detail c-blog--detail col-md-10 col-lg-8 mx-auto">
+					<h1 class="c-blog__title text-primary font-weight-bold display-4 mt-5 mb-5">{{ title }}</h1>
 
 					{% if entity_status.date %}
-						<div class="mb-3">{{ entity_status.date|date('D. M. YYYY v HH:mm')  }}</div>
+						<div class="c-blog__date mb-5">{{ entity_status.date|date('D. MMMM YYYY') }}</div>
 					{% endif %}
 
 					{% if description is defined and description | length > 0 %}
-						<div class="lead mb-4">{{ description|safe }}</div>
+						<div class="c-blog__perex lead mb-4">{{ description|safe }}</div>
 					{% endif %}
 
 					{% if body is defined and body | length > 0 %}
-						{{ body|safe }}
+						<div class="mb-5">{{ body|safe }}</div>
 					{% endif %}
 
-					<a href="/blog/" class="btn btn-link btn-lg pl-0">Zpět na články</a>
+					<a href="/blog/" class="c-blog__link btn btn-link btn-lg pl-0">
+						<span class="arrow mr-2"></span>Zpět na články</a>
 				</div>
 			</div>
 

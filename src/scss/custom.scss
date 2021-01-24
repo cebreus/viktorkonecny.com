@@ -3,6 +3,7 @@
 @import '../../node_modules/bootstrap/scss/functions';
 @import '../../node_modules/bootstrap/scss/mixins';
 @import './variables';
+@import './c-blog';
 
 // Přetížení Bootatrapu
 // --------------
@@ -538,42 +539,4 @@ iframe {
 
 form label {
   display: none;
-}
-
-.c-blog {
-  padding-top: 6rem;
-  padding-bottom: 4rem;
-}
-
-.c-blog__item {
-  display: flex;
-  flex-direction: column;
-  padding: $grid-gutter-width;
-  background-color: #242427;
-}
-
-.c-blog__date {
-  font-size: 0.875rem;
-  color: #868687;
-}
-
-.c-blog__title {
-  margin-bottom: map-get($spacers, 4);
-  font-weight: $font-weight-bold;
-  font-size: 1.625rem;
-}
-
-.c-blog__perex {
-  margin-bottom: map-get($spacers, 4);
-}
-
-.c-blog__link {
-  margin-top: auto;
-  margin-right: auto;
-  margin-bottom: -3.25rem;
-  // &:active,
-  // &:focus,
-  // &:hover {
-  //   background-color: $white;
-  // }
 }
