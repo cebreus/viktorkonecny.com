@@ -3,7 +3,7 @@ const gulp = require('gulp');
 const data = require('gulp-data');
 const mergeJson = require('gulp-merge-json');
 const path = require('path');
-const plumber = require('gulp-plumber');
+const through = require('through2');
 
 /**
  * @description Merge JSON files into one; each file in new node
@@ -40,6 +40,24 @@ const datasetBuild = (input, output, outputFilename, cb) => {
           }
           return data;
         },
+      })
+    )
+    .pipe(
+      through.obj((chunk, enc, cb) => {
+        let file = JSON.parse(chunk.contents.toString('utf-8'));
+
+        file['BLOG'] = file['BLOG'].sort(
+          (a, b) =>
+            new Date(b.entity_status['date']) -
+            new Date(a.entity_status['date'])
+        );
+
+        const fileString = JSON.stringify(file);
+        const fileBuffer = Buffer.from(fileString, 'utf-8');
+
+        chunk.contents = fileBuffer;
+
+        cb(null, chunk);
       })
     )
     .pipe(gulp.dest(output))
