@@ -14,54 +14,58 @@ const through = require('through2');
  */
 
 const datasetBuild = (input, output, outputFilename, cb) => {
-  return gulp
-    .src(input)
-    .pipe(
-      mergeJson({
-        fileName: outputFilename,
-        concatArrays: true,
-        mergeArrays: false,
-        edit: (json, file) => {
-          let data = {};
-          let fileName = path.parse(file.path).name;
-          let fileDir = path.parse(file.path).dir;
+  return (
+    gulp
+      .src(input)
+      .pipe(
+        mergeJson({
+          fileName: outputFilename,
+          concatArrays: true,
+          mergeArrays: false,
+          edit: (json, file) => {
+            let data = {};
+            let fileName = path.parse(file.path).name;
+            let fileDir = path.parse(file.path).dir;
 
-          if (fileName === 'site') {
-            let primaryKey = fileName;
-            data[primaryKey.toUpperCase()] = json;
-          } else if (fileDir.includes('dataset-')) {
-            let primaryKey = fileDir
-              .split(path.sep)
-              .pop()
-              .replace('_dataset-', '');
-            data[primaryKey.toUpperCase()] = [json].sort(
-              (a, b) => new Date(b['startDate']) - new Date(a['startDate'])
-            );
-          }
-          return data;
-        },
-      })
-    )
-    .pipe(
-      through.obj((chunk, enc, cb) => {
-        let file = JSON.parse(chunk.contents.toString('utf-8'));
+            // site data
+            if (fileName === 'site') {
+              let primaryKey = fileName;
+              data[primaryKey.toUpperCase()] = json;
+            }
+            // datasets e.g. Blog posts
+            else if (fileDir.includes('dataset-')) {
+              let primaryKey = fileDir
+                .split(path.sep)
+                .pop()
+                .replace('_dataset-', '');
+              data[primaryKey.toUpperCase()] = [json];
+            }
+            return data;
+          },
+        })
+      )
+      // Sorting BLOG by `entity_status.date`
+      .pipe(
+        through.obj((chunk, enc, cb) => {
+          let file = JSON.parse(chunk.contents.toString('utf-8'));
 
-        file['BLOG'] = file['BLOG'].sort(
-          (a, b) =>
-            new Date(b.entity_status['date']) -
-            new Date(a.entity_status['date'])
-        );
+          file['BLOG'] = file['BLOG'].sort(
+            (a, b) =>
+              new Date(b.entity_status['date']) -
+              new Date(a.entity_status['date'])
+          );
 
-        const fileString = JSON.stringify(file);
-        const fileBuffer = Buffer.from(fileString, 'utf-8');
+          const fileString = JSON.stringify(file);
+          const fileBuffer = Buffer.from(fileString, 'utf-8');
 
-        chunk.contents = fileBuffer;
+          chunk.contents = fileBuffer;
 
-        cb(null, chunk);
-      })
-    )
-    .pipe(gulp.dest(output))
-    .on('end', cb);
+          cb(null, chunk);
+        })
+      )
+      .pipe(gulp.dest(output))
+      .on('end', cb)
+  );
 };
 
 module.exports = datasetBuild;
