@@ -1,7 +1,7 @@
 ---
 type: blogpost
 uid: proc-zvolit-individualni-plan
-title: 'Landmine press a spokojený supraspinatus '
+title: Landmine press a spokojený supraspinatus 2
 description: Individuální plán zpracuji každému, kdo chce posunout svůj výkon na další
   úroveň.
 showDetail: false
