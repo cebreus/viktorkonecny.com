@@ -1,0 +1,44 @@
+name: 🚀 Build and Deploy to FTP
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-and-ftp-deploy:
+    name: 🎉 Build and Deploy
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v2
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Cache dependencies
+        id: cache
+        uses: actions/cache@v2
+        with:
+          path: ./node_modules
+          key: modules-${{ hashFiles('package-lock.json') }}
+
+      - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm ci
+
+      - name: 🔨 Build
+        run: npm run build
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.2.0
+        with:
+          server: ftp.viktorkonecny.com
+          username: viktorkonecny_com
+          password: ${{ secrets.ftp_password }}
+          local-dir: ./build/
+          server-dir: viktorkonecny.com/
