@@ -17,6 +17,7 @@ seo:
   iclude_to_sitemap: true
   slug: 2020-03-23-proc-zvolit-individualni-plan
   canonical: ''
+  seo_title: 'Landmine press a spokojený supraspinatus '
 open_graph:
   use: false
   type: website
