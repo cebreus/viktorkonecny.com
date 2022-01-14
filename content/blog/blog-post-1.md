@@ -31,7 +31,7 @@ twitter_cards:
   title: ''
   description: ''
   image: []
-excerpt: bla bla
+excerpt: ''
 
 ---
 Landmine press mám hodně rád!!! Za manželku bych ho úplně nevyměnil, ale už delší dobu zpátky jsem ho vyměnil za velkou část cviků, u kterých jde ruka do úplné flexe s činkou nad hlavu jako je např. military press. Důvod? Velká část lidí prostě nemá dostatečný rozsah pohybu k tomu, aby se do této pozice bezpečně a bez bolesti dostala. Řešení? Najít a cíleně pracovat na příčinách tohoto omezení - omezená mobilita hrudníku, pozice a pohyb lopatky a další. 
