@@ -79,7 +79,7 @@
     "husky": "^4.3.8",
     "imagemin-mozjpeg": "^9.0.0",
     "lint-staged": "^11.2.0",
-    "marked": "^3.0.4",
+    "marked": "^4.0.10",
     "nunjucks-date-filter-locale": "^1.4.3",
     "postcss": "^8.2.3",
     "postcss-flexbugs-fixes": "^5.0.2",
