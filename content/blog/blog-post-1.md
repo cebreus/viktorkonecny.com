@@ -31,7 +31,7 @@ twitter_cards:
   title: ''
   description: ''
   image: []
-excerpt: ''
+excerpt: ahoj ahoj
 show_detail: true
 
 ---
