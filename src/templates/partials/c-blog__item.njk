@@ -1,27 +1,27 @@
 <div class="col mb-5">
-	<div class="c-blog__item h-100">
+  <div class="c-blog__item h-100">
 
-		{% if item.entity_status.date is defined and item.entity_status.date | length > 0 %}
-			<span class="c-blog__date">
-				{{ item.entity_status.date | date('D. MMMM YYYY') }}
-			</span>
-		{% endif %}
+    {% if item.entity_status.date is defined and item.entity_status.date | length > 0 %}
+      <span class="c-blog__date">
+        {{ item.entity_status.date | date('D. MMMM YYYY') }}
+      </span>
+    {% endif %}
 
-		<h3 class="c-blog__title">
-			{% if item.showDetail === true %}
-				<a class="c-blog__title-link" href="/{{ item.path }}/">
-					{{ item.title }}
-				</a>
-			{% else %}
-				{{ item.title }}
-			{% endif %}
-		</h3>
-		{% if item.description is defined and  item.description | length > 0%}
-			<div class="c-blog__perex">{{ item.description }}</div>
-		{% endif %}
-		{% if item.showDetail %}
-			<a class="c-blog__link btn btn-primary btn-lg" href="/{{ item.path }}/">Celý článek<span class="arrow ml-2"></span></a>
-		{% endif %}
+    <h3 class="c-blog__title">
+      {% if item.show_detail === true %}
+        <a class="c-blog__title-link" href="/{{ item.path }}/">
+          {{ item.title }}
+        </a>
+      {% else %}
+        {{ item.title }}
+      {% endif %}
+    </h3>
+    {% if item.description is defined and  item.description | length > 0%}
+      <div class="c-blog__perex">{{ item.description }}</div>
+    {% endif %}
+    {% if item.show_detail %}
+      <a class="c-blog__link btn btn-primary btn-lg" href="/{{ item.path }}/">Celý článek<span class="arrow ml-2"></span></a>
+    {% endif %}
 
-	</div>
+  </div>
 </div>

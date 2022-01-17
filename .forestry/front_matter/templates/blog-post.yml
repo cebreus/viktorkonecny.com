@@ -20,6 +20,11 @@ fields:
     type: boolean
     label: Ukázat na homepage
     description: Zobrazí aktualitu na úvodní stránce webu.
+  - name: show_detail
+    type: boolean
+    label: Zobrazit detail
+    default: true
+    description: Bude vytvořena stránka v vlastní adresou.
   - type: field_group
     name: entity_status
     label: Vlastnosti příspěvku
