@@ -6,6 +6,7 @@ entity_status:
   updated_at: 2022-01-14T22:07:31+01:00
 title: Landmine press a spokojený supraspinatus
 excerpt: ''
+show_on_home: true
 seo:
   seo_title: ''
   seo_description: ''
