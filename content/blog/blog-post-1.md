@@ -7,7 +7,7 @@ description: Individuální plán zpracuji každému, kdo chce posunout svůj v�
 showDetail: false
 show_on_home: true
 entity_status:
-  date: 2020-03-01T11:00:00.000+00:00
+  date: 2022-01-03T12:00:00+01:00
   updated_at: 
   workflow_step: publish
 seo:
@@ -15,7 +15,7 @@ seo:
   description: ''
   robots: index,follow
   iclude_to_sitemap: true
-  slug: 2020-03-23-proc-zvolit-individualni-plan
+  slug: 2022-01-03-landmine-press-a-spokojeny-supraspinatus
   canonical: ''
   seo_title: 'Landmine press a spokojený supraspinatus '
 open_graph:
