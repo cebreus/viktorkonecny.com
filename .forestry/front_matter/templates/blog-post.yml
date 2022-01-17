@@ -3,120 +3,117 @@ label: Blogový příspěvek
 hide_body: false
 display_field: title
 fields:
+- type: text
+  name: type
+  label: Typ
+  hidden: true
+  default: blog-post
+- type: text
+  name: title
+  label: Titulek (hlavní nadpis)
+  config:
+    required: true
+- type: text
+  name: excerpt
+  label: Perex
+- name: show_on_home
+  type: boolean
+  label: Ukázat na homepage
+  description: Zobrazí aktualitu na úvodní stránce webu.
+- name: show_detail
+  type: boolean
+  label: Zobrazit detail
+  default: true
+  description: Bude vytvořena stránka v vlastní adresou.
+- type: field_group
+  name: entity_status
+  label: Vlastnosti příspěvku
+  fields:
+  - name: workflow_step
+    type: select
+    default: draft
+    config:
+      required: true
+      options:
+      - draft
+      - publish
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Stav
+    hidden: false
+  - type: datetime
+    name: date
+    label: Vytvořeno
+    default: now
+  - type: datetime
+    name: updated_at
+    label: Aktualizováno
+    default: now
+- type: field_group
+  name: seo
+  label: SEO
+  fields:
+  - type: text
+    name: seo_title
+    label: Titulek
+  - type: text
+    name: seo_description
+    label: Popis
+  - type: text
+    name: seo_robots
+    label: Nastavení procházení crawlery
+  - type: text
+    name: slug
+    label: URL slug
+    hidden: false
+    description: Poslední část adresy URL obsahující jedinečný řetězec, který identifikuje
+      webovou stránku.
+  - type: boolean
+    name: seo_iclude_to_sitemap
+    label: Vložit do sitemap.xml
+    hidden: true
+  - type: text
+    name: canonical
+    label: Kanonický odkaz
+    hidden: false
+- type: field_group
+  name: open_graph
+  label: Meta data pro Facebook
+  fields:
+  - type: boolean
+    name: use
+    label: Použít
+  - type: text
+    name: title
+    label: Titulek
+  - type: text
+    name: description
+    label: Popis
+  - type: list
+    name: image
+    label: Obrázky
   - type: text
     name: type
     label: Typ
-    hidden: true
-    default: blog-post
+- type: field_group
+  name: twitter_cards
+  fields:
+  - type: boolean
+    name: use
+    label: Použít
   - type: text
     name: title
-    label: Titulek (hlavní nadpis)
-    config:
-      required: true
+    label: Titulek
   - type: text
-    name: excerpt
-    label: Perex
-  - name: show_on_home
-    type: boolean
-    label: Ukázat na homepage
-    description: Zobrazí aktualitu na úvodní stránce webu.
-  - name: show_detail
-    type: boolean
-    label: Zobrazit detail
-    default: true
-    description: Bude vytvořena stránka v vlastní adresou.
-  - type: field_group
-    name: entity_status
-    label: Vlastnosti příspěvku
-    fields:
-      - name: workflow_step
-        type: select
-        default: draft
-        config:
-          required: true
-          options:
-            - draft
-            - publish
-          source:
-            type: simple
-            section:
-            file:
-            path:
-        label: Stav
-        hidden: false
-      - type: datetime
-        name: date
-        label: Vytvořeno
-        default: now
-      - type: datetime
-        name: updated_at
-        label: Aktualizováno
-        default: now
-  - type: field_group
-    name: seo
-    label: SEO
-    fields:
-      - type: text
-        name: seo_title
-        label: Titulek
-      - type: text
-        name: seo_description
-        label: Popis
-      - type: text
-        name: seo_robots
-        label: Nastavení procházení crawlery
-      - type: text
-        name: slug
-        label: URL slug
-        hidden: false
-        description:
-          Poslední část adresy URL obsahující jedinečný řetězec, který identifikuje
-          webovou stránku.
-      - type: boolean
-        name: seo_iclude_to_sitemap
-        label: Vložit do sitemap.xml
-        hidden: true
-      - type: text
-        name: canonical
-        label: Kanonický odkaz
-        hidden: false
-  - type: field_group
-    name: open_graph
-    label: Meta data pro Facebook
-    fields:
-      - type: boolean
-        name: use
-        label: Použít
-      - type: text
-        name: title
-        label: Titulek
-      - type: text
-        name: description
-        label: Popis
-      - type: list
-        name: image
-        label: Obrázky
-      - type: text
-        name: type
-        label: Typ
-  - type: field_group
-    name: twitter_cards
-    fields:
-      - type: boolean
-        name: use
-        label: Použít
-      - type: text
-        name: title
-        label: Titulek
-      - type: text
-        name: description
-        label: Popis
-      - type: list
-        name: image
-        label: Obrázky
-      - type: text
-        name: type
-        label: Typ
-    label: Meta data pro Twitter
-pages:
-  - content/blog/landmine-press-a-spokojeny-supraspinatus.app
+    name: description
+    label: Popis
+  - type: list
+    name: image
+    label: Obrázky
+  - type: text
+    name: type
+    label: Typ
+  label: Meta data pro Twitter
