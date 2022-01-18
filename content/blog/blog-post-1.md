@@ -1,9 +1,9 @@
 ---
 type: blogpost
 uid: proc-zvolit-individualni-plan
-title: Landmine press a spokojený supraspinatus 2
-description: Velká část lidí prostě nemá dostatečný rozsah pohybu k tomu, aby se dostala
-  s činkou nad hlavu. Řešení? Landmine press!
+title: Landmine press a spokojený supraspinatus
+description: Buďme upřímní. Velká část lidí prostě nemá dostatečný rozsah pohybu k
+  tomu, aby se dostala s činkou nad hlavu. Řešení? Landmine press!
 show_detail: true
 show_on_home: true
 entity_status:
