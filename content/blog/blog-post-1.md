@@ -43,8 +43,7 @@ Výjimku mají strukturální omezení, na kterých lze pracovat jen těžko (zk
 
 U landmine pressu může ruka pracovat v menší stupni flexe, je v neutrální pozici a může být méně riziková pro rameno nejen u osob s omezeným rozsahem pohybu v rameni.
 
-    <div class="embed-responsive embed-responsive-16by9">
-      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8" allowfullscreen></iframe>
-    </div>
-    
-    
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8" allowfullscreen></iframe>
+</div>
+
