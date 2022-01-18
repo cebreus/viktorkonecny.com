@@ -35,7 +35,9 @@ twitter_cards:
 ---
 Landmine press mám hodně rád!!! Za manželku bych ho úplně nevyměnil, ale už delší dobu zpátky jsem ho vyměnil za velkou část cviků, u kterých jde ruka do úplné flexe s činkou nad hlavu jako je např. military press. Důvod? Velká část lidí prostě nemá dostatečný rozsah pohybu k tomu, aby se do této pozice bezpečně a bez bolesti dostala. Řešení? Najít a cíleně pracovat na příčinách tohoto omezení - omezená mobilita hrudníku, pozice a pohyb lopatky a další.
 
-![](/uploads/viktor-00318.jpg)
+![](/uploads/viktor-00319jo.jpg)
+
+![](/uploads/viktor-00318jo.jpg)
 
 Výjimku mají strukturální omezení, na kterých lze pracovat jen těžko (zkuste změnit hloubku kloubní jamky), a nezbývá než tréninkový plán přizpůsobit těmto omezením. Jednu věc, kterou jsem si odnesl od světových trenérů Deana Somerseta a Tonyho Gentilcora je to, že u celkem značné části populace se vyskytuje nadpažek (acromion) typu 3. U těchto osob pak dochází k negativnímu impingementu a bolesti ramene ironicky už jen tím, že se podívají na hodinky (záměrně negativnímu, protože k ramennímu impingementu dochází vlastně vždy. Otázka je, k jak moc velkému útlaku dochází, a jestli může způsobit riziko zranění a bolesti v oblasti ramene).
 
