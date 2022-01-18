@@ -88,8 +88,8 @@ ul li {
 
 h2 {
   font-weight: $font-weight-bold;
-  color: $primary;
   letter-spacing: 0.02rem;
+  color: $primary;
 
   @include media-breakpoint-down(sm) {
     font-size: 2rem;
@@ -100,9 +100,9 @@ h2 {
     margin-bottom: 0.3rem;
     font-weight: $font-weight-bolder;
     font-size: 1rem;
+    letter-spacing: 0.3rem;
     text-transform: uppercase;
     color: $white;
-    letter-spacing: 0.3rem;
 
     &::before {
       content: '';
@@ -173,15 +173,17 @@ h3 {
 }
 
 .custom-select {
+  appearance: none;
   background: url(../images/custom-select.svg) 100% 50% no-repeat;
   cursor: pointer;
-  appearance: none;
 }
 
-.form-control-textarea {
+/* stylelint-disable */
+textarea.form-control {
   height: 120px;
   border-top: 1px solid rgba($white, 0.4);
 }
+/* stylelint-enable */
 
 .header-contacts {
   .nav-item {
@@ -483,8 +485,8 @@ h3 {
 .contacts {
   margin-bottom: 5rem;
   font-size: 1.25rem;
-  text-transform: uppercase;
   letter-spacing: 0.25rem;
+  text-transform: uppercase;
 
   @include media-breakpoint-down(lg) {
     font-size: 1rem;
