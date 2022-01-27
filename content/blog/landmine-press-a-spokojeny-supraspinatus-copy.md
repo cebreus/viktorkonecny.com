@@ -7,7 +7,7 @@ description: Jeden z parametrů tréninku, na který trenéři často zapomínaj
 show_detail: true
 show_on_home: true
 entity_status:
-  date: 2022-01-03T12:00:00.000+01:00
+  date: 2022-01-27T00:00:00+01:00
   updated_at: 
   workflow_step: publish
 seo:
