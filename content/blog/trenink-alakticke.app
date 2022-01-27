@@ -8,7 +8,7 @@ entity_status:
 title: Trénink alaktické výbušnosti jako součást tréninku kondice
 description: Pokud pracujete se sportovci, určitě byste neměli vynechávat trénink
   alaktické výbušnosti v rámci kondičního tréninku.
-show_on_home: false
+show_on_home: true
 seo:
   seo_title: ''
   seo_description: ''
