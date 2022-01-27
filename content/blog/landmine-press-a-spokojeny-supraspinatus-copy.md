@@ -2,7 +2,7 @@
 type: blogpost
 uid: proc-zvolit-individualni-plan
 title: 'QUICK TIP: Změňte rovinu!'
-description: Jeden z parametrů tréninku, na který trenéři často zapomínají, je rovina.
+description: Jeden z parametrů tréninku, na který trenéři často zapomínají? Rovina.
   Malý quick tip, který se může hodit.
 show_detail: true
 show_on_home: true
