@@ -5,8 +5,9 @@ entity_status:
   workflow_step: publish
   date: 2022-01-27T17:50:53+01:00
   updated_at: 2022-01-27T17:50:53+01:00
-title: Trénink alaktické
-description: ''
+title: Trénink alaktické výbušnosti jako součást tréninku kondice
+description: Pokud pracujete se sportovci, určitě byste neměli vynechávat trénink
+  alaktické výbušnosti v rámci kondičního tréninku.
 show_on_home: false
 seo:
   seo_title: ''
