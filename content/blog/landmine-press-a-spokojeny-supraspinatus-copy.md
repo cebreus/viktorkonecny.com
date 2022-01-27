@@ -1,9 +1,9 @@
 ---
 type: blogpost
 uid: proc-zvolit-individualni-plan
-title: Landmine press a spokojený supraspinatus-(copy)
-description: Buďme upřímní. Velká část lidí prostě nemá dostatečný rozsah pohybu k
-  tomu, aby se dostala s činkou nad hlavu. Řešení? Landmine press!
+title: 'QUICK TIP: Změňte rovinu!'
+description: Jeden z parametrů tréninku, na který trenéři často zapomínají, je i změna
+  roviny u cviku. Malý quick tip, který se může hodit.
 show_detail: true
 show_on_home: true
 entity_status:
@@ -39,4 +39,6 @@ Přitom právě jedna z důležitých proměnných, se kterou lze při tréninku
 
 Jeden příklad za všechny. Zkuste změnit například landmine press z minulého článku více do frontální roviny.
 
-![](/assets/uploads/29313ec4-a3ea-4d86-ad3a-bed566a9e094.jpeg)![](/assets/uploads/4313c2c6-8b7f-4af2-b9aa-c9ec625d8ac4_1_201_a.jpeg)
+![](/assets/uploads/viktor-00347.jpg)
+
+![](/assets/uploads/viktor-00340.jpg)
