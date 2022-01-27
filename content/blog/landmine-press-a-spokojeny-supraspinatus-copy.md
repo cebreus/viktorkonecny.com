@@ -2,8 +2,8 @@
 type: blogpost
 uid: proc-zvolit-individualni-plan
 title: 'QUICK TIP: Změňte rovinu!'
-description: Jeden z parametrů tréninku, na který trenéři často zapomínají, je i změna
-  roviny u cviku. Malý quick tip, který se může hodit.
+description: Jeden z parametrů tréninku, na který trenéři často zapomínají, je rovina.
+  Malý quick tip, který se může hodit.
 show_detail: true
 show_on_home: true
 entity_status:
