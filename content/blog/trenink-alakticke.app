@@ -2,7 +2,7 @@
 type: blog-post
 show_detail: true
 entity_status:
-  workflow_step: draft
+  workflow_step: publish
   date: 2022-01-27T17:50:53+01:00
   updated_at: 2022-01-27T17:50:53+01:00
 title: Trénink alaktické
