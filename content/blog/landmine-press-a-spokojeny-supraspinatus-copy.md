@@ -39,6 +39,4 @@ Přitom právě jedna z důležitých proměnných, se kterou lze při tréninku
 
 Jeden příklad za všechny. Zkuste změnit například landmine press z minulého článku více do frontální roviny.
 
-![](/assets/uploads/viktor-00347.jpg)
-
-![](/assets/uploads/viktor-00340.jpg)
+![](/assets/uploads/viktor-00347.jpg)![](/assets/uploads/viktor-00340.jpg)
