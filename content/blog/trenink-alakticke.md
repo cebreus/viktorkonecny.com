@@ -32,7 +32,7 @@ twitter_cards:
 ---
 Trénink kondice nemusí být jen o nekonečném běhání dlouhých úseků v nízké intenzitě.
 
-Schopnost výskoku, akcelerace nebo rychlé změny směru - to všechno jsou věci, které jsou stěžejní nejen u ledního hokeje, ale i většiny týmových sportů. Zároveň to jsou schopnosti, které jsou závislé na rychlé produkci energie. Pár bodů k tréninkům AP v rámci tréninků energetických systémů (ESD):
+Schopnost výskoku, akcelerace nebo rychlé změny směru – to všechno jsou věci, které jsou stěžejní nejen u ledního hokeje, ale i většiny týmových sportů. Zároveň to jsou schopnosti, které jsou závislé na rychlé produkci energie. Pár bodů k tréninkům AP v rámci tréninků energetických systémů (ESD):
 
 Kratší intervaly o maximálním úsilí - 6 - 10 sekund.  
 Mezi intervaly použijte delší odpočinek tak, aby došlo k úplnému zotavení - optimálně 2 - 5 minut.  
