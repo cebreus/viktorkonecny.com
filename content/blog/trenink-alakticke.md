@@ -8,7 +8,7 @@ entity_status:
 title: Trénink
 description: Pokud pracujete se sportovci, určitě byste neměli vynechávat trénink
   alaktické výbušnosti v rámci kondičního tréninku.
-show_on_home: true
+show_on_home: false
 seo:
   seo_title: ''
   seo_description: ''
