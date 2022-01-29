@@ -40,3 +40,5 @@ Tréninky AP jsou obecně velmi náročné na centrální nervovou soustavu, pro
 Aktivitu zvolte takovou, kde jste schopni vyvinout maximální úsilí např. airbike, sprinty nebo saně.
 
 Pokud máte místo nohou dynamity jako Vladimír Sobotka, připravte se na to, že po tréninku bude potřeba dotáhnout šrouby na airbiku.
+
+![](/assets/uploads/aaaaaaaa.gif)
