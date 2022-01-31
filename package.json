@@ -1,6 +1,6 @@
 {
   "name": "viktorkonecny",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Persoval site of the Viktor Konečný",
   "scripts": {
     "build": "node ./node_modules/gulp/bin/gulp.js -f gulpfile-build.js default",
