@@ -41,4 +41,10 @@ Mezi intervaly použijte delší odpočinek tak, aby došlo k úplnému zotaven�
 Tréninky AP jsou obecně velmi náročné na centrální nervovou soustavu, proto je vhodné zařadit je v rámci high-neural dní např. spojit s tréninkem maximálního/dynamického úsilí a nebo ho zařadit jako samostatnou tréninkovou jednotku. Mezi dny náročnými na CNS pak mít minimálně 48 hodin rozestup.  
 Aktivitu zvolte takovou, kde jste schopni vyvinout maximální úsilí např. airbike, sprinty nebo saně.
 
-Pokud máte místo nohou dynamity jako Vladimír Sobotka, připravte se na to, že po tréninku bude potřeba dotáhnout šrouby na airbiku.
+Pokud máte místo nohou dynamity jako Vladimír Sobotka, připravte se na to, že po tréninku bude potřeba dotáhnout všechny šrouby na airbiku.
+
+<div class="embed-responsive embed-responsive-16by9">
+
+<iframe class="embed-responsive-item" src=["](https://www.youtube.com/embed/zpOULjyy-n8)[https://www.youtube.com/embed/zpOULjyy-n8](https://www.youtube.com/embed/zpOULjyy-n8 "https://www.youtube.com/embed/zpOULjyy-n8")["](https://www.youtube.com/watch?v=qrOOn0HY6E0) allowfullscreen></iframe>
+
+</div>
