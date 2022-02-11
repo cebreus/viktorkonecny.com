@@ -24,7 +24,7 @@ const datasetBuild = (input, output, outputFilename, cb) => {
           mergeArrays: false,
           edit: (json, file) => {
             let data = {};
-            let fileName = path.parse(file.path).name;
+            let fileName = path.parse(file.path).name.replace(/\\/g, '/');
             let fileDir = path.parse(file.path).dir;
 
             // site data

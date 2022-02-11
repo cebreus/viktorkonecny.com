@@ -161,13 +161,14 @@ function buildPages(done) {
 function buildBlogPosts(done) {
   fs.readdir(config.datasetBlogBuild, (err, files) => {
     files.forEach((file) => {
-      const fileName = path.parse(file).name;
+      const fileName = path.parse(file).name.replace(/\\/g, '/');
 
       // read current file
       const readFile = fs.readFileSync(
         `${config.datasetBlogBuild}/${file}`,
         'utf-8'
       );
+      readFile = readFile.replace(/\\/g, '/');
 
       // parse current file
       const parsedFile = JSON.parse(readFile);
