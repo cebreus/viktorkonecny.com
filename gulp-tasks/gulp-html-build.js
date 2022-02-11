@@ -87,7 +87,7 @@ const buildHtml = (params) => {
       // Add access to site configuration
       .pipe(
         data(function () {
-          let file = params.siteConfig.replace(/\\/g, '/');
+          let file = params.siteConfig;
           file = {
             SITE: {
               ...JSON.parse(fs.readFileSync(file)),
@@ -99,7 +99,7 @@ const buildHtml = (params) => {
       // Add access to all blog posts
       .pipe(
         data(function () {
-          let file = params.datasetBlog.replace(/\\/g, '/');
+          let file = params.datasetBlog;
           file = {
             ...file,
             ...JSON.parse(fs.readFileSync(file)),
