@@ -135,7 +135,7 @@ function buildBlogPosts(done) {
       // read current file
       const readFile = fs.readFileSync(
         `${config.datasetBlogBuild}/${file}`,
-        'utf-8'
+        'utf8'
       );
 
       // parse current file

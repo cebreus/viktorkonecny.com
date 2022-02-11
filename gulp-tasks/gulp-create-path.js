@@ -10,11 +10,11 @@ const path = require('path');
  */
 
 const createPaths = (input, callback, type = 'cs') => {
-  const files = fs.readdirSync(input, 'utf-8');
+  const files = fs.readdirSync(input, 'utf8');
 
   files.forEach((file) => {
     const parsed = JSON.parse(
-      fs.readFileSync(`${process.cwd()}/${input}/${file}`, 'utf-8')
+      fs.readFileSync(`${process.cwd()}/${input}/${file}`, 'utf8')
     );
 
     const slug = parsed.seo.slug || path.parse(file).name.replace(/\\/g, '/');

@@ -47,7 +47,7 @@ const datasetBuild = (input, output, outputFilename, cb) => {
       // Sorting BLOG by `entity_status.date`
       .pipe(
         through.obj((chunk, enc, cb) => {
-          let file = JSON.parse(chunk.contents.toString('utf-8'));
+          let file = JSON.parse(chunk.contents.toString('utf8'));
 
           file['BLOG'] = file['BLOG'].sort(
             (a, b) =>
@@ -56,7 +56,7 @@ const datasetBuild = (input, output, outputFilename, cb) => {
           );
 
           const fileString = JSON.stringify(file);
-          const fileBuffer = Buffer.from(fileString, 'utf-8');
+          const fileBuffer = Buffer.from(fileString, 'utf8');
 
           chunk.contents = fileBuffer;
 

@@ -74,7 +74,7 @@ const buildHtml = (params) => {
                 `${process.cwd()}/${params.dataSource}/${
                   currentFile.dirname
                 }.json`,
-                'utf-8'
+                'utf8'
               )
             );
             oldDataSource = currentFile.dirname;
@@ -96,7 +96,7 @@ const buildHtml = (params) => {
           return file;
         })
       )
-     // Add access to all blog posts
+      // Add access to all blog posts
       .pipe(
         data(function () {
           let file = params.datasetBlog;
