@@ -17,7 +17,7 @@ const createPaths = (input, callback, type = 'cs') => {
       fs.readFileSync(`${process.cwd()}/${input}/${file}`, 'utf8')
     );
 
-    const slug = parsed.seo.slug || path.parse(file).name.replace(/\\/g, '/');
+    const slug = parsed.seo.slug || path.parse(file).name;
 
     parsed.path = `blog/${slug}`;
 
