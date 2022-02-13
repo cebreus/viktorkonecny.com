@@ -20,7 +20,7 @@
     "version": "node ./node_modules/auto-changelog/src/index.js -p -t keepachangelog.hbs && git add CHANGELOG.md"
   },
   "dependencies": {
-    "bootstrap": "4.5.3"
+    "bootstrap": "4.6.1"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.12.11",
