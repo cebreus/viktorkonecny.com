@@ -1,34 +1,44 @@
 {% extends "./layout.html" %}
 
 {% set pageData = {
-	page_id: 'blog',
-	template: 'index'
+  page_id: 'blog',
+  template: 'index'
 } %}
 
 {% block content %}
 
-	<article class="o-main pt-5 pb-3">
-		<div class="container pt-5">
-			<h1 class="text-primary font-weight-bold display-4 pt-5">{{ title }}</h1>
-			{% if body %}
-				<div class="mb-5">{{ body|safe }}</div>
-			{% endif %}
-		</div>
-	</article>
+  <article class="o-main pt-5 pb-3">
+    <div class="container pt-5">
+      <h1 class="text-primary font-weight-bold display-4 pt-5">{{ title }}</h1>
+      {% if body %}
+        <div class="mb-5">{{ body|safe }}</div>
+      {% endif %}
+    </div>
+  </article>
 
-	<main class="c-blog pt-0">
-		<div class="container">
-			<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-				{% for item in BLOG | sort(true, false, entity_status.date) %}
-					{% if item.entity_status.workflow_step === 'publish' %}
-						{% include "partials/c-blog__item.njk" %}
-					{% endif %}
-				{% endfor %}
-			</div>
-		</div>
-	</main>
+  <main class="c-blog pt-0">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+        {% set showBlog = 0 %}
+        {% set filteredBlogPosts = [] %}
 
-	<hr>
-	{% include "partials/form--contactus.njk" %}
+        {% for item in BLOG %}
+          {% if item.show_on_home === true and item.entity_status.workflow_step === 'publish' %}
+            {% set showBlog = loop.length %}
+            {% set filteredBlogPosts = (filteredBlogPosts.push(item), filteredBlogPosts) %}
+          {% endif %}
+        {% endfor %}
+
+        {% if showBlog %}
+          {% for item in filteredBlogPosts %}
+            {% include "partials/c-blog__item.njk" %}
+          {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+  </main>
+
+  <hr>
+  {% include "partials/form--contactus.njk" %}
 
 {% endblock %}

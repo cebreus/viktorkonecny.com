@@ -1,23 +1,23 @@
 {% extends "./layout.html" %}
 
 {% set pageData = {
-	page_id: 'home',
-	template: 'index'
+  page_id: 'home',
+  template: 'index'
 } %}
 
 {% block content %}
-	<main>
-        {% include "partials/theme.njk" %}
-        <hr class="d-sm-none">
-        {% include "partials/o-me.njk" %}
-        <hr>
-        {% include "partials/sluzby.njk" %}
-        <hr>
-        {% include "partials/online-coaching.njk" %}
-        <hr>
-        {% include "partials/c-blog__list.njk" %}
-        <hr>
-        {% include "partials/form--contactus.njk" %}
-        {% include "partials/map.njk" %}
-      </main>
+  <main>
+    {% include "partials/theme.njk" %}
+    <hr class="d-sm-none">
+    {% include "partials/o-me.njk" %}
+    <hr>
+    {% include "partials/sluzby.njk" %}
+    <hr>
+    {% include "partials/online-coaching.njk" %}
+    <hr>
+    {% include "partials/c-blog__list.njk" %}
+    <hr>
+    {% include "partials/form--contactus.njk" %}
+    {% include "partials/map.njk" %}
+  </main>
 {% endblock %}
