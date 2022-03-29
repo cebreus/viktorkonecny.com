@@ -9,7 +9,7 @@ sections:
   label: Blog
   create: documents
   match: "*.md"
-  new_doc_ext: ''
+  new_doc_ext: app
   templates:
   - blog-post
 upload_dir: static/assets/uploads
