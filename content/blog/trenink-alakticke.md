@@ -4,7 +4,7 @@ title: Trénink alaktické výbušnosti
 description: Pokud pracujete se sportovci, určitě byste neměli vynechávat trénink
   alaktické výbušnosti v rámci kondičního tréninku.
 show_detail: true
-show_on_home: false
+show_on_home: true
 date: 2022-01-27T17:51:53+01:00
 workflow_step: publish
 seo:
