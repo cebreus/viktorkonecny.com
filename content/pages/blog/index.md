@@ -1,10 +1,9 @@
 ---
 type: page
 title: Blog
-entity_status:
-  date: 2020-02-01T11:00:00.000+00:00
-  updated_at: 2020-02-01T13:00:00.000+00:00
-  workflow_step: publish
+date: 2020-02-01T11:00:00.000+00:00
+updated_at: 2020-02-01T13:00:00.000+00:00
+workflow_step: publish
 seo:
   title: ''
   description: ''

@@ -1,9 +1,9 @@
 <div class="col mb-5">
   <div class="c-blog__item h-100">
 
-    {% if item.entity_status.date is defined and item.entity_status.date | length > 0 %}
+    {% if item.date is defined and item.date | length > 0 %}
       <span class="c-blog__date">
-        {{ item.entity_status.date | date('D. MMMM YYYY') }}
+        {{ item.date | date('D. MMMM YYYY') }}
       </span>
     {% endif %}
 

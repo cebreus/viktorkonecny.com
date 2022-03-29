@@ -2,7 +2,7 @@
 {% set filteredBlogPosts = [] %}
 
 {% for item in BLOG %}
-  {% if item.show_on_home === true and item.entity_status.workflow_step === 'publish' %}
+  {% if item.show_on_home === true and item.workflow_step === 'publish' %}
     {% set showBlog = loop.length %}
     {% set filteredBlogPosts = (filteredBlogPosts.push(item), filteredBlogPosts) %}
   {% endif %}

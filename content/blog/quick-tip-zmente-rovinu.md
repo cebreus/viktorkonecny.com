@@ -4,9 +4,8 @@ title: 'QUICK TIP: Změňte rovinu!'
 description: Jeden z parametrů tréninku, na který trenéři často zapomínají? Rovina. Malý quick tip, který se může hodit.
 show_detail: true
 show_on_home: true
-entity_status:
-  date: 2022-01-27T00:00:00+01:00
-  workflow_step: publish
+date: 2022-01-27T00:00:00+01:00
+workflow_step: publish
 seo:
   robots: index,follow
   slug: quick-tip-zmente-rovinu

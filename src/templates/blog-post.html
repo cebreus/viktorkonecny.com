@@ -13,8 +13,8 @@
 				<div class="c-blog-detail c-blog--detail col-md-10 col-lg-8 mx-auto">
 					<h1 class="c-blog__title text-primary font-weight-bold display-4 mt-5 mb-5">{{ title }}</h1>
 
-					{% if entity_status.date %}
-						<div class="c-blog__date mb-5">{{ entity_status.date|date('D. MMMM YYYY') }}</div>
+					{% if date %}
+						<div class="c-blog__date mb-5">{{ date|date('D. MMMM YYYY') }}</div>
 					{% endif %}
 
 					{% if description is defined and description | length > 0 %}

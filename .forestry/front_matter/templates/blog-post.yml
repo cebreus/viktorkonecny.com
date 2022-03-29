@@ -25,33 +25,26 @@ fields:
   label: Zobrazit detail
   default: true
   description: Bude vytvořena stránka v vlastní adresou.
-- type: field_group
-  name: entity_status
-  label: Vlastnosti příspěvku
-  fields:
-  - name: workflow_step
-    type: select
-    default: draft
-    config:
-      required: true
-      options:
-      - draft
-      - publish
-      source:
-        type: simple
-        section: 
-        file: 
-        path: 
-    label: Stav
-    hidden: false
-  - type: datetime
-    name: date
-    label: Vytvořeno
-    default: now
-  - type: datetime
-    name: updated_at
-    label: Aktualizováno
-    default: now
+- name: workflow_step
+  type: select
+  default: draft
+  config:
+    required: true
+    options:
+    - draft
+    - publish
+    source:
+      type: simple
+  label: Stav
+  hidden: false
+- type: datetime
+  name: date
+  label: Vytvořeno
+  default: now
+- type: datetime
+  name: updated_at
+  label: Aktualizováno
+  default: now
 - type: field_group
   name: seo
   label: SEO
