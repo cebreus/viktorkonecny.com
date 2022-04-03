@@ -32,7 +32,7 @@ Stejně jako v životě i v silovém tréninku platí, že každý den je posví
 
 <div class="embed-responsive embed-responsive-16by9">
 
-<iframe class="embed-responsive-item" src="[https://youtu.be/qrOOn0HY6E0](https://youtu.be/qrOOn0HY6E0 "https://youtu.be/qrOOn0HY6E0")" allowfullscreen></iframe>
+<iframe class="embed-responsive-item" src="https://youtu.be/qrOOn0HY6E0" allowfullscreen></iframe>
 
 </div>
 
@@ -48,7 +48,7 @@ TOP set (aka EDM sety) je maximální váha, kterou jste schopni zvednout pro da
 
 V tomto případě je vaše maximální váha pro dnešní trénink 105 kg.
 
-B_ad day scenario._ Ne vždy se zadaří. Víkend mohl být ve znamení oslav, v noci vás rušila sousedova kočka, do rána jste museli pracovat na prezentaci pro šéfa, kterou stejně nikdo ani nebude číst. Na trénink jdete se stejným očekáváním jako u výše uvedeného příkladu. Nicméně u první pracovní série s 95 kg sotva dotlačíte páté opakování do stojanu. Nevadí. Vaše maximální váha pro dnešní trénink je 95 kg. Série se 100 kg a 105 kg už nepojedete, protože by pro váš aktuální fyzický a mentální stav představovala větší váhu než 5RM.
+Bad day scenario. Ne vždy se zadaří. Víkend mohl být ve znamení oslav, v noci vás rušila sousedova kočka, do rána jste museli pracovat na prezentaci pro šéfa, kterou stejně nikdo ani nebude číst. Na trénink jdete se stejným očekáváním jako u výše uvedeného příkladu. Nicméně u první pracovní série s 95 kg sotva dotlačíte páté opakování do stojanu. Nevadí. Vaše maximální váha pro dnešní trénink je 95 kg. Série se 100 kg a 105 kg už nepojedete, protože by pro váš aktuální fyzický a mentální stav představovala větší váhu než 5RM.
 
 1. Set - 5 x 95 = aktuální 5RM pro daný trénink
 
