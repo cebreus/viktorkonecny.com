@@ -28,6 +28,12 @@ Pokud máte místo nohou dynamity jako Vladimír Sobotka, připravte se na to, �
 
 <div class="embed-responsive embed-responsive-16by9">
 
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8" allowfullscreen></iframe>
+
+</div>
+
+<div class="embed-responsive embed-responsive-16by9">
+
 <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=qrOOn0HY6E0" allowfullscreen></iframe>
 
 </div>
