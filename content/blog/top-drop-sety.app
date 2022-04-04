@@ -30,12 +30,6 @@ twitter_cards:
 ---
 Stejně jako v životě i v silovém tréninku platí, že každý den je posvícení a očekávat lineární zlepšování ve tréninku je v mnoha případně prostě nesmysl. Kolikrát už se stalo, že jste na bench-press vytlačili 100 kg a logicky jste očekávali, že další týden zvednete o pár kilo víc. A ono… se to nestalo. A je to naprosto v pořádku. Lidské tělo není stroj a na celkový výkon má mimo prostor posilovny spoustu dalších věcí, které v mnoha případech nejsme schopni ovlivnit - kvalita spánku, pracovní stres a další. TOP a DROP série nám dávaji do ruky skvělý nástroj, jak pracovat s autoregualcí. Pracujte tedy s vašim aktuálním maximálním výkonem dle vaše fyzického a mentálního stavu daného dne a ne s tím očekávaným tabulkovým.
 
-<div class="embed-responsive embed-responsive-16by9">
-
-<iframe class="embed-responsive-item" src="https://youtu.be/qrOOn0HY6E0" allowfullscreen></iframe>
-
-</div>
-
 Celý princip top a drop sérii spočívá v tom, že se v rámci několika pracovních sérii (zpravidla 1-3) snažíte dostat na své denní maximum pro daný cvik (top série). Toto maximum pak použijete pro nastavení dalších pracovních sérii, u kterých lehce snížíte váhu nebo počet opakování (drop série). Cílem je vytvořit další tréninkový objem o vyšší intenzite pro daný cvik.
 
 POZOR - Přesto že lineární zlepšování v rámci každého tréninku nemusí být reálné. Důležité je sledovat střednědobý až dlouhodobý trend a pracovat s celkovým progresem v rámci několika týdnů, tam by mělo být vidět zlepšení. Pokud ne, je na čase přehodnotit nastavený tréninkový plán.
