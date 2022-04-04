@@ -79,7 +79,9 @@ Thumbs.db
 .dccache
 .env
 .eslintcache
+.husky
 .idea
+.netlify
 .temp
 .tmp
 *.bak
@@ -111,10 +113,3 @@ results
 
 coverage
 testApp
-
-
-############################
-# Local Netlify folder
-############################
-
-.netlify

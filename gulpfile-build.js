@@ -2,6 +2,7 @@ const fs = require('fs');
 const gulp = require('gulp');
 const path = require('path');
 
+const buildHtmlFnc = require('./gulp-tasks-build/gulp-html-build');
 const cleanFnc = require('./gulp-tasks/gulp-clean');
 const compileSassFnc = require('./gulp-tasks-build/gulp-compile-sass');
 const copyStaticFnc = require('./gulp-tasks/gulp-copy-static');

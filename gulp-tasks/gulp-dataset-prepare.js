@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const plumber = require('gulp-plumber');
 const markdownToJSON = require('gulp-markdown-to-json');
-const marked = require('marked');
+const { marked } = require('marked');
 const rename = require('gulp-rename');
 
 /**
@@ -25,12 +25,12 @@ const datasetPrepare = (input, output, cb) => {
             extname: '.json',
           };
         } else if (path.dirname !== '.') {
+          // console.log(path.dirname);
           return {
             basename: path.dirname,
             dirname: '/',
             extname: '.json',
           };
-          console.log(path.dirname);
         }
       })
     )

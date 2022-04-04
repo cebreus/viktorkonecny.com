@@ -54,8 +54,8 @@ $form-row-col-widths: map-merge(
 
     .row {
       &::after {
-        right: -$grid-gutter-width / 2;
-        left: -$grid-gutter-width / 2;
+        right: -$grid-gutter-width * .5;
+        left: -$grid-gutter-width * .5;
 
         @each $breakpoint in map-keys($grid-breakpoints) {
           @include media-breakpoint-up($breakpoint) {

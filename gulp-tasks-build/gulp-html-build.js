@@ -23,6 +23,7 @@ const rename = require('gulp-rename');
 
 const buildHtml = (params) => {
   const dateFilter = require('nunjucks-date-filter-locale');
+  const markdown = require('nunjucks-markdown-filter');
   const localeSettings = require(`.${params.siteConfig}`);
   dateFilter.setLocale(localeSettings.meta.lang);
 
@@ -148,6 +149,7 @@ const buildHtml = (params) => {
           path: params.processPaths,
           manageEnv: (enviroment) => {
             enviroment.addFilter('date', dateFilter);
+            enviroment.addFilter('md', markdown);
             enviroment.addGlobal('toDate', function (date) {
               return date ? new Date(date) : new Date();
             });
@@ -176,6 +178,8 @@ const buildHtml = (params) => {
           params.injectCdnJs.toString().replace(/[, ]+/g, ' ')
         )
       )
+      // Remove multi/line comments
+      .pipe(replace(/( )*<!--((.*)|[^<]*|[^!]*|[^-]*|[^>]*)-->\n*/gm, ''))
       .pipe(minify({ collapseWhitespace: true }))
       .pipe(
         gulpif(

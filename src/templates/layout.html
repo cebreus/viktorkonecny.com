@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="{{ SITE.meta.lang }}">
-	<head>
-		<meta charset="{{ SITE.meta.charset }}">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="{{ SITE.meta.charset }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		{% include "partials/meta-seo.njk" %}
-		{% include "partials/meta-open-graph.njk" %}
-		{% include "partials/meta-twitter-cards.njk" %}
-		{% include "partials/favicons.njk" %}
+    {% include "partials/meta-seo.njk" %}
+    {% include "partials/meta-open-graph.njk" %}
+    {% include "partials/meta-twitter-cards.njk" %}
+    {% include "partials/favicons.njk" %}
 
-		<!-- inject:css -->
-		<!-- endinject -->
-	</head>
-	<body data-version="1.0.3" data-template="{{ pageData.template }}" data-spy="scroll" data-target="#navbarDefault">
-		{% include "partials/o-header.njk" %}
-		{% block content %}{% endblock %}
-		{% include "partials/o-footer.njk" %}
+    <!-- inject:css -->
+    <!-- endinject -->
+  </head>
+  <body data-version="1.1.0" data-template="{{ pageData.template }}" data-spy="scroll" data-target="#navbarDefault">
+    {% include "partials/o-header.njk" %}
+    {% block content %}{% endblock %}
+    {% include "partials/o-footer.njk" %}
 
-		<!-- inject: bootstrap js -->
-		<!-- inject:js -->
-		<!-- endinject -->
-	</body>
+    <!-- inject: bootstrap js -->
+    <!-- inject:js -->
+    <!-- endinject -->
+  </body>
 </html>
