@@ -23,7 +23,7 @@
     "prepare": "rm -rf .husky && husky install && npx husky set .husky/pre-commit 'npm run pre-commit' && npx husky set .husky/commit-msg 'npx --no-install commitlint --edit'"
   },
   "dependencies": {
-    "bootstrap": "4.6.1"
+    "bootstrap": "4.6.2"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.16.4",
