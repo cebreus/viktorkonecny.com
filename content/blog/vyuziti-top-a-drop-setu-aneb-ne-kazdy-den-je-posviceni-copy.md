@@ -36,7 +36,11 @@ V rámci těchto metod nemusíme donekonečna párovat pouze dřepy s vertikáln
 
 <iframe class="embed-responsive-item" src="[https://www.youtube.com/embed/qrOOn0HY6E0](https://www.youtube.com/embed/qrOOn0HY6E0 "https://www.youtube.com/embed/qrOOn0HY6E0")" allowfullscreen></iframe>
 
+<div class="embed-responsive embed-responsive-16by9">
+
+<iframe class="embed-responsive-item" src="[https://www.youtube.com/embed/qrOOn0HY6E0](https://www.youtube.com/embed/qrOOn0HY6E0 "https://www.youtube.com/embed/qrOOn0HY6E0")" allowfullscreen></iframe>
+
 3-4 sets  
-Video 1️⃣ - Heavy sled march - 8m  
-Video 2️⃣ - Dumbbell step-up jumps - 3+3x  
-Video 3️⃣ - Band assisted alternating jumps - 3+3x
+Video  - Heavy sled march - 8m  
+Video  - Dumbbell step-up jumps - 3+3x  
+Video  - Band assisted alternating jumps - 3+3x
