@@ -4,9 +4,8 @@ show_detail: true
 workflow_step: publish
 date: 2022-06-01T00:00:00+02:00
 updated_at: 2022-06-09T20:49:17+02:00
-title: Komplexní a kontrastní tréninkové metody a jejich využití ve sportovní přípravě
-  sportovce
-description: "...aneb jak ze sportovce udělat supersportovce."
+title: Komplexní a kontrastní tréninkové metody
+description: "...aneb jak zkušenějšího sportovce stvořit nadčlověka."
 show_on_home: true
 seo:
   seo_title: ''
