@@ -5,7 +5,7 @@ workflow_step: publish
 date: 2022-06-01T00:00:00+02:00
 updated_at: 2022-06-09T20:49:17+02:00
 title: Komplexní a kontrastní tréninkové metody
-description: "...aneb jak zkušenějšího sportovce stvořit nadčlověka."
+description: "...aneb jak ze zkušenějšího sportovce stvořit nadčlověka."
 show_on_home: true
 seo:
   seo_title: ''
@@ -28,7 +28,7 @@ twitter_cards:
   type: ''
 
 ---
-Komplexní a kontrastní tréninkové metody mohou být důležitou součástí tréninkového cyklu u zkušenějších sportovců. U obou metod jde zjednodušeně o to, že použijete silový cvik okamžitě následovaný explozivním/plyometrickým cvikem u stejného nebo biomechanicky podobného cviku (u druhého zmíněného nemusíte použít pouze jeden cvik, ale můžete využít několika explozivních cviků zaměřených na různou část silově-rychlostní křivky). Jejich primárním cílem je vyšší aktivace centrální nervové soustavy (PAP - Post-Activation Potentiation) a následná vyšší aktivace motorických jednotek a lepší nervosvalová aktivita = vyšší výkon.🚀
+Komplexní a kontrastní tréninkové metody mohou být důležitou součástí tréninkového cyklu u zkušenějších sportovců. U obou metod jde zjednodušeně o to, že použijete silový cvik okamžitě následovaný explozivním/plyometrickým cvikem u stejného nebo biomechanicky podobného cviku (u druhého zmíněného nemusíte použít pouze jeden cvik, ale můžete využít několika explozivních cviků zaměřených na různou část silově-rychlostní křivky). Jejich primárním cílem je vyšší aktivace centrální nervové soustavy (PAP - Post-Activation Potentiation) a následná vyšší aktivace motorických jednotek a lepší nervosvalová aktivita = vyšší výkon.
 
 V rámci těchto metod nemusíme donekonečna párovat pouze dřepy s vertikálními výskoky, ale můžeme zařadit i více specifické cviky, které jsou biomechanicky bližší ke konkrétnímu sportu. Právě takové cviky mohou mít i maximální přenositelnost do sportovního výkonu. U hokejistů to může být zařazení laterálních forem silových cviků a skoků, u volejbalistů můžete využít různých forem vertikálních výskoků. U sprintera může být vhodnou modalitou zařazení těžkých saní v kombinaci s některou formou skoků. Samotná kombinace pak může vypadat následovně:
 
