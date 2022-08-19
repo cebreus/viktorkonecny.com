@@ -1,7 +1,7 @@
 ---
 type: blog-post
 show_detail: true
-workflow_step: publish
+workflow_step: draft
 date: 2022-04-03T20:49:17.000+02:00
 updated_at: 2022-04-03T20:49:17.000+02:00
 title: Využití TOP a DROP setů aneb ne každý den je posvícení-(copy)
@@ -29,34 +29,11 @@ twitter_cards:
   type: ''
 
 ---
-Stejně jako v životě i v silovém tréninku platí, že každý den není posvícení. Očekávat lineární zlepšování u každého tréninku je v mnoha případech prostě nesmysl. Kolikrát už se stalo, že jste na bench-press vytlačili 100 kg a logicky jste očekávali, že další týden zvednete o pár kilo víc. A ono… se to nestalo. A je to naprosto v pořádku. Lidské tělo není stroj a váš celkový výkon ovlivňuje spoustu faktorů, které v mnoha případech nejsme schopni ani ovlivnit - kvalita spánku, pracovní stres a další. TOP a DROP sety nám dávají do ruky skvělý nástroj pro autoregulaci. Pracujete totiž s vaším aktuálním maximálním výkonem dle vašeho fyzického a mentálního stavu v daný den.
-
-Celý princip top a drop setů spočívá v tom, že se v rámci několika pracovních sérií (zpravidla 1-3) snažíte dostat na své denní maximum pro daný cvik a daný počet opakování (top série). Toto denní maximum pak použijete pro nastavení dalších pracovních sérií, u kterých lehce snížíte váhu nebo počet opakování (drop série), tak abyste odjeli další tréninkový objem o vysoké intenzitě.
-
-POZOR - Přesto, že lineární zlepšování v rámci každého tréninku nemusí být reálné, je důležité sledovat střednědobý až dlouhodobý trend a pracovat s celkovým progresem v rámci několika týdnů - tam by mělo být vidět zlepšení. Pokud ne, je na čase přehodnotit nastavený tréninkový plán.
-
-TOP SET
-
-TOP set (aka EDM set) je maximální váha, kterou jste schopni zvednout pro daný počet opakování (RM - Repetition max) v rámci daného dne a tréninku. Například 5RM tedy představuje maximální váhu pro 5 opakování. Pokud jste minulý trénink zvedli na bench-press pětkrát 100 kg, optimálně by vaše pracovní top série mohly vypadat následovně:
-
-SET 1 - 5 x 95 kg
-
-SET 2 - 5 x 100 kg
-
-SET 3 - 5 x 102,5 kg = aktuální 5RM pro daný trénink (zlepšení o 2,5kg)
-
-V tomto případě je vaše maximální váha pro dnešní trénink 102,5 kg.
-
-B_ad day scenario._ Ne vždy se zadaří. Víkend mohl být ve znamení oslav nebo jste do rána museli pracovat na prezentaci pro šéfa, kterou stejně nikdo číst nebude. Na trénink jdete se stejným očekáváním jako u výše uvedeného příkladu. Nicméně u první pracovní série s 95 kg sotva dotlačíte páté opakování do stojanu. Nevadí. Vaše maximální váha pro dnešní trénink je 95 kg. Sérii se 100 kg a 102,5 kg už nepojedete, protože by pro váš aktuální fyzický a mentální stav představovala větší váhu než pro pět opakování.
-
-SET 1 - 5 x 95 = aktuální 5RM pro daný trénink (zhoršení o 5 kg)
-
-DROP SETY
-
-Vzhledem k tomu, že jste v rámci top série zvedli maximální váhu a dostali se tak nebo pracovali velmi blízko selhání (záleží podle nastaveného RPE) - nebude už pravděpodobně reálné zvednout stejnou váhu pro stejný počet opakování. Můžete tedy buďto udržet stejný počet opakování (5) a váhu snížit o 5-10 %. Pokud jste se v rámci top série dostali na 102,5 kg, pak v rámci drop setů odjedete další 3-4 další pracovní série s 95 kg. Druhá možnost je použít stejnou váhu jako pro TOP sérii, ale snížit počet opakování. Pro tento příklad necháte na ose 102,5 kg. Místo pěti uděláte ale pouze tři opakování v celkově 3-4 setech.
-
-Ještě jednou obě možnosti, které můžete využít pro drop sety. Pokud je vaše nejlepší váha pro top set 102,5 kg, pak:
-
-Varianta A - 3-4 sety x 5 opakování s 95 kg
-
-Varianta B - 3-4 sety x 3 opakování s 102,5 kg
+Komplexní a kontrastní tréninkové metody mohou být důležitou součástí tréninkového cyklu u zkušenějších sportovců. U obou metod jde zjednodušeně o to, že použijete silový cvik okamžitě následovaný explozivním/plyometrickým cvikem u stejného nebo biomechanicky podobného cviku (u druhého zmíněného nemusíte použít pouze jeden cvik, ale můžete využít několika explozivních cviků zaměřených na různou část silově-rychlostní křivky). Jejich primárním cílem je vyšší aktivace centrální nervové soustavy (PAP - Post-Activation Potentiation) a následná vyšší aktivace motorických jednotek a lepší nervosvalová aktivita = vyšší výkon.🚀  
+  
+V rámci těchto metod nemusíme donekonečna párovat pouze dřepy s vertikálními výskoky, ale můžeme zařadit i více specifické cviky, které jsou biomechanicky bližší ke konkrétnímu sportu. Právě takové cviky mohou mít i maximální přenositelnost do sportovního výkonu. U hokejistů to může být zařazení laterálních forem silových cviků a skoků, u volejbalistů můžete využít různých forem vertikálních výskoků. U sprintera může být vhodnou modalitou zařazení těžkých saní v kombinaci s některou formou skoků. Samotná kombinace pak může vypadat následovně:  
+  
+3-4 sets  
+Video 1️⃣ - Heavy sled march - 8m  
+Video 2️⃣ - Dumbbell step-up jumps - 3+3x  
+Video 3️⃣ - Band assisted alternating jumps - 3+3x
