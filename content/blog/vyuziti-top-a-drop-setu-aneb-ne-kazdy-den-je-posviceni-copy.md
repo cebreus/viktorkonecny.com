@@ -34,7 +34,7 @@ V rámci těchto metod nemusíme donekonečna párovat pouze dřepy s vertikáln
 
 <div class="embed-responsive embed-responsive-16by9">
 
-<iframe class="embed-responsive-item" src="[https://www.youtube.com/embed/qrOOn0HY6E0](https://www.youtube.com/embed/qrOOn0HY6E0 "https://www.youtube.com/embed/qrOOn0HY6E0")" allowfullscreen></iframe>
+<iframe class="embed-responsive-item" src="[https://www.youtube.com/embed/AFA57YJlUbA](https://www.youtube.com/embed/AFA57YJlUbA "https://www.youtube.com/embed/AFA57YJlUbA")" allowfullscreen></iframe>
 
 3-4 sets  
 Video  - Heavy sled march - 8m  
