@@ -2,8 +2,8 @@
 type: blog-post
 show_detail: true
 workflow_step: publish
-date: 2022-06-01T00:00:00+02:00
-updated_at: 2022-06-09T20:49:17+02:00
+date: 2022-06-01T00:00:00.000+02:00
+updated_at: 2022-06-09T20:49:17.000+02:00
 title: Komplexní a kontrastní tréninkové metody
 description: "...aneb jak ze zkušenějšího sportovce stvořit nadčlověka."
 show_on_home: true
@@ -37,6 +37,4 @@ Video  - Heavy sled march - 8m
 Video  - Dumbbell step-up jumps - 3+3x  
 Video  - Band assisted alternating jumps - 3+3x
 
-<div class="embed-responsive embed-responsive-16by9">
-
-<iframe class="embed-responsive-item" src="[https://www.youtube.com/embed/qrOOn0HY6E0](https://www.youtube.com/embed/qrOOn0HY6E0 "https://www.youtube.com/embed/qrOOn0HY6E0")" allowfullscreen></iframe>
+<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qrOOn0HY6E0" allowfullscreen></iframe></div>
