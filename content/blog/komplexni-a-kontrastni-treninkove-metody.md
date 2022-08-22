@@ -41,4 +41,4 @@ Video  - Band assisted alternating jumps - 3+3x
 
 ahoj
 
-<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qrOOn0HY6E0" allowfullscreen></iframe></div>
+<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/AFA57YJlUbA" allowfullscreen></iframe></div>
