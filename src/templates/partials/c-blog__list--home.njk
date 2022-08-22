@@ -14,7 +14,7 @@
       <h2 class="c-blog__heading pl-sm-5 pl-md-2 offset-lg-4">
         <span>Blog</span> Články o tréninku</h2>
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-        {% for item in filteredBlogPosts %}
+        {% for item in filteredBlogPosts | sort(true, true, 'date') %}
           {% include "partials/c-blog__item.njk" %}
         {% endfor %}
       </div>

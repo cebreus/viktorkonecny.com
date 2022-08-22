@@ -23,14 +23,14 @@
         {% set filteredBlogPosts = [] %}
 
         {% for item in BLOG %}
-          {% if item.show_on_home === true and item.workflow_step === 'publish' %}
+          {% if item.workflow_step === 'publish' %}
             {% set showBlog = loop.length %}
             {% set filteredBlogPosts = (filteredBlogPosts.push(item), filteredBlogPosts) %}
           {% endif %}
         {% endfor %}
 
         {% if showBlog %}
-          {% for item in filteredBlogPosts %}
+          {% for item in filteredBlogPosts | sort(true, true, 'date') %}
             {% include "partials/c-blog__item.njk" %}
           {% endfor %}
         {% endif %}

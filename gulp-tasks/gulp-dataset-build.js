@@ -35,7 +35,7 @@ const datasetBuild = (input, output, outputFilename, cb) => {
               .pop()
               .replace('_dataset-', '');
             data[primaryKey.toUpperCase()] = [json].sort(
-              (a, b) => new Date(b['startDate']) - new Date(a['startDate'])
+              (a, b) => new Date(b['date']) - new Date(a['date'])
             );
           }
           return data;
