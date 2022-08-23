@@ -5,7 +5,7 @@ workflow_step: publish
 date: 2022-06-01T00:00:00.000+02:00
 updated_at: 2022-06-09T20:49:17.000+02:00
 title: Komplexní a kontrastní tréninkové metody
-description: "...aneb jak ze zkušenějšího sportovce stvořit nadčlověka."
+description: "...aneb jak ze sportovce stvořit nadčlověka."
 show_on_home: true
 seo:
   seo_title: ''
