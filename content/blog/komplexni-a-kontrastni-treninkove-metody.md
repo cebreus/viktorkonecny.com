@@ -37,13 +37,19 @@ V rámci těchto metod nemusíme donekonečna párovat pouze dřepy s vertikáln
 A2  - Dumbbell step-up jumps - 3+3x  
 A3  - Band assisted alternating jumps - 3+3x**
 
+    
+
 Heavy sled march
 
 <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/AFA57YJlUbA" allowfullscreen></iframe></div>
 
+  
+
 Dumbbell step-up jumps
 
 <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/YOqeNqbX4eA" allowfullscreen></iframe></div>
+
+  
 
 Band assisted alternating jumps
 
