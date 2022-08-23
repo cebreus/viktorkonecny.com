@@ -32,9 +32,13 @@ Komplexní a kontrastní tréninkové metody mohou být důležitou součástí 
 
 V rámci těchto metod nemusíme donekonečna párovat pouze dřepy s vertikálními výskoky, ale můžeme zařadit i více specifické cviky, které jsou biomechanicky bližší ke konkrétnímu sportu. Právě takové cviky mohou mít i maximální přenositelnost do sportovního výkonu. U hokejistů to může být zařazení laterálních forem silových cviků a skoků, u volejbalistů můžete využít různých forem vertikálních výskoků. U sprintera může být vhodnou modalitou zařazení těžkých saní v kombinaci s některou formou skoků. Samotná kombinace pak může vypadat následovně:
 
-3-4 sets  
-Video  - Heavy sled march - 8m  
+**3-4 sets**  
+**Video  - Heavy sled march - 8m  
 Video  - Dumbbell step-up jumps - 3+3x  
-Video  - Band assisted alternating jumps - 3+3x
+Video  - Band assisted alternating jumps - 3+3x**
 
 <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/AFA57YJlUbA" allowfullscreen></iframe></div>
+
+<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/YOqeNqbX4eA" allowfullscreen></iframe></div>
+
+<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k8VcAl2llqw" allowfullscreen></iframe></div>
