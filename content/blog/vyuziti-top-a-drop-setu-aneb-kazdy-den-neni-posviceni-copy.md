@@ -2,11 +2,11 @@
 type: blog-post
 show_detail: true
 workflow_step: publish
-date: 2022-04-03T20:49:17.000+02:00
-updated_at: 2022-04-03T20:49:17.000+02:00
-title: Využití TOP a DROP setů aneb každý den není posvícení-(copy)
-description: 'Očekávat lineární zlepšování v tréninku je ve většině případů nereálné.
-  TOP a DROP sety nám dávají do ruky skvělý nástroj pro autoregulaci. '
+date: 2022-08-22T20:49:17+02:00
+updated_at: 2022-08-22T20:49:17+02:00
+title: 3 důvody proč ve sportovní přípravě zařadit SHUTTLE RUNS
+description: Že nevíte, co shuttle runs jsou? Nevadí, v následujících několika odstavcích
+  si vše vysvětlíme.
 show_on_home: true
 seo:
   seo_title: ''
@@ -29,38 +29,18 @@ twitter_cards:
   type: ''
 
 ---
-Stejně jako v životě i v silovém tréninku platí, že každý den není posvícení. Očekávat lineární zlepšování u každého tréninku je v mnoha případech prostě nesmysl. Kolikrát už se stalo, že jste na bench-press vytlačili 100 kg a logicky jste očekávali, že další týden zvednete o pár kilo víc. A ono… se to nestalo. A je to naprosto v pořádku. Lidské tělo není stroj a váš celkový výkon ovlivňuje spoustu faktorů, které v mnoha případech nejsme schopni ani ovlivnit - kvalita spánku, pracovní stres a další. TOP a DROP sety nám dávají do ruky skvělý nástroj pro autoregulaci. Pracujete totiž s vaším aktuálním maximálním výkonem dle vašeho fyzického a mentálního stavu v daný den.
+SHUTTLE RUNS - Pokud jste se doteď s tímto výrazem nesetkali, nevadí, možná tento výraz znáte pod tím českým - člunkové běhy. Jak už to ale bývá, v jednoduchosti je prostě síla. U silového a kondičního tréninku to pak platí dvojnásob. Člunkové běhy nejsou nic jiného, než že místo lineárního běhu pouze směrem dopředu si celkovou vzdálenost rozdělíte na menší až středně dlouhé bloky ohraničené kužely a běháte od jednoho kuželu tam a zpátky. Obzvláště vhodné je zařadit tyto běhy u sportovců na začátku přípravy a to hned z několika důvodů:  
+  
+**1/ Menší riziko zranění hamstringů.**  
+  
+Pokud jste delší dobu neběhali a nebo jste na začátku přípravy a vaším cílem je dostat se do submaximální rychlosti, budou shuttle runs vhodnější variantou z pohledu snížení rizika zranění hamstringů. Hlavní důvod je takový, že v případě menší vzdálenosti např. 20 metrů se nejste schopni dostat do tak vysoké rychlosti jako u lineárního běhu na 100 metrů. Se submaximální až maximální rychlostí souvisí i změna pozice a technika běhu. Ta je oproti prvotní akcelerační fázi více cyklická a dochází k jinému náklonu těla a pohybu nohy. Právě u submaximální a maximální rychlosti v této pozici se hamstring dostává do většího protažení při dopadu přední nohy a zvyšujete tak i nároky na jeho stabilizační funkci v oblasti kolene a kyčlí. Na takové nároky nemusí být sportovec zpočátku připraven. U shuttle runs bude velká část úseku probíhat v akcelerační fázi, při které se hamstring nedostane do takové délky. Zařaďte v prvotní fázi shuttle runs, vybudujte kapacitu vašich hamstringů a oblasti kotníku a postupně zvyšujte vzdálenost a rychlost běhů. Otázkou zůstává, jestli se dostat až k tréninku maximální rychlosti, protože u většiny týmových sportů se do takové rychlosti sportovec stejně nedostane.  
+  
+**2/ Vyšší přenositelnost pro týmové sporty**  
+  
+Většina týmových sportů včetně hokeje, fotbalu nebo basketbalu je založená na změnách směru a akceleraci. Shuttle runs tak mohou představovat nástroj s vyšší přenositelností pro tyto sporty, protože přesně na tyto dvě věci jste schopni se zaměřit v bezpečném prostředí.
 
-Celý princip top a drop setů spočívá v tom, že se v rámci několika pracovních sérií (zpravidla 1-3) snažíte dostat na své denní maximum pro daný cvik a daný počet opakování (top série). Toto denní maximum pak použijete pro nastavení dalších pracovních sérií, u kterých lehce snížíte váhu nebo počet opakování (drop série), tak abyste odjeli další tréninkový objem o vysoké intenzitě.
+**3/ Aerobní kapacita**  
+  
+Skvělým nástrojem pro budování aerobní kapacity je pak kombinace shuttle runs s tempovanými běhy, tzn. samotný běh mezi kužely bude trvat okolo 15 sekund v 70 - 90% rychlosti následovaný 45 - 60 vteřinovou pasivní pauzou. Díky střídání kratších intervalů s pasivní pauzou jste schopni udržet celkovou techniku běhu. V mnoha případech může být tato možnost vhodnější především u sportovcům, kterým dlouhé lineární běhy nevyhovují (např. díky větší tělesné hmotnosti). Na videu jeden z možných tréninků z počátku přípravy, kdy je cílem uběhnout 2x 32 - 42 metrů během 15 sekund (záleží podle změřené MAS - Maximal aerobic speed pro daného člověka) následovaný 45 sekundovou pasivní pauzou.
 
-POZOR - Přesto, že lineární zlepšování v rámci každého tréninku nemusí být reálné, je důležité sledovat střednědobý až dlouhodobý trend a pracovat s celkovým progresem v rámci několika týdnů - tam by mělo být vidět zlepšení. Pokud ne, je na čase přehodnotit nastavený tréninkový plán.
-
-TOP SET
-
-TOP set (aka EDM set) je maximální váha, kterou jste schopni zvednout pro daný počet opakování (RM - Repetition max) v rámci daného dne a tréninku. Například 5RM tedy představuje maximální váhu pro 5 opakování. Pokud jste minulý trénink zvedli na bench-press pětkrát 100 kg, optimálně by vaše pracovní top série mohly vypadat následovně:
-
-SET 1 - 5 x 95 kg
-
-SET 2 - 5 x 100 kg
-
-SET 3 - 5 x 102,5 kg = aktuální 5RM pro daný trénink (zlepšení o 2,5kg)
-
-V tomto případě je vaše maximální váha pro dnešní trénink 102,5 kg.
-
-Bad day scenario. Ne vždy se zadaří. Víkend mohl být ve znamení oslav nebo jste do rána museli pracovat na prezentaci pro šéfa, kterou stejně nikdo číst nebude. 
-
-![Office GIFs | Tenor](https://c.tenor.com/4ncxpl6WgRoAAAAM/give-me-a-break-right.gif)
-
-Na trénink jdete se stejným očekáváním jako u výše uvedeného příkladu. Nicméně u první pracovní série s 95 kg sotva dotlačíte páté opakování do stojanu. Nevadí. Vaše maximální váha pro dnešní trénink je 95 kg. Sérii se 100 kg a 102,5 kg už nepojedete, protože by pro váš aktuální fyzický a mentální stav představovala větší váhu než pro pět opakování.
-
-SET 1 - 5 x 95 = aktuální 5RM pro daný trénink (zhoršení o 5 kg)
-
-DROP SETY
-
-Vzhledem k tomu, že jste v rámci top série zvedli maximální váhu a dostali se tak nebo pracovali velmi blízko selhání (záleží podle nastaveného RPE) - nebude už pravděpodobně reálné zvednout stejnou váhu pro stejný počet opakování. Můžete tedy buďto udržet stejný počet opakování (5) a váhu snížit o 5-10 %. Pokud jste se v rámci top série dostali na 102,5 kg, pak v rámci drop setů odjedete další 3-4 další pracovní série s 95 kg. Druhá možnost je použít stejnou váhu jako pro TOP sérii, ale snížit počet opakování. Pro tento příklad necháte na ose 102,5 kg. Místo pěti uděláte ale pouze tři opakování v celkově 3-4 setech.
-
-Ještě jednou obě možnosti, které můžete využít pro drop sety. Pokud je vaše nejlepší váha pro top set 102,5 kg, pak:
-
-Varianta A - 3-4 sety x 5 opakování s 95 kg
-
-Varianta B - 3-4 sety x 3 opakování s 102,5 kg
+<iframe width="330" height="587" src="[https://www.youtube.com/embed/v2t62Skk1lQ](https://www.youtube.com/embed/v2t62Skk1lQ "https://www.youtube.com/embed/v2t62Skk1lQ")" title="Tempo shuttle runs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
