@@ -5,8 +5,8 @@ workflow_step: publish
 date: 2022-08-22T20:49:17+02:00
 updated_at: 2022-08-22T20:49:17+02:00
 title: 3 důvody proč ve sportovní přípravě zařadit SHUTTLE RUNS
-description: Že nevíte, co shuttle runs jsou? Nevadí, v následujících několika odstavcích
-  si vše vysvětlíme.
+description: Že nevíte, co shuttle runs jsou? Nevadí, po přečtení tohoto článku budete
+  vědět přesně o co se jedná a hlavně PROČ shuttle runs v přípravě použít.
 show_on_home: true
 seo:
   seo_title: ''
