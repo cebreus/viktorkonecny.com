@@ -4,7 +4,7 @@ show_detail: true
 workflow_step: publish
 date: 2022-04-03T20:49:17.000+02:00
 updated_at: 2022-04-03T20:49:17.000+02:00
-title: Využití TOP a DROP setů aneb ne každý den je posvícení
+title: Využití TOP a DROP setů aneb každý den není posvícení
 description: 'Očekávat lineární zlepšování v tréninku je ve většině případů nereálné.
   TOP a DROP sety nám dávají do ruky skvělý nástroj pro autoregulaci. '
 show_on_home: true
@@ -47,7 +47,11 @@ SET 3 - 5 x 102,5 kg = aktuální 5RM pro daný trénink (zlepšení o 2,5kg)
 
 V tomto případě je vaše maximální váha pro dnešní trénink 102,5 kg.
 
-B_ad day scenario._ Ne vždy se zadaří. Víkend mohl být ve znamení oslav nebo jste do rána museli pracovat na prezentaci pro šéfa, kterou stejně nikdo číst nebude. Na trénink jdete se stejným očekáváním jako u výše uvedeného příkladu. Nicméně u první pracovní série s 95 kg sotva dotlačíte páté opakování do stojanu. Nevadí. Vaše maximální váha pro dnešní trénink je 95 kg. Sérii se 100 kg a 102,5 kg už nepojedete, protože by pro váš aktuální fyzický a mentální stav představovala větší váhu než pro pět opakování.
+Bad day scenario. Ne vždy se zadaří. Víkend mohl být ve znamení oslav nebo jste do rána museli pracovat na prezentaci pro šéfa, kterou stejně nikdo číst nebude. 
+
+![Office GIFs | Tenor](https://c.tenor.com/4ncxpl6WgRoAAAAM/give-me-a-break-right.gif)
+
+Na trénink jdete se stejným očekáváním jako u výše uvedeného příkladu. Nicméně u první pracovní série s 95 kg sotva dotlačíte páté opakování do stojanu. Nevadí. Vaše maximální váha pro dnešní trénink je 95 kg. Sérii se 100 kg a 102,5 kg už nepojedete, protože by pro váš aktuální fyzický a mentální stav představovala větší váhu než pro pět opakování.
 
 SET 1 - 5 x 95 = aktuální 5RM pro daný trénink (zhoršení o 5 kg)
 
