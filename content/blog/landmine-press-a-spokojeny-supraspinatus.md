@@ -1,19 +1,18 @@
 ---
 type: blogpost
 title: Landmine press a spokojený supraspinatus
-description:
-  Buďme upřímní. Velká část lidí prostě nemá dostatečný rozsah pohybu k
+description: Buďme upřímní. Velká část lidí prostě nemá dostatečný rozsah pohybu k
   tomu, aby se dostala s činkou nad hlavu. Řešení? Landmine press!
 show_detail: true
-show_on_home: true
-date: 2022-01-03T12:00:00.000+01:00
+show_on_home: false
+date: 2022-01-03T12:00:00+01:00
 workflow_step: publish
 seo:
   robots: index,follow
   slug: landmine-press-a-spokojeny-supraspinatus
   seo_title: Landmine press a spokojený supraspinatus
----
 
+---
 Landmine press mám hodně rád!!! Za manželku bych ho úplně nevyměnil, ale už delší dobu zpátky jsem ho vyměnil za velkou část cviků, u kterých jde ruka do úplné flexe s činkou nad hlavu jako je např. military press. Důvod? Velká část lidí prostě nemá dostatečný rozsah pohybu k tomu, aby se do této pozice bezpečně a bez bolesti dostala. Řešení? Najít a cíleně pracovat na příčinách tohoto omezení - omezená mobilita hrudníku, pozice a pohyb lopatky a další.
 
 ![](/assets/uploads/viktor-00319jo.jpg)
