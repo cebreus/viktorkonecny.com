@@ -29,7 +29,11 @@ twitter_cards:
   type: ''
 
 ---
-SHUTTLE RUNS - Pokud jste se doteď s tímto výrazem nesetkali, nevadí, možná tento výraz znáte pod tím českým - člunkové běhy. Jak už to ale bývá, v jednoduchosti je prostě síla. U silového a kondičního tréninku to pak platí dvojnásob. Člunkové běhy nejsou nic jiného, než že místo lineárního běhu pouze směrem dopředu si celkovou vzdálenost rozdělíte na menší až středně dlouhé bloky ohraničené kužely a běháte od jednoho kuželu tam a zpátky. Obzvláště vhodné je zařadit tyto běhy u sportovců na začátku přípravy a to hned z několika důvodů:
+SHUTTLE RUNS - Pokud jste se doteď s tímto výrazem nesetkali, nevadí, možná tento výraz znáte pod tím českým - člunkové běhy. Jak už to ale bývá, v jednoduchosti je prostě síla. U silového a kondičního tréninku to pak platí dvojnásob. Člunkové běhy nejsou nic jiného, než že místo lineárního běhu pouze směrem dopředu si celkovou vzdálenost rozdělíte na menší až středně dlouhé bloky ohraničené kužely a běháte od jednoho kuželu tam a zpátky. 
+
+![Smart Thinking GIFs - Get the best GIF on GIPHY](https://media1.giphy.com/media/W3a0zO282fuBpsqqyD/200.gif)
+
+Obzvláště vhodné je zařadit tyto běhy u sportovců na začátku přípravy a to hned z několika důvodů:
 
 **1/ Menší riziko zranění hamstringů.**
 
@@ -42,5 +46,7 @@ Většina týmových sportů včetně hokeje, fotbalu nebo basketbalu je založe
 **3/ Aerobní kapacita**
 
 Skvělým nástrojem pro budování aerobní kapacity je pak kombinace shuttle runs s tempovanými běhy, tzn. samotný běh mezi kužely bude trvat okolo 15 sekund v 70 - 90% rychlosti následovaný 45 - 60 vteřinovou pasivní pauzou. Díky střídání kratších intervalů s pasivní pauzou jste schopni udržet celkovou techniku běhu. V mnoha případech může být tato možnost vhodnější především u sportovcům, kterým dlouhé lineární běhy nevyhovují (např. díky větší tělesné hmotnosti). Na videu jeden z možných tréninků z počátku přípravy, kdy je cílem uběhnout 2x 32 - 42 metrů během 15 sekund (záleží podle změřené MAS - Maximal aerobic speed pro daného člověka) následovaný 45 sekundovou pasivní pauzou.
+
+Tempo shuttle runs - 2 x 42 m
 
 <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v2t62Skk1lQ" allowfullscreen></iframe></div>
