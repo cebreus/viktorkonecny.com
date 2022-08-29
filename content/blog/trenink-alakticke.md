@@ -1,19 +1,18 @@
 ---
 type: blogpost
 title: Trénink alaktické výbušnosti
-description:
-  Pokud pracujete se sportovci, určitě byste neměli vynechávat trénink
+description: Pokud pracujete se sportovci, určitě byste neměli vynechávat trénink
   alaktické výbušnosti v rámci kondičního tréninku.
 show_detail: true
-show_on_home: true
+show_on_home: false
 date: 2022-01-27T17:51:53.000+01:00
 workflow_step: publish
 seo:
   robots: index,follow
   slug: trenink-alakticke
   seo_iclude_to_sitemap: false
----
 
+---
 Trénink kondice nemusí být jen o nekonečném běhání dlouhých úseků v nízké intenzitě.
 
 ![](/assets/uploads/aaaaaaaa.gif)
