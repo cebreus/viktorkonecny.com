@@ -5,9 +5,9 @@ workflow_step: publish
 date: 2022-06-01T00:00:00.000+02:00
 updated_at: 2022-06-09T20:49:17.000+02:00
 title: Komplexní a kontrastní tréninkové metody
-description: "....aneb jak ze sportovce stvořit nadčlověka! Pokud už jste znudění
-  neustálým párováním dřepů a vertikálních výskoků u komplexních a kontrastních metody,
-  následujících pár řádků může být přesně pro vás."
+description: "....aneb jak ze sportovce stvořit nadčlověka! Pokud už vás nudí neustále
+  párovat dřepy a vertikální výskoky u komplexních a kontrastních metody, následujících
+  pár řádků může být přesně pro vás."
 show_on_home: true
 seo:
   seo_title: ''
