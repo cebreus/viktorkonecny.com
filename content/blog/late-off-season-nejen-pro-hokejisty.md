@@ -1,7 +1,7 @@
 ---
 type: blog-post
 show_detail: true
-workflow_step: draft
+workflow_step: publish
 date: 2022-09-13T22:13:58+02:00
 updated_at: 2022-09-13T22:13:58+02:00
 title: Late off-season (nejen) pro hokejisty
