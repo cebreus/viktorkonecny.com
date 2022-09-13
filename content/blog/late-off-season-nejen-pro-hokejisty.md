@@ -6,7 +6,7 @@ date: 2022-09-13T22:13:58+02:00
 updated_at: 2022-09-13T22:13:58+02:00
 title: Late off-season (nejen) pro hokejisty
 description: Tak důležitá.. ale přesto tak opomíjená část přípravy (nejen) pro hokejisty.
-show_on_home: false
+show_on_home: true
 seo:
   seo_title: ''
   seo_description: ''
