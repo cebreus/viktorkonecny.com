@@ -1,6 +1,6 @@
 ---
 type: blogpost
-title: Late off-season (nejen) pro hokejisty
+title: Late off-season (nejen) pro hokejisty2
 description: Tak důležitá.. ale přesto tak opomíjená část přípravy (nejen) pro hokejisty.
 show_detail: true
 show_on_home: true
