@@ -38,6 +38,8 @@ Níže popsaných pár řádku se dá ve výsledku přenést na většinu sport�
 
 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/uFX2C0b9xeE" allowfullscreen></iframe></div>
 
+   
+
 2/ Kromě pozitivního vlivu z pohledu rizika zranění je navíc důležitý i druhý faktor a to sice LEPŠÍ VÝKON A PŘENESENÍ VYBUDOVANÝCH SCHOPNOSTÍ DO SPECIFICKÉHO SPORTU. Pokud jste několik týdnů až měsíců pracovali na síle, hypertrofii, výbušnosti nebo kondici, byla by škoda nevyužít v maximální možné míře tyto schopnosti i ve konkrétním sportu. Většina aktivit a cviků v posilovně totiž probíhá primárně v sagitální rovině. Naopak u týmových sportů a hokeji konkrétně je potřeba myslet i na rotace a frontální rovinu. Poslední týdny přípravy by tak měly primárně patřit práci na výše uvedených schopnostech v pohybových vzorech, které jsou specifické pro daný sport.
 
 Jaké konkrétní modality a cviky zařadit? To se pokusím popsat v příštím příspěvku.
