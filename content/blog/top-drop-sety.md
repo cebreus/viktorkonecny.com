@@ -7,7 +7,7 @@ updated_at: 2022-04-03T20:49:17.000+02:00
 title: Využití TOP a DROP setů aneb každý den není posvícení
 description: 'Očekávat lineární zlepšování v tréninku je ve většině případů nereálné.
   TOP a DROP sety nám dávají do ruky skvělý nástroj pro autoregulaci. '
-show_on_home: true
+show_on_home: false
 seo:
   seo_title: ''
   seo_description: ''
