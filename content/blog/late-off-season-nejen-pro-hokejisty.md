@@ -42,9 +42,7 @@ Níže popsaných pár řádku se dá ve výsledku přenést na většinu sport�
 
 <br>
 
-Slider lateral lunge s jednoručkou jako jedna z možností, jak posílit adduktory v prodloužené pozici.
-
-<br>
+**Slider lateral lunge s jednoručkou jako jedna z možností, jak posílit adduktory v prodloužené pozici.**
 
 <div class="embed-responsive embed-responsive-16by9">
 
