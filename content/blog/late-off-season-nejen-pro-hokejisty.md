@@ -36,6 +36,8 @@ Níže popsaných pár řádku se dá ve výsledku přenést na většinu sport�
 
 1/ Tím hlavním důvodem zařazení této fáze je primárně PŘIPRAVIT TĚLO NA SPECIFICKÝ POHYB - a to především z pohledu komfortu a snížení rizika zranění. Pokud jste delší dobu určitou aktivitu nedělali, tělu bude chvíli trvat než si na specifický pohyb adaptuje a zvykne. Silový trénink se dá v tomto případě použít skvěle jako pomyslný oslí můstek mezi tréninky v posilovně a ve specifickém prostředí na ledě. Příklad? Zařazením většímu objemu laterálních pohybů v rámci silového tréninku, kdy adduktory dostáváme a posilujeme ve větším protažení, bude mít vliv na menší bolestivost (DOMs) a případné natažení ve chvíli, kdy hráč poprvé stoupne na led.
 
+Slider lateral lunge s jednoručkou jako jedna z možností, jak posílit adduktory v prodloužené pozici.
+
 <div class="embed-responsive embed-responsive-16by9">
 
 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/uFX2C0b9xeE" allowfullscreen></iframe></div>
