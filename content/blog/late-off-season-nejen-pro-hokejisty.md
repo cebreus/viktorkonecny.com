@@ -28,7 +28,7 @@ twitter_cards:
   type: ''
 
 ---
-Late off-season aka pozdní fáze přípravy je velmi zjednodušeně část přípravy (nejčastěji poslední 2-4 týdny) před začátkem samotné sezóny. Stejně tak je to i část přípravy, která velmi často chybí v celkovém konceptu plánování off-season. Jeden z nejoptimálnějších přístupů během této fáze je pak postupně zařazovat a zvyšovat frekvenci specifických tréninků a postupně ubírat počet silových tréninků, tak aby došlo k co nejplynulejšímu přechodu sportovce do sezóny.
+Late off-season aka pozdní fáze přípravy je velmi zjednodušeně část přípravy (nejčastěji poslední 2-4 týdny) před začátkem samotné sezóny. Stejně tak je to i část přípravy, která velmi často chybí v celkovém konceptu plánování off-season. Jeden z nejoptimálnějších přístupů během této fáze je pak postupně zařazovat a zvyšovat frekvenci specifických tréninků a postupně ubírat počet silových tréninků, tak aby došlo k co nejplynulejšímu přechodu sportovce do sezóny. 
 
 <br>
 
@@ -36,7 +36,7 @@ Níže popsaných pár řádku se dá ve výsledku přenést na většinu sport�
 
 <br>
 
-1/ Tím hlavním důvodem zařazení této fáze je primárně **_PŘIPRAVIT TĚLO NA SPECIFICKÝ POHYB_** - a to především z pohledu komfortu a snížení rizika zranění. Pokud jste delší dobu určitou aktivitu nedělali, tělu bude chvíli trvat než si na specifický pohyb adaptuje a zvykne. Silový trénink se dá v tomto případě použít skvěle jako pomyslný oslí můstek mezi tréninky v posilovně a ve specifickém prostředí na ledě. Příklad? Zařazením většímu objemu laterálních pohybů v rámci silového tréninku, kdy adduktory dostáváme a posilujeme ve větším protažení, bude mít vliv na menší bolestivost (DOMs) a případné natažení ve chvíli, kdy hráč poprvé stoupne na led.
+1/ Tím hlavním důvodem zařazení této fáze je primárně **_PŘIPRAVIT TĚLO NA SPECIFICKÝ POHYB_** - a to především z pohledu komfortu a snížení rizika zranění. Pokud jste delší dobu určitou aktivitu nedělali, tělu bude chvíli trvat než si na specifický pohyb adaptuje a zvykne. Silový trénink se dá v tomto případě použít skvěle jako pomyslný oslí můstek mezi tréninky v posilovně a ve specifickém prostředí na ledě. Příklad? Zařazením laterálních pohybů u cviků na spodní polovinu těla v rámci silového tréninku, kdy adduktory dostáváme a posilujeme ve větším protažení, bude mít následně pozitivní vliv na menší bolestivost (DOMs) a riziko zranění ve chvíli, kdy hráč poprvé stoupne na led.
 
 <br>
 
@@ -48,7 +48,7 @@ Níže popsaných pár řádku se dá ve výsledku přenést na většinu sport�
 
 <br>
 
-2/ Kromě pozitivního vlivu z pohledu rizika zranění je navíc důležitý i druhý faktor a to sice **_LEPŠÍ VÝKON A PŘENESENÍ VYBUDOVANÝCH SCHOPNOSTÍ DO SPECIFICKÉHO SPORTU_**. Pokud jste několik týdnů až měsíců pracovali na síle, hypertrofii, výbušnosti nebo kondici, byla by škoda nevyužít v maximální možné míře tyto schopnosti i ve konkrétním sportu. Většina aktivit a cviků v posilovně totiž probíhá primárně v sagitální rovině. Naopak u týmových sportů a hokeji konkrétně je potřeba myslet i na rotace a frontální rovinu. Poslední týdny přípravy by tak měly primárně patřit práci na výše uvedených schopnostech v pohybových vzorech, které jsou specifické pro daný sport.
+2/ Kromě pozitivního vlivu z pohledu rizika zranění je navíc důležitý i druhý faktor a to sice **_LEPŠÍ VÝKON A PŘENESENÍ VYBUDOVANÝCH SCHOPNOSTÍ DO SPECIFICKÉHO SPORTU_**. Pokud jste několik týdnů až měsíců pracovali na síle, hypertrofii, výbušnosti nebo kondici, byla by škoda nevyužít v maximální možné míře tyto schopnosti i v konkrétním sportu. Většina aktivit a cviků v posilovně totiž probíhá primárně v sagitální rovině. Naopak u týmových sportů a hokeji konkrétně je potřeba myslet i na rotace a frontální rovinu. Poslední týdny přípravy by tak měly primárně patřit práci na výše uvedených schopnostech v pohybových vzorech, které jsou specifické pro daný sport.
 
 <br>
 
