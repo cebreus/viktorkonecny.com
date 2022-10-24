@@ -28,7 +28,7 @@ twitter_cards:
   type: ''
 
 ---
-Late off-season aka pozdní fáze přípravy je velmi zjednodušeně část přípravy (nejčastěji poslední 2-4 týdny) před začátkem samotné sezóny. Stejně tak je to i část přípravy, která velmi často chybí v celkovém konceptu plánování off-season. Jeden z nejoptimálnějších přístupů během této fáze je pak postupně zařazovat a zvyšovat frekvenci specifických tréninků a postupně ubírat počet silových tréninků, tak aby došlo k co nejplynulejšímu přechodu sportovce do sezóny.
+Late off-season aka pozdní fáze přípravy je velmi zjednodušeně specifická část přípravy (nejčastěji poslední 2-4 týdny) před začátkem samotné sezóny. Stejně tak je to i část přípravy, která velmi často chybí v celkovém konceptu plánování off-season. Jeden z nejoptimálnějších přístupů během této fáze je pak postupně zařazovat a zvyšovat frekvenci specifických tréninků a postupně ubírat počet silových tréninků, tak aby došlo k co nejplynulejšímu přechodu sportovce do sezóny. Tato fáze přípravy je vlastně přesný opak GPP (general physical preparation), kdy se naopak chcete soustředit na obecnou přípravu a tělu dát odpočnout od specifických pohybů.
 
 <br>
 
@@ -52,4 +52,4 @@ Níže popsaných pár řádku se dá ve výsledku přenést na většinu sport�
 
 <br>
 
-Jaké konkrétní modality a cviky zařadit? Na to se zaměříme v příštím příspěvku. 
+Jaké konkrétní modality a cviky zařadit? Na to se zaměříme v příštím příspěvku.
