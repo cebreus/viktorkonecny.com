@@ -52,4 +52,32 @@ Níže popsaných pár řádku se dá ve výsledku přenést na většinu sport�
 
 <br>
 
-Jaké konkrétní modality a cviky zařadit? Na to se zaměříme v příštím příspěvku.
+Co tedy upravit, tak abychom z předešlých fází vytěžili maximum?
+
+<br>
+
+<br>
+
+### Silový trénink
+
+V této části se zaměříme především na spodní polovinu těla. Již dříve v článku bylo zmíněno, že zařazením laterálních pohybů u cviků na spodní polovinu těla v rámci silového tréninku, kdy adduktory dostáváme a posilujeme ve větším protažení, bude mít následně pozitivní vliv na menší bolestivost (DOMs) a riziko zranění. Zařazením laterálním pohybů je jedna z věcí, která je málo k vidění nejen u sportovců, ale i gen-pop klientely. Zvolte některou z forem bočních výpadů, cossack dřepů nebo laterálních dřepů s landminem. Pokud bych měl ale vybrat pro mě pomyslného krále cviků v této kategorii, pak by to byl laterální dřep se sliderem. Zkuste a dejte vědět, co na to říkají vaše vnitřní stehna další den.
+
+###### Lateral slider DB squat
+
+<div class="embed-responsive embed-responsive-16by9">
+
+<iframe class="embed-responsive-item" src="https://youtube.com/shorts/xJTITHsZ5C8?feature=share" allowfullscreen></iframe></div>
+
+Power
+
+Stejné jako u síly dává smysl budovat výbušnost nejen v předo-zadní rovině, ale využít i laterálních pohybů ve formě skoků, hopů a boundů do stran. Žádná raketová věda. Jedna z věcí, která ale není až tak vidění, jsou specifické drilly pro budování rotační výbušnosti pomocí medicinbalů. Jedna z věcí, o které už dlouhodobě mluví třeba Eric Cressey, a se kterou se nedá nesouhlasit. Rozvoj výbušné síly v sagitální rovině nemá ve výsledku tak velkou přenositelnost pro zlepšení rotační výbušnosti (a tedy i zlepšení v síle úderu, střely apod.). Právě z tohoto důvodu by měla silově-kodniční příprava obsahovat i rotační odhody. Využijte různé formy formou scoop toss nebo shotput variant rotačních hodů s medíky pro maximální přenositelnost do specifického výkonu - střela, odhod, odpal, podání.
+
+VIDEO - Step-behind rotational medball scoop toss
+
+VIDEO - Overhead medball throw to scoop toss
+
+Speed / COD / Agility
+
+Stejná pravidla specificity platí i pro trénink rychlosti - především pak akcelerační fáze. I v tomto případě by byla škoda zůstat pouze u lineárních drillů. Většina týmových sportů není pouze o schopnosti lineárně zrychlit. Kromě samotného zrychlení je důležité rychle změnit směr a reagovat na interní/externí podmět. V rámci silové přípravy bude v prvním kroku optimální postupně nahrazovat lineární starty starty bokem, které jsou pro hokejisty více specifické. Využít můžete buďto jednu z možností crossover nebo open up variant. Video X - Half-kneeling open up start. Postupně zvyšovat specificitu a přidávat drilly, u kterých sportovec mění směr pohybu podle předem určeného vzorce (COD) nebo reaguje na určitý podnět (agility).
+
+VIDEO X - Lateral shuffle to sprint
