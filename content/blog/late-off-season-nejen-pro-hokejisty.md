@@ -72,16 +72,30 @@ V této části se zaměříme především na spodní polovinu těla. Již dř�
 
 Stejné jako u síly dává smysl budovat výbušnost nejen v předo-zadní rovině, ale využít i laterálních pohybů ve formě skoků, hopů a boundů do stran. Žádná raketová věda. Jedna z věcí, která ale není až tak vidění, jsou specifické drilly pro budování rotační výbušnosti pomocí medicinbalů. Jedna z věcí, o které už dlouhodobě mluví třeba Eric Cressey, a se kterou se nedá nesouhlasit. Rozvoj výbušné síly v sagitální rovině nemá ve výsledku tak velkou přenositelnost pro zlepšení rotační výbušnosti (a tedy i zlepšení v síle úderu, střely apod.). Právě z tohoto důvodu by měla silově-kodniční příprava obsahovat i rotační odhody. Využijte různé formy formou scoop toss nebo shotput variant rotačních hodů s medíky pro maximální přenositelnost do specifického výkonu - střela, odhod, odpal, podání.
 
-Step-behind rotational medball scoop toss
+###### Step-behind rotational medball scoop toss
 
 <div class="embed-responsive embed-responsive-16by9">
 
 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KlRp2MEYCc" allowfullscreen></iframe></div>
 
-VIDEO - Overhead medball throw to scoop toss
+###### Overhead medball throw to scoop toss
 
-Speed / COD / Agility
+<div class="embed-responsive embed-responsive-16by9">
 
-Stejná pravidla specificity platí i pro trénink rychlosti - především pak akcelerační fáze. I v tomto případě by byla škoda zůstat pouze u lineárních drillů. Většina týmových sportů není pouze o schopnosti lineárně zrychlit. Kromě samotného zrychlení je důležité rychle změnit směr a reagovat na interní/externí podmět. V rámci silové přípravy bude v prvním kroku optimální postupně nahrazovat lineární starty starty bokem, které jsou pro hokejisty více specifické. Využít můžete buďto jednu z možností crossover nebo open up variant. Video X - Half-kneeling open up start. Postupně zvyšovat specificitu a přidávat drilly, u kterých sportovec mění směr pohybu podle předem určeného vzorce (COD) nebo reaguje na určitý podnět (agility).
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/SOjqdpvmqYE" allowfullscreen></iframe></div>
 
-VIDEO X - Lateral shuffle to sprint
+### Speed / COD / Agility
+
+Stejná pravidla specificity platí i pro trénink rychlosti - především pak akcelerační fáze. I v tomto případě by byla škoda zůstat pouze u lineárních drillů. Většina týmových sportů není pouze o schopnosti lineárně zrychlit. Kromě samotného zrychlení je důležité rychle změnit směr a reagovat na interní/externí podmět. V rámci silové přípravy bude v prvním kroku optimální postupně nahrazovat lineární starty starty bokem, které jsou pro hokejisty více specifické. Využít můžete buďto jednu z možností crossover nebo open up variant. Postupně zvyšovat specificitu a přidávat drilly, u kterých sportovec mění směr pohybu podle předem určeného vzorce (COD) nebo reaguje na určitý podnět (agility).
+
+Half-kneeling open up start
+
+<div class="embed-responsive embed-responsive-16by9">
+
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/SOjqdpvmqYE" allowfullscreen></iframe></div>
+
+Lateral shuffle to sprint
+
+<div class="embed-responsive embed-responsive-16by9">
+
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VT-NoVSpCWk" allowfullscreen></iframe></div>
