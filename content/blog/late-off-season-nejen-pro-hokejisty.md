@@ -94,7 +94,7 @@ Half-kneeling open up start
 
 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/SOjqdpvmqYE" allowfullscreen></iframe></div>
 
-Lateral shuffle to sprint
+###### Lateral shuffle to sprint
 
 <div class="embed-responsive embed-responsive-16by9">
 
