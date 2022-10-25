@@ -66,13 +66,17 @@ V této části se zaměříme především na spodní polovinu těla. Již dř�
 
 <div class="embed-responsive embed-responsive-16by9">
 
-<iframe class="embed-responsive-item" src="https://youtube.com/shorts/xJTITHsZ5C8?feature=share" allowfullscreen></iframe></div>
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/xJTITHsZ5C8" allowfullscreen></iframe></div>
 
-Power
+### Power
 
 Stejné jako u síly dává smysl budovat výbušnost nejen v předo-zadní rovině, ale využít i laterálních pohybů ve formě skoků, hopů a boundů do stran. Žádná raketová věda. Jedna z věcí, která ale není až tak vidění, jsou specifické drilly pro budování rotační výbušnosti pomocí medicinbalů. Jedna z věcí, o které už dlouhodobě mluví třeba Eric Cressey, a se kterou se nedá nesouhlasit. Rozvoj výbušné síly v sagitální rovině nemá ve výsledku tak velkou přenositelnost pro zlepšení rotační výbušnosti (a tedy i zlepšení v síle úderu, střely apod.). Právě z tohoto důvodu by měla silově-kodniční příprava obsahovat i rotační odhody. Využijte různé formy formou scoop toss nebo shotput variant rotačních hodů s medíky pro maximální přenositelnost do specifického výkonu - střela, odhod, odpal, podání.
 
-VIDEO - Step-behind rotational medball scoop toss
+Step-behind rotational medball scoop toss
+
+<div class="embed-responsive embed-responsive-16by9">
+
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KlRp2MEYCc" allowfullscreen></iframe></div>
 
 VIDEO - Overhead medball throw to scoop toss
 
