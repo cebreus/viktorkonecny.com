@@ -4,7 +4,7 @@ show_detail: true
 workflow_step: publish
 date: 2022-09-13T22:13:58+02:00
 updated_at: 2022-09-13T22:13:58+02:00
-title: Late off-season (nejen) v hokejové přípravě - 1. část
+title: Late off-season (nejen) v hokejové přípravě
 description: Tak důležitá... ale přesto tak opomíjená část přípravy (nejen) pro hokejisty.
 show_on_home: true
 seo:
@@ -100,7 +100,7 @@ Stejná pravidla specificity platí i pro trénink rychlosti - především pak 
 
 <div class="embed-responsive embed-responsive-16by9">
 
-<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/SOjqdpvmqYE" allowfullscreen></iframe></div>
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/kbOmS1GeHLo" allowfullscreen></iframe></div>
 
 **Lateral shuffle to sprint**
 
