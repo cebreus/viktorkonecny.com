@@ -78,15 +78,13 @@ Stejné jako u síly dává smysl budovat výbušnost nejen v předo-zadní rovi
 
 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KlRp2MEYCc" allowfullscreen></iframe></div>
 
+<br>
+
 **Overhead medball throw to scoop toss**
 
 <div class="embed-responsive embed-responsive-16by9">
 
 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/SOjqdpvmqYE" allowfullscreen></iframe></div>
-
-<br>
-
-<br>
 
 ##### Speed / COD / Agility
 
@@ -97,6 +95,8 @@ Stejná pravidla specificity platí i pro trénink rychlosti - především pak 
 <div class="embed-responsive embed-responsive-16by9">
 
 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/kbOmS1GeHLo" allowfullscreen></iframe></div>
+
+<br>
 
 **Lateral shuffle to sprint**
 
