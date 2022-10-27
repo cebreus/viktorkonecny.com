@@ -52,7 +52,7 @@ Níže popsaných pár řádku se dá ve výsledku přenést na většinu sport�
 
 <br>
 
-###### Co tedy upravit, tak abychom z předešlých fází vytěžili maximum?
+##### Co tedy upravit, tak abychom z předešlých fází vytěžili maximum?
 
 **A/ SILOVÝ TRÉNINK**
 
@@ -67,6 +67,8 @@ Lateral slider DB squat
 <div class="embed-responsive embed-responsive-16by9">
 
 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/xJTITHsZ5C8" allowfullscreen></iframe></div>
+
+<br>
 
 <br>
 
@@ -91,6 +93,8 @@ Overhead medball throw to scoop toss
 <div class="embed-responsive embed-responsive-16by9">
 
 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/SOjqdpvmqYE" allowfullscreen></iframe></div>
+
+<br>
 
 <br>
 
