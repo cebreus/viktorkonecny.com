@@ -52,7 +52,7 @@ Níže popsaných pár řádku se dá ve výsledku přenést na většinu sport�
 
 <br>
 
-##### Co tedy upravit, tak abychom z předešlých fází vytěžili maximum?
+#### Co tedy upravit, tak abychom z předešlých fází vytěžili maximum?
 
 **A/ SILOVÝ TRÉNINK**
 
