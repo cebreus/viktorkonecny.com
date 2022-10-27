@@ -82,7 +82,7 @@ Stejné jako u síly dává smysl budovat výbušnost nejen v předo-zadní rovi
 
 Step-behind rotational medball scoop toss
 
-<div class="https://www.youtube.com/embed/SOjqdpvmqYE">
+<div class="https://www.youtube.com/embed/KlRp2MEYCcY">
 
 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KlRp2MEYCc" allowfullscreen></iframe></div>
 
