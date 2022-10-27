@@ -70,7 +70,7 @@ Lateral slider DB squat
 
 <br>
 
-**B/ POWER**
+**B/ VÝBUŠNOST**
 
 <br>
 
@@ -94,9 +94,7 @@ Overhead medball throw to scoop toss
 
 <br>
 
-C/ SPEED / COD / AGILITY
-
-<br>
+**C/ RYCHLOST / COD / AGILITY**
 
 Stejná pravidla specificity platí i pro trénink rychlosti - především pak akcelerační fáze. I v tomto případě by byla škoda zůstat pouze u lineárních drillů. Většina týmových sportů není pouze o schopnosti lineárně zrychlit. Kromě samotného zrychlení je důležité rychle změnit směr a reagovat na interní/externí podmět. V rámci silové přípravy bude v prvním kroku optimální postupně nahrazovat lineární starty starty bokem, které jsou pro hokejisty více specifické. Využít můžete buďto jednu z možností crossover nebo open up variant. Postupně zvyšovat specificitu a přidávat drilly, u kterých sportovec mění směr pohybu podle předem určeného vzorce (COD) nebo reaguje na určitý podnět (agility).
 
