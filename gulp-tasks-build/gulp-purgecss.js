@@ -25,6 +25,7 @@ const purgeCss = (inputCss, inputHtml, outputCss, cb) => {
             'scrolled',
             'show',
             'smaller',
+            'btn-outline-primary',
           ],
           greedy: [/alert*/],
         },
