@@ -19,118 +19,109 @@ window.addEventListener('scroll', () => {
 
 // -----
 
-const form = document.querySelector('#contactus');
-const formData = new FormData(form);
-const submitButton = document.querySelector("#contactus [type='submit']");
-const submitButtonOriginalText = submitButton.innerHTML;
-const arrow = '<span class="arrow ml-2"></span>';
+// Get DOM elements
+const delayForSubmitButtonChange = 1000;
+const form = document.getElementById('contactus');
+const submitButton = form.querySelector('button[type="submit"]');
+const submitButtonOriginalHTML = submitButton.innerHTML;
+const webhookUrl = 'https://hook.eu1.make.com/pmod5qz3lh5pmvfprv71oncxltoe8swo';
 
-submitButton.addEventListener('click', async (event) => {
-  let alertContainer = form.querySelector('.status');
-  let catchCounter = 0;
-  let formSubmitted = false;
-  let response;
+// Messages
+const errorMessage =
+  'Při odesílání formuláře došlo k chybě, zkuste to znovu později.';
+const errorNetwork = 'Připojení k internetu je špatné nebo jste offline';
+const requestTimedOutMessage = 'Vypršel čas požadavku.';
+const sendingMessage = 'Odesílání...';
+const successMessage = 'Formulář byl úspěšně odeslán!';
 
-  if (formSubmitted) {
-    return;
-  }
-  formSubmitted = true;
+// Create alert function
+function createAlert(message, className) {
+  const alert = document.createElement('div');
+  alert.className = `alert ${className} alert-dismissible fade show`;
+  alert.setAttribute('role', 'alert');
+  alert.style.margin = '20px 0';
 
-  event.preventDefault();
-  submitButton.innerHTML = 'Odesílám...';
-  submitButton.disabled = true;
-  alertContainer.innerHTML = '';
+  const alertMessage = document.createElement('div');
+  alertMessage.style.margin = '3px 0';
+  alertMessage.innerHTML = message;
+  alert.appendChild(alertMessage);
+  alert.appendChild(closeButton);
 
-  await new Promise((resolve) => setTimeout(resolve, 500));
-  console.log(formData);
+  return alert;
+}
 
-  try {
-    response = await fetch(
-      'https://hook.eu1.make.com/pmod5qz3lh5pmvfprv71oncxltoe8swo',
-      {
-        method: 'POST',
-        body: formData,
-      }
-    );
-  } catch (error) {
-    catchCounter++;
-    if (catchCounter > 2) {
-      showMessage(
-        'Problém s připojením.<br>Napište přímo e-mail <a class="text-danger" href="mailto:training@viktorkonecny.com" target="_blank">training@viktorkonecny.com</a>',
-        'error',
-        alertContainer
-      );
-    } else {
-      showMessage('Problém s připojením.', 'error', alertContainer);
-    }
-    submitButton.innerHTML = `Zkusit znovu ${arrow}`;
-    submitButton.disabled = false;
-    formSubmitted = false;
-    return;
-  }
+// Create close button function
+const closeButton = document.createElement('button');
+closeButton.className = 'close';
+closeButton.innerHTML = '<span aria-hidden="true">&times;</span>';
+closeButton.setAttribute('data-dismiss', 'alert');
+closeButton.setAttribute('aria-label', 'Zavřít');
 
-  if (response.ok) {
-    showMessage('Formulář úspěšně odeslán!', '', alertContainer);
-    submitButton.innerHTML = `Vymazat formulář ${arrow}`;
-    submitButton.disabled = false;
-    submitButton.classList.remove('btn-primary');
-    submitButton.classList.add('btn-outline-primary');
-
-    submitButton.addEventListener('click', (event) => {
-      event.preventDefault();
-      console.log('clicked');
-      form.reset();
-      alertContainer.innerHTML = '';
-      submitButton.innerHTML = submitButtonOriginalText;
-      submitButton.classList.add('btn-primary');
-      submitButton.classList.remove('btn-outline-primary');
-      submitButton.classList.remove('btn-danger');
-      formSubmitted = false;
-    });
-  } else if (response.status === 400) {
-    showMessage(
-      'Něco se někde ztratilo. Zkuste odeslat pozdeji nebo napište přímo e-mail <a class="text-danger" href="mailto:training@viktorkonecny.com" target="_blank">training@viktorkonecny.com</a>',
-      'error',
-      alertContainer
-    );
-    submitButton.innerHTML = `Zkusit později ${arrow}`;
-    submitButton.classList.add('btn-danger');
-    submitButton.classList.remove('btn-primary');
-    submitButton.disabled = false;
-    formSubmitted = false;
-  } else {
-    showMessage('Něco se někde ztratilo.', 'error', alertContainer);
-    submitButton.innerHTML = `Zkusit znovu ${arrow}`;
-    submitButton.classList.add('btn-danger');
-    submitButton.classList.remove('btn-primary');
-    submitButton.disabled = false;
-    formSubmitted = false;
-  }
+// Hide alert on click function
+closeButton.addEventListener('click', () => {
+  alert.style.display = 'none';
 });
 
-function showMessage(message, type, container) {
-  if (type === 'error') {
-    console.error(message);
-  } else {
-    console.log(message);
+// Handle form submit function
+form.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  handleFormSubmit();
+});
+
+// Handle form submit
+async function handleFormSubmit() {
+  submitButton.innerHTML = sendingMessage;
+  const formData = new FormData(form);
+  formData.append('timestamp', new Date().toISOString());
+
+  try {
+    const response = await sendFormData(formData);
+    handleResponse(response);
+  } catch (error) {
+    handleError(error);
+  } finally {
+    resetForm();
   }
-  const escapedMessage = message.replace(/[&<>"']/g, (match) => {
-    return {
-      '&': '&amp;',
-      '<': '&lt;',
-      '>': '&gt;',
-      '"': '&quot;',
-      "'": '&#39;',
-    }[match];
-  });
-  container.innerHTML = `
-    <div class="alert alert-${
-      type === 'error' ? 'danger' : 'success'
-    } alert-dismissible fade show" role="alert" style="margin: 20px 0px;">
-      <div style="margin: 3px 0px;">${escapedMessage}</div>
-      <button class="close" data-dismiss="alert" aria-label="Zavřít">
-        <span aria-hidden="true">×</span>
-      </button>
-    </div>
-  `;
+}
+
+// Send form data function
+async function sendFormData(formData) {
+  return Promise.race([
+    fetch(webhookUrl, {
+      method: 'POST',
+      body: formData,
+    }),
+    new Promise((resolve, reject) =>
+      setTimeout(() => reject(new Error(requestTimedOutMessage)), 5000)
+    ),
+  ]);
+}
+
+// Handle response function
+function handleResponse(response) {
+  if (!response.ok) throw new Error(errorMessage);
+  const alert = createAlert(successMessage, 'alert-success');
+  setTimeout(() => {
+    form.insertBefore(alert, form.lastChild);
+  }, delayForSubmitButtonChange);
+
+  setTimeout(() => resetForm(), 10000);
+}
+
+// Handle error function
+function handleError(error) {
+  console.error(error);
+  const alertMessage =
+    error instanceof TypeError ? errorNetwork : error.message;
+  const alert = createAlert(alertMessage, 'alert-warning');
+  setTimeout(() => {
+    form.insertBefore(alert, form.lastChild);
+  }, delayForSubmitButtonChange);
+}
+
+// Reset form function
+function resetForm() {
+  setTimeout(() => {
+    submitButton.innerHTML = submitButtonOriginalHTML;
+  }, delayForSubmitButtonChange);
 }
