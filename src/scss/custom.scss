@@ -17,7 +17,7 @@ html {
 body {
   // Set minimum reasonable width on very small devices
   min-width: 320px;
-  letter-spacing: 0.06rem;
+  letter-spacing: 0.025rem;
 
   @include media-breakpoint-down(sm) {
     font-size: 0.85rem;
@@ -41,7 +41,7 @@ img:not([src$='.svg']) {
 
 b,
 strong {
-  font-weight: $font-weight-bolder;
+  font-weight: $font-weight-bold;
 }
 
 .navbar {
@@ -177,7 +177,7 @@ h3 {
 
 /* stylelint-disable */
 textarea.form-control {
-  height: 120px;
+  height: 170px;
   border-top: 1px solid rgba($white, 0.4);
 }
 /* stylelint-enable */
@@ -226,7 +226,7 @@ textarea.form-control {
   
     li {
       position: relative;
-      padding: 0 0 0.75rem 2rem;
+      padding: 0 0 0.5rem 2rem;
     }
   
     li::before {
@@ -392,6 +392,7 @@ textarea.form-control {
 .block {
   padding: 2.5rem 2.5rem 0;
   background: darken($primary, 8%);
+  font-weight: $font-weight-normal;
 
   @include media-breakpoint-only(md) {
     padding: 2rem;
@@ -402,7 +403,6 @@ textarea.form-control {
   }
 
   &.block-light {
-    font-weight: $font-weight-bolder;
     font-size: 1.125rem;
     color: $black;
     background: $primary;
@@ -415,6 +415,7 @@ textarea.form-control {
 
 ul.block-list {
   padding: 0; 
+  font-weight: $font-weight-bold;
   
   li::before {
     background: $black;
@@ -495,7 +496,7 @@ ul.block-list {
 .contacts {
   margin-bottom: 5rem;
   font-size: 1.25rem;
-  letter-spacing: 0.25rem;
+  letter-spacing: 0.125rem;
   text-transform: uppercase;
 
   @include media-breakpoint-down(lg) {
@@ -513,7 +514,7 @@ ul.block-list {
     margin-bottom: -1px;
     white-space: nowrap;
     border: darken($white, 80%) 1px solid;
-
+    text-decoration: none;
     @include transition;
 
     @include media-breakpoint-only(xs) {
@@ -521,7 +522,6 @@ ul.block-list {
     }
 
     &:hover {
-      text-decoration: none;
       background: darken($white, 80%);
     }
 

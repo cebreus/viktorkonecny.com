@@ -181,9 +181,9 @@ $body-color:                $white !default;
 // Style anchor elements.
 
 $link-color:                              theme-color("primary") !default;
-$link-decoration:                         none !default;
+$link-decoration:                         underline !default;
 $link-hover-color:                        $link-color !default;
-$link-hover-decoration:                   underline !default;
+$link-hover-decoration:                   none !default;
 // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
 $emphasized-link-hover-darken-percentage: 15% !default;
 
@@ -291,12 +291,12 @@ $font-size-lg:                $font-size-base * 1.25 !default;
 $font-size-sm:                $font-size-base * .875 !default;
 
 $font-weight-lighter:         lighter !default;
-$font-weight-light:           200 !default;
+$font-weight-light:           300 !default;
 $font-weight-normal:          400 !default;
 $font-weight-bold:            700 !default;
 $font-weight-bolder:          600 !default;
 
-$font-weight-base:            $font-weight-normal !default;
+$font-weight-base:            $font-weight-light !default;
 $line-height-base:            1.5 !default;
 
 $h1-font-size:                $font-size-base * 1.9 !default;
@@ -324,7 +324,7 @@ $display4-weight:             300 !default;
 $display-line-height:         $headings-line-height !default;
 
 $lead-font-size:              $font-size-base * 1.25 !default;
-$lead-font-weight:            500 !default;
+$lead-font-weight:            400 !default;
 
 $small-font-size:             80% !default;
 

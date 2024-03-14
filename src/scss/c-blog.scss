@@ -33,6 +33,14 @@
     margin-right: auto;
     margin-bottom: -3.25rem;
   }
+
+  .c-blog__title-link {
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 // stylelint-disable plugin/selector-bem-pattern

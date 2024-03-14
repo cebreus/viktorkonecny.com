@@ -10,13 +10,28 @@
     {% include "partials/theme.njk" %}
     <hr class="d-sm-none">
     {% include "partials/o-me.njk" %}
-    <hr>
+    
+    
+    <!-- Place <div> tag where you want the feed to appear -->
+    <div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div>
+
+    <!-- The Javascript can be moved to the end of the html page before the </body> tag -->
+    <script type="text/javascript">
+    /* curator-feed-default-feed-layout */
+    (function(){
+    var i,e,d=document,s="script";i=d.createElement("script");i.async=1;i.charset="UTF-8";
+    i.src="https://cdn.curator.io/published/f0554a76-c457-48d2-bfca-851ea7832297.js";
+    e=d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
+    })();
+    </script>
     {% include "partials/sluzby.njk" %}
     <hr>
+    {#
     {% include "partials/online-coaching.njk" %}
-    <hr>
+    <hr> #}
     {% include "partials/c-blog__list--home.njk" %}
     <hr>
+   
     {% include "partials/form--contactus.njk" %}
     {% include "partials/map.njk" %}
   </main>

@@ -1,11 +1,11 @@
 <div class="col mb-5">
   <div class="c-blog__item h-100">
 
-    {% if item.date is defined and item.date | length > 0 %}
+    {# % if item.date is defined and item.date | length > 0 %}
       <span class="c-blog__date">
         {{ item.date | date('D. MMMM YYYY') }}
       </span>
-    {% endif %}
+    {% endif % #}
 
     <h3 class="c-blog__title">
       {% if item.show_detail === true %}
